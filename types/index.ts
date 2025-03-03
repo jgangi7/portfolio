@@ -9,8 +9,8 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  icon?: string;
-  category: 'frontend' | 'backend' | 'tools' | 'other';
+  category: "languages" | "frontend" | "backend" | "databases" | "cloud" | "testing";
+  icon: string;
 }
 
 export interface SocialLinks {
