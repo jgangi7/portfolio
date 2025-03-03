@@ -1,17 +1,3 @@
-# Personal Portfolio Website
-
-A modern, responsive portfolio website built with Next.js, React, and TailwindCSS.
-
-## Features
-
-- Responsive design
-- Modern UI/UX
-- Smooth animations
-- Project showcase
-- Skills section
-- Contact form
-- Dark/Light mode
-
 ## Getting Started
 
 1. Clone the repository
