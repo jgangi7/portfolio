@@ -1,9 +1,9 @@
-import { Layout } from '../components/ui/Layout';
-import { Hero } from '../components/sections/Hero';
-import { Projects } from '../components/sections/Projects';
-import { Skills } from '../components/sections/Skills';
-import { Contact } from '../components/sections/Contact';
-import type { Project, Skill } from '../types';
+import { Layout } from "../components/ui/Layout";
+import { Hero } from "../components/sections/Hero";
+import { Projects } from "../components/sections/Projects";
+import { Skills } from "../components/sections/Skills";
+import { Contact } from "../components/sections/Contact";
+import type { Project, Skill } from "../types";
 
 // You can replace these with your actual data
 const projects: Project[] = [
@@ -12,7 +12,7 @@ const projects: Project[] = [
     description: "Portforlio website",
     technologies: ["React", "TypeScript", "Node.js", "TailwindCSS"],
     githubUrl: "https://github.com/jgangi7/portolio",
-    liveUrl: "https://github.com/jgangi7/portfolio"
+    liveUrl: "https://github.com/jgangi7/portfolio",
   },
   // Add more projects here
 ];
@@ -22,159 +22,159 @@ const skills: Skill[] = [
   {
     name: "TypeScript",
     category: "languages",
-    icon: "📘"
+    icon: "📘",
   },
   {
     name: "JavaScript",
     category: "languages",
-    icon: "📜"
+    icon: "📜",
   },
   {
     name: "C#",
     category: "languages",
-    icon: "🔷"
+    icon: "🔷",
   },
   {
     name: "SQL",
     category: "languages",
-    icon: "📊"
+    icon: "📊",
   },
   {
     name: "HTML",
     category: "languages",
-    icon: "🌐"
+    icon: "🌐",
   },
   {
     name: "CSS",
     category: "languages",
-    icon: "🎨"
+    icon: "🎨",
   },
 
   // Frontend
   {
     name: "React",
     category: "frontend",
-    icon: "⚛️"
+    icon: "⚛️",
   },
   {
     name: "AngularJS",
     category: "frontend",
-    icon: "🅰️"
+    icon: "🅰️",
   },
   {
     name: "Redux",
     category: "frontend",
-    icon: "🔄"
+    icon: "🔄",
   },
   {
     name: "RxJS",
     category: "frontend",
-    icon: "🔁"
+    icon: "🔁",
   },
   {
     name: "TailwindCSS",
     category: "frontend",
-    icon: "🌊"
+    icon: "🌊",
   },
 
   // Backend
   {
     name: "Node.js",
     category: "backend",
-    icon: "🟢"
+    icon: "🟢",
   },
   {
     name: ".NET",
     category: "backend",
-    icon: "🔷"
+    icon: "🔷",
   },
   {
     name: "Express",
     category: "backend",
-    icon: "🚂"
+    icon: "🚂",
   },
   {
     name: "REST APIs",
     category: "backend",
-    icon: "🔌"
+    icon: "🔌",
   },
 
   // Databases
   {
     name: "PostgreSQL",
     category: "databases",
-    icon: "🐘"
+    icon: "🐘",
   },
   {
     name: "MongoDB",
     category: "databases",
-    icon: "🍃"
+    icon: "🍃",
   },
   {
     name: "SQL Server",
     category: "databases",
-    icon: "💾"
+    icon: "💾",
   },
   {
     name: "Azure",
     category: "databases",
-    icon: "☁️"
+    icon: "☁️",
   },
 
   // Cloud & DevOps
   {
     name: "AWS",
     category: "cloud",
-    icon: "☁️"
+    icon: "☁️",
   },
   {
     name: "Docker",
     category: "cloud",
-    icon: "🐳"
+    icon: "🐳",
   },
   {
     name: "Jenkins",
     category: "cloud",
-    icon: "👷"
+    icon: "👷",
   },
   {
     name: "Redis",
     category: "cloud",
-    icon: "📦"
+    icon: "📦",
   },
   {
     name: "Datadog",
     category: "cloud",
-    icon: "🐕"
+    icon: "🐕",
   },
 
   // Testing & Tools
   {
     name: "Cypress.io",
     category: "testing",
-    icon: "🔍"
+    icon: "🔍",
   },
   {
     name: "Jest",
     category: "testing",
-    icon: "🃏"
+    icon: "🃏",
   },
   {
     name: "Git",
     category: "testing",
-    icon: "📚"
+    icon: "📚",
   },
   {
     name: "TFS",
     category: "testing",
-    icon: "🔧"
-  }
+    icon: "🔧",
+  },
 ];
 
 const socialLinks = {
   github: "https://github.com/jgangi7",
   linkedin: "https://linkedin.com/in/james-gangi",
-  email: "gangijames18@gmail.com"
+  email: "gangijames18@gmail.com",
 };
 
 export default function Home() {
@@ -182,12 +182,12 @@ export default function Home() {
     <Layout>
       <Hero
         name="James Gangi"
-        tagline="Software Developer passionate about creating impactful solutions"
+        tagline="I'm a Software Engineer with experience in building scalable and high-performance applications. I have a strong background in frontend and backend development, specializing in Micro Front-Ends, RESTful APIs, and database management. I’m proficient with GitHub and TFS for version control, ensuring efficient collaboration and deployment workflows. I also have experience working with AWS (SNS, SQS, Lambda, EC2, RDS), Docker, Jenkins, and Datadog for cloud infrastructure, CI/CD, and monitoring. Passionate about writing clean, efficient code and continuously learning new technologies.    "
         socialLinks={socialLinks}
       />
-      <Projects projects={projects} />
+      {/* <Projects projects={projects} /> */}
       <Skills skills={skills} />
       <Contact email={socialLinks.email} />
     </Layout>
   );
-} 
+}

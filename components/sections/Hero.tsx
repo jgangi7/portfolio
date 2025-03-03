@@ -25,13 +25,13 @@ export const Hero: React.FC<HeroProps> = ({ name, tagline, socialLinks }) => {
       </motion.div>
 
       <div className="flex gap-6 mt-8">
-        <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary">
+        <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-primary">
           <FaGithub />
         </a>
-        <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary">
+        <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-3xl hover:text-primary">
           <FaLinkedin />
         </a>
-        <a href={`mailto:${socialLinks.email}`} className="text-2xl hover:text-primary">
+        <a href={`mailto:${socialLinks.email}`} className="text-3xl hover:text-primary">
           <FaEnvelope />
         </a>
       </div>
