@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import { ThemeToggle } from './ThemeToggle';
+import { Navigation } from './Navigation';
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,14 +23,15 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
+      <Navigation />
       <ThemeToggle />
 
-      <main className="container mx-auto px-4">
+      <main className="container mx-auto px-4 pt-20">
         {children}
       </main>
 
-      <footer className="text-center py-6 mt-12 border-t">
-        <p>© {new Date().getFullYear()} James Gangi. All rights reserved.</p>
+      <footer className="text-center py-6 mt-12 border-t border-gray-200 dark:border-gray-800">
+        <p className="text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} James Gangi. All rights reserved.</p>
       </footer>
     </div>
   );
