@@ -48,21 +48,25 @@ const nextConfig = {
       }
     ];
   },
-  // Force HTTPS in production
+  // Force HTTPS in production only
   async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: process.env.NEXT_PUBLIC_DOMAIN || '',
-          }
-        ],
-        permanent: true,
-        destination: 'https://:host/:path*'
-      }
-    ];
+    if (process.env.NODE_ENV === 'production') {
+      return [
+        {
+          source: '/:path*',
+          destination: 'https://:host/:path*',
+          permanent: true,
+          basePath: false,
+          has: [
+            {
+              type: 'host',
+              value: '(?!localhost).*'
+            }
+          ]
+        }
+      ];
+    }
+    return [];
   }
 }
 

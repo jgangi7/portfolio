@@ -15,33 +15,39 @@ Personal portfolio website built with Next.js, TypeScript, and TailwindCSS.
    cp .env.local.example .env.local
    ```
 
-3. **Development**
+## Development
+
+### Regular Development
+```bash
+npm run dev
+```
+Open `http://localhost:3000`
+
+### Secure Development (HTTPS)
+```bash
+# Terminal 1: Start Next.js
+npm run dev
+
+# Terminal 2: Start HTTPS proxy
+npx local-ssl-proxy --source 3001 --target 3000 --cert localhost.pem --key localhost-key.pem
+```
+Open `https://localhost:3001`
+
+If you get SSL errors:
+1. Install mkcert globally:
    ```bash
-   npm run dev
+   npm install -g mkcert
    ```
-   Open `http://localhost:3000`
-
-## HTTPS Setup (Required)
-
-1. **Install SSL Proxy**
+2. Create local certificates:
    ```bash
-   npm install -g local-ssl-proxy
+   mkcert create-ca
+   mkcert create-cert
    ```
-
-2. **Run Development**
-   ```bash
-   # Terminal 1
-   npm run dev
-
-   # Terminal 2
-   local-ssl-proxy --source 3001 --target 3000
-   ```
-   Open `https://localhost:3001`
+3. Restart your browser and try again
 
 ## Production Deployment
 
-1. Set `NEXT_PUBLIC_DOMAIN` in `.env.local`
-2. Build and deploy:
+1. Build the project:
    ```bash
    npm run build
    npm start
