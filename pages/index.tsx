@@ -6,16 +6,16 @@ import { Contact } from '../components/sections/Contact';
 import type { Project, Skill } from '../types';
 
 // You can replace these with your actual data
-// const projects: Project[] = [
-//   {
-//     title: "Project 1",
-//     description: "Description of project 1",
-//     technologies: ["React", "TypeScript", "Node.js"],
-//     githubUrl: "https://github.com/yourusername/project1",
-//     liveUrl: "https://project1.com"
-//   },
-//   // Add more projects here
-// ];
+const projects: Project[] = [
+  {
+    title: "Portforlio website",
+    description: "Portforlio website",
+    technologies: ["React", "TypeScript", "Node.js", "TailwindCSS"],
+    githubUrl: "https://github.com/jgangi7/portolio",
+    liveUrl: "https://github.com/jgangi7/portfolio"
+  },
+  // Add more projects here
+];
 
 const skills: Skill[] = [
   {
@@ -38,7 +38,7 @@ const skills: Skill[] = [
 
 const socialLinks = {
   github: "https://github.com/jgangi7",
-  linkedin: "https://linkedin.com/in/jaames-gangi",
+  linkedin: "https://linkedin.com/in/james-gangi",
   email: "gangijames18@gmail.com"
 };
 
@@ -50,7 +50,7 @@ export default function Home() {
         tagline="Software Developer passionate about creating impactful solutions"
         socialLinks={socialLinks}
       />
-      {/* <Projects projects={projects} /> */}
+      <Projects projects={projects} />
       <Skills skills={skills} />
       <Contact email={socialLinks.email} />
     </Layout>
