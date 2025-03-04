@@ -6,11 +6,11 @@
     "contact": "Contact"
   },
   "hero": {
-    "greeting": "Hi, my name is",
+    "greeting": "Hi, I'm",
     "name": "James Gangi",
-    "title": "Software Engineer",
-    "subtitle": "I build things for the web",
-    "description": "I'm a software engineer specializing in building exceptional digital experiences."
+    "title": "Fullstack Software Engineer || Computer Science && Math",
+    "subtitle": "I am highly interested in all things technology and business related. Beyond coding, I work out, play chess, and love to ski! I'm open to trying new activities the same way that I'm willing to learn new tools and technologies most suitable for the job.",
+    "description": "Hey, I'm James Gangi, a full-stack software engineer based in Northern Virginia / Washington DC."
   },
   "about": {
     "title": "About Me",
@@ -24,7 +24,7 @@
     "databases": "Databases"
   },
   "contact": {
-    "title": "Get In Touch",
+    "title": "Contact",
     "email": "Email",
     "linkedin": "LinkedIn",
     "github": "GitHub"
