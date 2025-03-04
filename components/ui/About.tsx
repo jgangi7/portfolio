@@ -22,7 +22,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+    <section id="about" className="min-h-screen py-20 bg-white dark:bg-[#0a192f]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -78,27 +78,30 @@ export default function About() {
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
               {t.raw('connect').title}
             </h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-6">
               <a
                 href="https://github.com/jgangi7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
+                <span className="mr-2">📦</span>
                 {t.raw('connect').github}
               </a>
               <a
                 href="https://linkedin.com/in/james-gangi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
+                <span className="mr-2">💼</span>
                 {t.raw('connect').linkedin}
               </a>
               <a
                 href="mailto:gangijames18@gmail.com"
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
               >
+                <span className="mr-2">📧</span>
                 {t.raw('connect').email}
               </a>
             </div>
