@@ -29,11 +29,45 @@
     }
   },
   "skills": {
-    "title": "Skills",
+    "title": "Skills & Expertise",
     "frontend": "Frontend",
     "backend": "Backend",
     "tools": "Tools",
-    "databases": "Databases"
+    "databases": "Databases",
+    "categories": {
+      "frontend": {
+        "react": "React",
+        "typescript": "TypeScript",
+        "javascript": "JavaScript",
+        "html": "HTML",
+        "css": "CSS",
+        "tailwind": "Tailwind CSS",
+        "nextjs": "Next.js",
+        "angular": "Angular"
+      },
+      "backend": {
+        "nodejs": "Node.js",
+        "express": "Express",
+        "dotnet": ".NET",
+        "csharp": "C#",
+        "python": "Python",
+        "java": "Java"
+      },
+      "databases": {
+        "postgresql": "PostgreSQL",
+        "mongodb": "MongoDB",
+        "mysql": "MySQL",
+        "redis": "Redis"
+      },
+      "tools": {
+        "git": "Git",
+        "docker": "Docker",
+        "kubernetes": "Kubernetes",
+        "aws": "AWS",
+        "azure": "Azure",
+        "jenkins": "Jenkins"
+      }
+    }
   },
   "contact": {
     "title": "Contact",
