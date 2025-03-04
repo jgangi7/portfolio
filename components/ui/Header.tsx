@@ -36,7 +36,8 @@ export default function Header() {
     }
   }, [lastScrollY]);
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
@@ -59,28 +60,31 @@ export default function Header() {
         <nav>
           <ul className="flex space-x-8">
             <li>
-              <button
-                onClick={() => scrollToSection('hero')}
+              <a
+                href="#hero"
+                onClick={(e) => scrollToSection(e, 'hero')}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
               >
                 {t('about')}
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection('skills')}
+              <a
+                href="#skills"
+                onClick={(e) => scrollToSection(e, 'skills')}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
               >
                 {t('skills')}
-              </button>
+              </a>
             </li>
             <li>
-              <button
-                onClick={() => scrollToSection('projects')}
+              <a
+                href="#projects"
+                onClick={(e) => scrollToSection(e, 'projects')}
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
               >
                 {t('projects')}
-              </button>
+              </a>
             </li>
           </ul>
         </nav>
