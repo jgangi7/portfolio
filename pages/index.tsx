@@ -310,11 +310,11 @@ export default function Home() {
                   What I Do
                 </h3>
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Develop full-stack web applications</li>
-                  <li>Design and implement RESTful APIs</li>
-                  <li>Work with cloud services (AWS, Azure)</li>
-                  <li>Practice DevOps and CI/CD</li>
-                  <li>Write clean, maintainable code</li>
+                  <li>Skilled in ReactJS, AngularJS, TypeScript, .NET, C#, and Node.js.</li>
+                  <li>Experience in caching, query optimization, and API efficiency.</li>
+                  <li>Proficient in Micro Front-Ends and modular design.</li>
+                  <li>Strong with GitHub, TFS, and CI/CD</li>
+                  <li>Expertise in SQL, procedure deployment, and optimization.</li>
                 </ul>
               </div>
             </div>
