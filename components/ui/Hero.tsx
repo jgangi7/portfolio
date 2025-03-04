@@ -13,9 +13,7 @@ export const Hero = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center p-6 bg-white dark:bg-[#0a192f] transition-colors duration-300">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/50 to-gray-100/50 dark:from-[#0a192f] dark:via-[#0a192f] dark:to-[#112240] pointer-events-none" />
-
+    
       {/* Content container */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -49,7 +47,7 @@ export const Hero = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-gray-800 dark:text-gray-200 text-xl mb-6 transition-colors duration-300"
           >
-            Software Engineer @ Amazon || Computer Science && Math @ NYU || Polyglot
+           Fullstack Software Engineer || Computer Science && Math  
           </motion.h2>
 
           <motion.div
@@ -59,15 +57,11 @@ export const Hero = () => {
             className="text-gray-600 dark:text-[#8892b0] text-lg space-y-4 transition-colors duration-300"
           >
             <p>
-              Hey, I'm James Gangi, a full-stack software engineer based in New York City.
-            </p>
-            <p>
-              I'm currently a senior studying Computer Science and Math at New York
-              University graduating in May 2025.
+              Hey, I'm James Gangi, a full-stack software engineer based in Northern Virginia / Washinton DC.
             </p>
             <p>
               I am highly interested in all things technology and business related. Beyond
-              coding, I work out, play chess, and make videos. I'm open to trying new activities
+              coding, I work out, play chess, and love to ski! I'm open to trying new activities
               the same way that I'm willing to learn new tools and technologies most suitable for
               the job.
             </p>
