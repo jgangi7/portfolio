@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ThemeToggle } from './ThemeToggle';
 import { Navigation } from './Navigation';
 
@@ -36,9 +36,10 @@ export const Header = () => {
       initial={{ y: 0 }}
       animate={{ y: shouldShow ? 0 : -100 }}
       transition={{ duration: 0.3 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800"
+      className="fixed top-0 left-0 right-0 z-50"
     >
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="absolute inset-0 bg-white/80 dark:bg-[#0a192f]/90 backdrop-blur-md transition-colors duration-300" />
+      <div className="container relative z-10 mx-auto px-4 h-16 flex items-center justify-between">
         <Navigation />
         <ThemeToggle />
       </div>

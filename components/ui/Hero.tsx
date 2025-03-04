@@ -12,9 +12,9 @@ export const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center p-6 bg-[#0a192f] overflow-hidden">
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a192f] via-[#0a192f] to-[#112240] opacity-95" />
+    <div className="relative min-h-screen flex items-center justify-center p-6 bg-white dark:bg-[#0a192f] transition-colors duration-300">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/50 to-gray-100/50 dark:from-[#0a192f] dark:via-[#0a192f] dark:to-[#112240] pointer-events-none" />
 
       {/* Content container */}
       <motion.div
@@ -32,12 +32,14 @@ export const Hero = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <motion.span
-                className="text-[#64ffda] text-4xl inline-block origin-bottom-right"
+                className="text-4xl inline-block origin-bottom-right"
                 animate={waveAnimation}
               >
                 👋
               </motion.span>
-              <h1 className="text-[#64ffda] text-4xl font-bold">I'm James</h1>
+              <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 dark:from-[#64ffda] dark:to-[#64ffdb] transition-colors duration-300">
+                I'm James
+              </h1>
             </div>
           </motion.div>
 
@@ -45,7 +47,7 @@ export const Hero = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-gray-200 text-xl mb-6"
+            className="text-gray-800 dark:text-gray-200 text-xl mb-6 transition-colors duration-300"
           >
             Software Engineer @ Amazon || Computer Science && Math @ NYU || Polyglot
           </motion.h2>
@@ -54,7 +56,7 @@ export const Hero = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-[#8892b0] text-lg space-y-4"
+            className="text-gray-600 dark:text-[#8892b0] text-lg space-y-4 transition-colors duration-300"
           >
             <p>
               Hey, I'm James Gangi, a full-stack software engineer based in New York City.
