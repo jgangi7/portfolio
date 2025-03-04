@@ -1,56 +1,54 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { useLoading } from '../LoadingProvider';
+import { motion } from 'framer-motion';
+import { skills } from '@/data/skills';
+import { Skill } from '@/types';
 
 export const Skills = () => {
-  const { heroLoaded } = useLoading();
-  const [showSkills, setShowSkills] = useState(false);
-
-  useEffect(() => {
-    if (heroLoaded) {
-      // Add delay after Hero loads
-      const timer = setTimeout(() => {
-        setShowSkills(true);
-      }, 1000);
-      return () => clearTimeout(timer);
-    } else {
-      setShowSkills(false);
+  // Group skills by category
+  const skillsByCategory = skills.reduce((acc, skill) => {
+    if (!acc[skill.category]) {
+      acc[skill.category] = [];
     }
-  }, [heroLoaded]);
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    },
-    exit: {
-      opacity: 0,
-      y: -20,
-      transition: {
-        duration: 0.3
-      }
-    }
-  };
+    acc[skill.category].push(skill);
+    return acc;
+  }, {} as Record<string, Skill[]>);
 
   return (
-    <AnimatePresence mode="wait">
-      {showSkills && heroLoaded && (
-        <motion.div
-          key="skills"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          className="w-full py-16 bg-white dark:bg-[#0a192f] transition-colors duration-300"
-        >
-          {/* Your existing Skills content */}
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <section id="skills" className="py-40 bg-white dark:bg-[#0a192f]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-4xl mx-auto px-6"
+      >
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+          Skills & Expertise
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
+            <motion.div
+              key={category}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
+            >
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">
+                {category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {categorySkills.map((skill) => (
+                  <span
+                    key={skill.name}
+                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm"
+                  >
+                    {skill.icon} {skill.name}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </section>
   );
 }; 
