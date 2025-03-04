@@ -1,6 +1,27 @@
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { useEffect } from 'react';
 
 export const Hero = () => {
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+  
+  const springConfig = { damping: 25, stiffness: 150 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
+
+  useEffect(() => {
+    const moveCursor = (e: MouseEvent) => {
+      cursorX.set(e.clientX - 16); // Offset by half the circle width
+      cursorY.set(e.clientY - 16); // Offset by half the circle height
+    };
+
+    window.addEventListener('mousemove', moveCursor);
+
+    return () => {
+      window.removeEventListener('mousemove', moveCursor);
+    };
+  }, [cursorX, cursorY]);
+
   const waveAnimation = {
     rotate: [0, 20, -20, 20, 0], // Rotation angles for waving
     transition: {
@@ -13,6 +34,15 @@ export const Hero = () => {
 
   return (
     <div className="relative h-[90vh] flex items-center justify-center px-6 pt-16 pb-8 bg-white dark:bg-[#0a192f] transition-colors duration-300">
+      {/* Cursor tracer */}
+      <motion.div
+        className="fixed pointer-events-none w-8 h-8 rounded-full bg-blue-400/30 dark:bg-blue-400/20 mix-blend-screen"
+        style={{
+          x: cursorXSpring,
+          y: cursorYSpring,
+          zIndex: 9999,
+        }}
+      />
       
       {/* Content container */}
       <motion.div
