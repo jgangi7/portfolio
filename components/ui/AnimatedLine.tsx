@@ -29,13 +29,18 @@ const PointLabel = ({ position, letter }: { position: Point; letter: string }) =
 
 const AnimatedLine = () => {
   const lineRef = useRef<THREE.Line>(null);
+  const pointsRef = useRef<{ x: number; y: number; z: number }[]>([]);
   const [points, setPoints] = useState<Point[]>(() => {
-    // Initialize with points spread across the full width
-    const numPoints = 7; // More points for smoother line
-    return Array.from({ length: numPoints }, (_, i) => {
-      const x = (i - (numPoints - 1) / 2) * (12 / (numPoints - 1)); // Wider spread (12 units)
-      return [x, Math.sin(i / 2) * 1.2, 0] as Point; // Increased amplitude
+    const numPoints = 7;
+    const initialPoints = Array.from({ length: numPoints }, (_, i) => {
+      const x = (i - (numPoints - 1) / 2) * (12 / (numPoints - 1));
+      const y = Math.sin(i / 2) * 1.2;
+      return [x, y, 0] as Point;
     });
+    
+    // Initialize the ref with the same points
+    pointsRef.current = initialPoints.map(([x, y, z]) => ({ x, y, z }));
+    return initialPoints;
   });
 
   // Generate random letters once on mount
@@ -48,31 +53,40 @@ const AnimatedLine = () => {
 
     const timeline = gsap.timeline({
       repeat: -1,
-      defaults: { ease: "power1.inOut" }
+      defaults: { ease: "power2.inOut" }
     });
 
     const animate = () => {
-      const newPoints = points.map((point) => {
-        // Random position within bounds
-        const y = (Math.random() - 0.5) * 3; // Increased random range
-        return [point[0], y, point[2]] as Point;
-      });
+      // Create target positions for each point
+      const targetPositions = pointsRef.current.map((point) => ({
+        y: (Math.random() - 0.5) * 3
+      }));
 
-      // Add animation sequence with pauses
       timeline
-        .to(points, {
-          duration: 6, // Slower animation
-          onUpdate: () => {
-            const currentPoints = points.map((point, i) => {
-              const progress = timeline.progress();
-              const targetY = newPoints[i][1];
-              const currentY = point[1] + (targetY - point[1]) * progress;
-              return [point[0], currentY, point[2]] as Point;
-            });
-            setPoints(currentPoints);
+        .to(pointsRef.current, {
+          duration: 6,
+          y: (index) => targetPositions[index].y,
+          stagger: {
+            each: 0.1,
+            from: "random"
           },
+          onUpdate: () => {
+            setPoints(pointsRef.current.map(({ x, y, z }) => [x, y, z]));
+          }
         })
-        .to({}, { duration: 1 }); // 1 second pause
+        .to({}, { duration: 1 }) // Pause
+        .to(pointsRef.current, {
+          duration: 6,
+          y: (index) => points[index][1], // Return to original positions
+          stagger: {
+            each: 0.1,
+            from: "random"
+          },
+          onUpdate: () => {
+            setPoints(pointsRef.current.map(({ x, y, z }) => [x, y, z]));
+          }
+        })
+        .to({}, { duration: 1 }); // Pause
     };
 
     animate();
