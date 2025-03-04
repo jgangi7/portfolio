@@ -6,19 +6,19 @@ export default function About() {
 
   // Create arrays for skills and facts using the flattened structure
   const skills = [
-    t('whatIDo.skill.0'),
-    t('whatIDo.skill.1'),
-    t('whatIDo.skill.2'),
-    t('whatIDo.skill.3'),
-    t('whatIDo.skill.4'),
+    t.raw('whatIDo').skills[0],
+    t.raw('whatIDo').skills[1],
+    t.raw('whatIDo').skills[2],
+    t.raw('whatIDo').skills[3],
+    t.raw('whatIDo').skills[4],
   ];
 
   const facts = [
-    t('quickFacts.fact.0'),
-    t('quickFacts.fact.1'),
-    t('quickFacts.fact.2'),
-    t('quickFacts.fact.3'),
-    t('quickFacts.fact.4'),
+    t.raw('quickFacts').facts[0],
+    t.raw('quickFacts').facts[1],
+    t.raw('quickFacts').facts[2],
+    t.raw('quickFacts').facts[3],
+    t.raw('quickFacts').facts[4],
   ];
 
   return (
@@ -36,15 +36,15 @@ export default function About() {
           {/* Professional Journey */}
           <div className="mb-12">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              {t('professional.title')}
+              {t.raw('professional').title}
             </h3>
-            <p className="text-gray-700 dark:text-gray-300">{t('professional.content')}</p>
+            <p className="text-gray-700 dark:text-gray-300">{t.raw('professional').content}</p>
           </div>
 
           {/* What I Do */}
           <div className="mb-12">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              {t('whatIDo.title')}
+              {t.raw('whatIDo').title}
             </h3>
             <ul className="space-y-3">
               {skills.map((skill, index) => (
@@ -59,7 +59,7 @@ export default function About() {
           {/* Quick Facts */}
           <div className="mb-12">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              {t('quickFacts.title')}
+              {t.raw('quickFacts').title}
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {facts.map((fact, index) => (
@@ -76,7 +76,7 @@ export default function About() {
           {/* Connect */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              {t('connect.title')}
+              {t.raw('connect').title}
             </h3>
             <div className="flex space-x-4">
               <a
@@ -85,7 +85,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
               >
-                {t('connect.github')}
+                {t.raw('connect').github}
               </a>
               <a
                 href="https://linkedin.com/in/james-gangi"
@@ -93,13 +93,13 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
               >
-                {t('connect.linkedin')}
+                {t.raw('connect').linkedin}
               </a>
               <a
                 href="mailto:gangijames18@gmail.com"
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
               >
-                {t('connect.email')}
+                {t.raw('connect').email}
               </a>
             </div>
           </div>
