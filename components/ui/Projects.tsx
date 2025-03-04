@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
+import { SiTypescript, SiVite, SiMui, SiSharp, SiDotnet, SiSwagger, SiHiveBlockchain } from 'react-icons/si';
+import { TbApi } from 'react-icons/tb';
 
 interface Project {
   title: string;
   description: string;
-  technologies: string[];
+  technologies: {
+    name: string;
+    icon: React.ReactNode;
+  }[];
   imageUrl?: string;
   githubUrl?: string;
   liveUrl?: string;
@@ -13,23 +18,29 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Portfolio Website",
-    description: "A modern, responsive portfolio website built with Next.js, TypeScript, and TailwindCSS. Features dark mode, internationalization, and smooth animations.",
-    technologies: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
-    githubUrl: "https://github.com/jgangi7/portfolio",
-    liveUrl: "https://jamesgangi.com"
+    title: "Stock Portfolio Analytics",
+    description: "A React TypeScript application for tracking and visualizing stock portfolio performance. Features real-time stock price updates, portfolio allocation visualization, and gain/loss tracking.",
+    technologies: [
+      { name: "React", icon: <FaReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Vite", icon: <SiVite /> },
+      { name: "Material-UI", icon: <SiMui /> },
+      { name: "Recharts", icon: <FaDatabase /> },
+      { name: "Alpha Vantage API", icon: <TbApi /> }
+    ],
+    githubUrl: "https://github.com/jgangi7/portfolio-visualizer",
   },
   {
-    title: "E-commerce Platform",
-    description: "Full-stack e-commerce platform with user authentication, product management, and payment integration.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/jgangi7/ecommerce-platform",
-  },
-  {
-    title: "Task Management System",
-    description: "A collaborative task management system with real-time updates and team collaboration features.",
-    technologies: ["Angular", ".NET", "SQL Server", "SignalR"],
-    githubUrl: "https://github.com/jgangi7/task-manager",
+    title: "C# Blockchain API",
+    description: "A simple blockchain implementation in C# using ASP.NET Core Web API. Features block creation with proof-of-work, chain validation, and RESTful endpoints with Swagger documentation.",
+    technologies: [
+      { name: "C#", icon: <SiSharp /> },
+      { name: "ASP.NET Core", icon: <SiDotnet /> },
+      { name: "REST API", icon: <TbApi /> },
+      { name: "Swagger", icon: <SiSwagger /> },
+      { name: "Blockchain", icon: <SiHiveBlockchain /> }
+    ],
+    githubUrl: "https://github.com/jgangi7/blockchain-c-sharp",
   }
 ];
 
@@ -71,10 +82,11 @@ export default function Projects() {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
-                      key={tech}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm"
+                      key={tech.name}
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm flex items-center gap-2"
                     >
-                      {tech}
+                      <span className="text-base">{tech.icon}</span>
+                      {tech.name}
                     </span>
                   ))}
                 </div>
