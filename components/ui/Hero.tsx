@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useLoading } from '../LoadingProvider';
+import { AnimatedLineCanvas } from './AnimatedLine';
 
 export const Hero = () => {
   const { setHeroLoaded } = useLoading();
@@ -138,6 +139,9 @@ export const Hero = () => {
             variants={containerVariants}
             className="relative z-10 max-w-3xl w-full"
           >
+            {/* Animated Line */}
+            <AnimatedLineCanvas />
+
             {/* Main content */}
             <div className="flex flex-col items-start space-y-4">
               <motion.div variants={itemVariants}>
