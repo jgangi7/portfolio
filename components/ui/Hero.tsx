@@ -111,9 +111,7 @@ export default function Hero() {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-            >
-              {t('common.loading')}
-            </motion.p>
+            />
           </motion.div>
         </motion.div>
       ) : (
