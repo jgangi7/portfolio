@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
-import { ThemeToggle } from './ThemeToggle';
-import { Navigation } from './Navigation';
+import { Header } from './Header';
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,11 +8,11 @@ interface LayoutProps {
   description?: string;
 }
 
-export const Layout: React.FC<LayoutProps> = ({
+export const Layout = ({
   children,
   title = 'James Gangi - Software Developer Portfolio',
   description = 'Software Developer Portfolio showcasing my projects and skills',
-}) => {
+}: LayoutProps) => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
       <Head>
@@ -23,8 +22,7 @@ export const Layout: React.FC<LayoutProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Navigation />
-      <ThemeToggle />
+      <Header />
 
       <main className="container mx-auto px-4 pt-20">
         {children}
