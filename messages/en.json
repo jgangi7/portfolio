@@ -15,36 +15,24 @@
   "about": {
     "title": "About",
     "content": "I'm passionate about creating software that improves lives.",
-    "professional": {
-      "title": "Professional Journey",
-      "content": "Throughout my career, I've worked with a diverse range of technologies and frameworks, focusing on creating efficient, maintainable, and user-friendly applications. My experience spans from front-end development with React and Angular to back-end systems using Node.js and .NET."
-    },
-    "whatIDo": {
-      "title": "What I Do",
-      "skills": [
-        "Skilled in ReactJS, AngularJS, TypeScript, .NET, C#, and Node.js.",
-        "Experience in caching, query optimization, and API efficiency.",
-        "Proficient in Micro Front-Ends and modular design.",
-        "Strong with GitHub, TFS, and CI/CD",
-        "Expertise in SQL, procedure deployment, and optimization."
-      ]
-    },
-    "quickFacts": {
-      "title": "Quick Facts",
-      "facts": [
-        "🎓 Computer Science Background",
-        "💼 Full-Stack Developer",
-        "🌟 Problem Solver",
-        "📚 Continuous Learner",
-        "🤝 Team Player"
-      ]
-    },
-    "connect": {
-      "title": "Connect With Me",
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "email": "Email"
-    }
+    "professional.title": "Professional Journey",
+    "professional.content": "Throughout my career, I've worked with a diverse range of technologies and frameworks, focusing on creating efficient, maintainable, and user-friendly applications. My experience spans from front-end development with React and Angular to back-end systems using Node.js and .NET.",
+    "whatIDo.title": "What I Do",
+    "whatIDo.skill.0": "Skilled in ReactJS, AngularJS, TypeScript, .NET, C#, and Node.js.",
+    "whatIDo.skill.1": "Experience in caching, query optimization, and API efficiency.",
+    "whatIDo.skill.2": "Proficient in Micro Front-Ends and modular design.",
+    "whatIDo.skill.3": "Strong with GitHub, TFS, and CI/CD",
+    "whatIDo.skill.4": "Expertise in SQL, procedure deployment, and optimization.",
+    "quickFacts.title": "Quick Facts",
+    "quickFacts.fact.0": "🎓 Computer Science Background",
+    "quickFacts.fact.1": "💼 Full-Stack Developer",
+    "quickFacts.fact.2": "🌟 Problem Solver",
+    "quickFacts.fact.3": "📚 Continuous Learner",
+    "quickFacts.fact.4": "🤝 Team Player",
+    "connect.title": "Connect With Me",
+    "connect.github": "GitHub",
+    "connect.linkedin": "LinkedIn",
+    "connect.email": "Email"
   },
   "skills": {
     "title": "Skills & Expertise",
