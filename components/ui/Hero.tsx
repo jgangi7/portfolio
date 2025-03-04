@@ -1,26 +1,20 @@
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const Hero = () => {
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
-  
-  const springConfig = { damping: 25, stiffness: 150 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 16); // Offset by half the circle width
-      cursorY.set(e.clientY - 16); // Offset by half the circle height
+    const handleMouseMove = (event: { clientX: any; clientY: any; }) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    window.addEventListener('mousemove', moveCursor);
+    window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener('mousemove', moveCursor);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [cursorX, cursorY]);
+  }, []);
 
   const waveAnimation = {
     rotate: [0, 20, -20, 20, 0], // Rotation angles for waving
@@ -38,9 +32,11 @@ export const Hero = () => {
       <motion.div
         className="fixed pointer-events-none w-8 h-8 rounded-full bg-blue-400/30 dark:bg-blue-400/20 mix-blend-screen"
         style={{
-          x: cursorXSpring,
-          y: cursorYSpring,
-          zIndex: 9999,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          pointerEvents: 'none',
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
         }}
       />
       
