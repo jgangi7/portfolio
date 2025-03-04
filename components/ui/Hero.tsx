@@ -66,6 +66,51 @@ export const Hero = () => {
               the job.
             </p>
           </motion.div>
+
+          {/* Projects section */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="mt-6 w-full"
+          >
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+              Featured Projects
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <motion.a
+                href="https://github.com/jgangi7/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-[#64ffda] transition-all duration-300"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">
+                  Test header
+                </h4>
+                <p className="text-gray-600 dark:text-[#8892b0] text-sm">
+                  Test
+                </p>
+              </motion.a>
+
+              <motion.a
+                href="https://github.com/yourusername/project2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-[#64ffda] transition-all duration-300"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">
+                  Project Name 2
+                </h4>
+                <p className="text-gray-600 dark:text-[#8892b0] text-sm">
+                  Brief description of your second featured project. Highlight key technologies and achievements.
+                </p>
+              </motion.a>
+            </div>
+          </motion.div>
         </div>
       </motion.div>
     </div>
