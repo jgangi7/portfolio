@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import Spline from '@splinetool/react-spline/dist/Spline';
+import Spline from '@splinetool/react-spline';
 
 interface Project {
   title: string;
