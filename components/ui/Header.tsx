@@ -56,36 +56,7 @@ export default function Header() {
     >
       <div className="absolute inset-0 bg-white/80 dark:bg-[#0a192f]/90 backdrop-blur-md transition-colors duration-300" />
       <div className="container relative z-10 mx-auto px-4 h-16 flex items-center justify-between">
-        <nav>
-          <ul className="flex space-x-8">
-            <li>
-              <button
-                onClick={() => scrollToSection('hero')}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-              >
-                {t('about')}
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection('skills')}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-              >
-                {t('skills')}
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-              >
-                {t('projects')}
-              </button>
-            </li>
-          </ul>
-        </nav>
         <div className="flex items-center space-x-4">
-          <LanguageSelector />
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -102,6 +73,7 @@ export default function Header() {
               </svg>
             )}
           </motion.button>
+          <LanguageSelector />
         </div>
       </div>
     </motion.header>
