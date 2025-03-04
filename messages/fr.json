@@ -13,15 +13,49 @@
     "description": "Bonjour, je suis James Gangi, un ingénieur logiciel full-stack basé en Virginie du Nord / Washington DC."
   },
   "about": {
-    "title": "À Propos de Moi",
-    "content": "Je suis passionné par la création de logiciels qui améliorent la vie."
+    "title": "À Propos",
+    "content": "Je suis passionné par la création de logiciels qui améliorent la vie.",
+    "professional": {
+      "title": "Parcours Professionnel",
+      "content": "Tout au long de ma carrière, j'ai travaillé avec une large gamme de technologies et de frameworks, en me concentrant sur la création d'applications efficaces, maintenables et conviviales. Mon expérience s'étend du développement front-end avec React et Angular aux systèmes back-end utilisant Node.js et .NET."
+    },
+    "whatIDo": {
+      "title": "Ce Que Je Fais",
+      "skills": [
+        "Compétent en ReactJS, AngularJS, TypeScript, .NET, C# et Node.js.",
+        "Expérience en mise en cache, optimisation des requêtes et efficacité des API.",
+        "Maîtrise des Micro Front-Ends et de la conception modulaire.",
+        "Solide expérience avec GitHub, TFS et CI/CD",
+        "Expertise en SQL, déploiement de procédures et optimisation."
+      ]
+    },
+    "quickFacts": {
+      "title": "En Bref",
+      "facts": [
+        "🎓 Formation en Informatique",
+        "💼 Développeur Full-Stack",
+        "🌟 Résolveur de Problèmes",
+        "📚 Apprenant Continu",
+        "🤝 Esprit d'Équipe"
+      ]
+    },
+    "connect": {
+      "title": "Me Contacter",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
   },
   "skills": {
-    "title": "Compétences",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "tools": "Outils",
-    "databases": "Bases de données"
+    "title": "Compétences & Expertise",
+    "categories": {
+      "languages": "Langages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de données",
+      "cloud": "Cloud & DevOps",
+      "testing": "Tests & Outils"
+    }
   },
   "contact": {
     "title": "Me Contacter",

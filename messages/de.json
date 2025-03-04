@@ -13,15 +13,49 @@
     "description": "Hallo, ich bin James Gangi, ein Fullstack-Softwareentwickler aus Northern Virginia / Washington DC."
   },
   "about": {
-    "title": "Über Mich",
-    "content": "Ich bin leidenschaftlich daran interessiert, Software zu entwickeln, die das Leben verbessert."
+    "title": "Über mich",
+    "content": "Ich bin leidenschaftlich daran interessiert, Software zu entwickeln, die das Leben verbessert.",
+    "professional": {
+      "title": "Beruflicher Werdegang",
+      "content": "Im Laufe meiner Karriere habe ich mit einer Vielzahl von Technologien und Frameworks gearbeitet und mich dabei auf die Entwicklung effizienter, wartbarer und benutzerfreundlicher Anwendungen konzentriert. Meine Erfahrung reicht von der Frontend-Entwicklung mit React und Angular bis hin zu Backend-Systemen mit Node.js und .NET."
+    },
+    "whatIDo": {
+      "title": "Was Ich Mache",
+      "skills": [
+        "Erfahren in ReactJS, AngularJS, TypeScript, .NET, C# und Node.js.",
+        "Erfahrung in Caching, Query-Optimierung und API-Effizienz.",
+        "Kompetent in Micro Front-Ends und modularem Design.",
+        "Versiert mit GitHub, TFS und CI/CD",
+        "Expertise in SQL, Prozedur-Deployment und Optimierung."
+      ]
+    },
+    "quickFacts": {
+      "title": "Kurz & Knapp",
+      "facts": [
+        "🎓 Informatik-Hintergrund",
+        "💼 Fullstack-Entwickler",
+        "🌟 Problemlöser",
+        "📚 Kontinuierlicher Lerner",
+        "🤝 Teamplayer"
+      ]
+    },
+    "connect": {
+      "title": "Kontakt",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "E-Mail"
+    }
   },
   "skills": {
-    "title": "Fähigkeiten",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "tools": "Werkzeuge",
-    "databases": "Datenbanken"
+    "title": "Fähigkeiten & Expertise",
+    "categories": {
+      "languages": "Programmiersprachen",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Datenbanken",
+      "cloud": "Cloud & DevOps",
+      "testing": "Tests & Werkzeuge"
+    }
   },
   "contact": {
     "title": "Kontakt",

@@ -17,7 +17,12 @@ export default function LanguageSelector() {
 
   const handleLanguageChange = (locale: string) => {
     const { pathname, asPath, query } = router;
-    router.push({ pathname, query }, asPath, { locale });
+    const currentScrollPosition = window.scrollY;
+    router.push({ pathname, query }, asPath, { locale })
+      .then(() => {
+        // Restore scroll position after language change
+        window.scrollTo(0, currentScrollPosition);
+      });
   };
 
   return (

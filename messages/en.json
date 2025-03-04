@@ -13,15 +13,49 @@
     "description": "Hey, I'm James Gangi, a full-stack software engineer based in Northern Virginia / Washington DC."
   },
   "about": {
-    "title": "About Me",
-    "content": "I'm passionate about creating software that improves lives."
+    "title": "About",
+    "content": "I'm passionate about creating software that improves lives.",
+    "professional": {
+      "title": "Professional Journey",
+      "content": "Throughout my career, I've worked with a diverse range of technologies and frameworks, focusing on creating efficient, maintainable, and user-friendly applications. My experience spans from front-end development with React and Angular to back-end systems using Node.js and .NET."
+    },
+    "whatIDo": {
+      "title": "What I Do",
+      "skills": [
+        "Skilled in ReactJS, AngularJS, TypeScript, .NET, C#, and Node.js.",
+        "Experience in caching, query optimization, and API efficiency.",
+        "Proficient in Micro Front-Ends and modular design.",
+        "Strong with GitHub, TFS, and CI/CD",
+        "Expertise in SQL, procedure deployment, and optimization."
+      ]
+    },
+    "quickFacts": {
+      "title": "Quick Facts",
+      "facts": [
+        "🎓 Computer Science Background",
+        "💼 Full-Stack Developer",
+        "🌟 Problem Solver",
+        "📚 Continuous Learner",
+        "🤝 Team Player"
+      ]
+    },
+    "connect": {
+      "title": "Connect With Me",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
   },
   "skills": {
-    "title": "Skills",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "tools": "Tools",
-    "databases": "Databases"
+    "title": "Skills & Expertise",
+    "categories": {
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "cloud": "Cloud & DevOps",
+      "testing": "Testing & Tools"
+    }
   },
   "contact": {
     "title": "Contact",
