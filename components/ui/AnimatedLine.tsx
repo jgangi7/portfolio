@@ -2,10 +2,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Line } from "@react-three/drei";
 import gsap from "gsap";
+import * as THREE from 'three';
+
+type Point = [number, number, number];
 
 const AnimatedLine = () => {
-  const lineRef = useRef();
-  const [points, setPoints] = useState([
+  const lineRef = useRef<THREE.Line>(null);
+  const [points, setPoints] = useState<Point[]>([
     [-2, Math.random() * 2 - 1, 0],
     [-1, Math.random() * 2 - 1, 0],
     [0, Math.random() * 2 - 1, 0],
@@ -15,10 +18,11 @@ const AnimatedLine = () => {
 
   useEffect(() => {
     const animatePoints = () => {
-      gsap.to(points, {
+      const newPoints = points.map((point) => [...point] as Point);
+      gsap.to(newPoints, {
         duration: 2,
-        y: () => points.map(() => Math.random() * 2 - 1),
-        onUpdate: () => setPoints([...points]),
+        y: () => Math.random() * 2 - 1,
+        onUpdate: () => setPoints([...newPoints]),
         ease: "sine.inOut",
         repeat: -1,
         yoyo: true,
