@@ -7,7 +7,7 @@ export const Navigation = () => {
   const isActive = (path: string) => router.pathname === path;
 
   return (
-    <nav className="fixed top-4 left-4 z-10">
+    <nav>
       <ul className="flex space-x-6">
         <li>
           <Link

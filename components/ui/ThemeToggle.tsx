@@ -15,7 +15,7 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="fixed top-4 right-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-800 transition-colors"
+      className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 transition-colors"
       aria-label="Toggle theme"
     >
       <div className="w-8 h-12 relative">
