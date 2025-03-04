@@ -1,12 +1,16 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
 import { Header } from './Header';
+import { Footer } from './Footer';
+import { withLoadingGuard } from '../LoadingProvider';
 
 interface LayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
 }
+
+const GuardedFooter = withLoadingGuard(Footer, 900); // 0.9s delay after Hero
 
 export const Layout = ({
   children,
@@ -28,9 +32,7 @@ export const Layout = ({
         {children}
       </main>
 
-      <footer className="text-center py-6 mt-12 border-t border-gray-200 dark:border-gray-800">
-        <p className="text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} James Gangi. All rights reserved.</p>
-      </footer>
+      <GuardedFooter />
     </div>
   );
 }; 
