@@ -44,6 +44,7 @@ declare module '@react-three/drei' {
     color?: string;
     anchorX?: 'center' | 'left' | 'right';
     anchorY?: 'bottom' | 'top' | 'middle';
+    font?: string;
   }
 
   export const Line: React.FC<LineProps>;

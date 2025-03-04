@@ -153,7 +153,7 @@ export const Hero = () => {
                     👋
                   </motion.span>
                   <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 dark:from-[#64ffda] dark:to-[#64ffdb] transition-colors duration-300">
-                    I'm James
+                   Hi! I'm James
                   </h1>
                 </div>
               </motion.div>
