@@ -37,7 +37,17 @@ declare module '@react-three/drei' {
     className?: string;
   }
 
+  export interface TextProps {
+    children: ReactNode;
+    position: [number, number, number];
+    fontSize?: number;
+    color?: string;
+    anchorX?: 'center' | 'left' | 'right';
+    anchorY?: 'bottom' | 'top' | 'middle';
+  }
+
   export const Line: React.FC<LineProps>;
+  export const Text: React.FC<TextProps>;
 }
 
 declare module 'gsap' {
