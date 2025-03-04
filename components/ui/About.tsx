@@ -22,88 +22,85 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="min-h-screen py-20 bg-white dark:bg-[#0a192f]">
-      <div className="container mx-auto px-4">
+    <section id="about" className="h-screen pt-80 bg-white dark:bg-[#0a192f] overflow-y-auto">
+      <div className="container mx-auto px-4 pb-20">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">{t('title')}</h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-12">{t('content')}</p>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            {t('title')}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="md:col-span-2 space-y-6 text-gray-700 dark:text-gray-300">
+              <p className="text-lg leading-relaxed">
+                {t('content')}
+              </p>
 
-          {/* Professional Journey */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              {t.raw('professional').title}
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300">{t.raw('professional').content}</p>
-          </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {t.raw('professional').title}
+                </h3>
+                <p>
+                  {t.raw('professional').content}
+                </p>
+              </div>
 
-          {/* What I Do */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              {t.raw('whatIDo').title}
-            </h3>
-            <ul className="space-y-3">
-              {skills.map((skill, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  <span className="text-gray-700 dark:text-gray-300">{skill}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {t.raw('whatIDo').title}
+                </h3>
+                <ul className="list-disc list-inside space-y-2">
+                  {skills.map((skill, index) => (
+                    <li key={index} className="leading-relaxed">{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
-          {/* Quick Facts */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              {t.raw('quickFacts').title}
-            </h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {facts.map((fact, index) => (
-                <li
-                  key={index}
-                  className="text-gray-700 dark:text-gray-300 flex items-center space-x-2"
-                >
-                  <span>{fact}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div className="space-y-6 sticky top-6">
+              <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  {t.raw('quickFacts').title}
+                </h3>
+                <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                  {facts.map((fact, index) => (
+                    <li key={index} className="leading-relaxed">{fact}</li>
+                  ))}
+                </ul>
+              </div>
 
-          {/* Connect */}
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              {t.raw('connect').title}
-            </h3>
-            <div className="flex space-x-6">
-              <a
-                href="https://github.com/jgangi7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-              >
-                <span className="mr-2">📦</span>
-                {t.raw('connect').github}
-              </a>
-              <a
-                href="https://linkedin.com/in/james-gangi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-              >
-                <span className="mr-2">💼</span>
-                {t.raw('connect').linkedin}
-              </a>
-              <a
-                href="mailto:gangijames18@gmail.com"
-                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-              >
-                <span className="mr-2">📧</span>
-                {t.raw('connect').email}
-              </a>
+              <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  {t.raw('connect').title}
+                </h3>
+                <div className="space-y-3">
+                  <a
+                    href="https://github.com/jgangi7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  >
+                    <span className="mr-2">📦</span> {t.raw('connect').github}
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/james-gangi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  >
+                    <span className="mr-2">💼</span> {t.raw('connect').linkedin}
+                  </a>
+                  <a
+                    href="mailto:gangijames18@gmail.com"
+                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  >
+                    <span className="mr-2">📧</span> {t.raw('connect').email}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
