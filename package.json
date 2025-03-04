@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@splinetool/react-spline": "^3.0.0",
     "autoprefixer": "^10.4.17",
     "framer-motion": "^11.0.3",
     "next": "14.1.0",
