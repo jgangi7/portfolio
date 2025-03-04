@@ -22,8 +22,8 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="h-screen pt-80 bg-white dark:bg-[#0a192f] overflow-y-auto">
-      <div className="container mx-auto px-4 pb-20">
+    <section id="about" className="min-h-screen pt-80 pb-20 bg-white dark:bg-[#0a192f]">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -60,7 +60,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="space-y-6 sticky top-6">
+            <div className="space-y-6">
               <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                   {t.raw('quickFacts').title}
