@@ -1,0 +1,40 @@
+{
+  "navigation": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "name": "James Gangi",
+    "title": "Software-Entwickler",
+    "subtitle": "Ich entwickle Weblösungen",
+    "description": "Ich bin ein Software-Entwickler, spezialisiert auf die Entwicklung außergewöhnlicher digitaler Erlebnisse."
+  },
+  "about": {
+    "title": "Über Mich",
+    "content": "Ich bin leidenschaftlich daran interessiert, Software zu entwickeln, die das Leben verbessert."
+  },
+  "skills": {
+    "title": "Fähigkeiten",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Werkzeuge",
+    "databases": "Datenbanken"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "email": "E-Mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "languages": {
+      "en": "EN",
+      "fr": "FR",
+      "de": "DE"
+    }
+  }
+} 

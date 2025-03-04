@@ -1,0 +1,40 @@
+{
+  "navigation": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je m'appelle",
+    "name": "James Gangi",
+    "title": "Ingénieur Logiciel",
+    "subtitle": "Je crée des solutions web",
+    "description": "Je suis un ingénieur logiciel spécialisé dans la création d'expériences numériques exceptionnelles."
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "content": "Je suis passionné par la création de logiciels qui améliorent la vie."
+  },
+  "skills": {
+    "title": "Compétences",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Outils",
+    "databases": "Bases de données"
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "languages": {
+      "en": "AN",
+      "fr": "FR",
+      "de": "AL"
+    }
+  }
+} 

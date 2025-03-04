@@ -1,0 +1,40 @@
+{
+  "navigation": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, my name is",
+    "name": "James Gangi",
+    "title": "Software Engineer",
+    "subtitle": "I build things for the web",
+    "description": "I'm a software engineer specializing in building exceptional digital experiences."
+  },
+  "about": {
+    "title": "About Me",
+    "content": "I'm passionate about creating software that improves lives."
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools",
+    "databases": "Databases"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "common": {
+    "loading": "Loading...",
+    "languages": {
+      "en": "EN",
+      "fr": "FR",
+      "de": "DE"
+    }
+  }
+} 
