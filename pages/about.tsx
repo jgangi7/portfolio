@@ -21,8 +21,8 @@ const AboutPage = () => {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-2 space-y-6 text-gray-700 dark:text-gray-300">
             <p className="text-lg leading-relaxed">
-              Hi there! I'm James Gangi, a passionate Software Developer with a strong foundation in full-stack development. 
-              I specialize in building scalable web applications using modern technologies and best practices.
+            Hi! I'm James Gangi, a passionate Software Developer with a strong foundation in full-stack development. I excel at building scalable web applications using the newest technologies and best practices.
+            I have experience with a wide variety of technologies and frameworks throughout my career.
             </p>
 
             <div className="space-y-4">
@@ -30,10 +30,9 @@ const AboutPage = () => {
                 Professional Journey
               </h2>
               <p>
-                Throughout my career, I've worked with a diverse range of technologies and frameworks, 
-                focusing on creating efficient, maintainable, and user-friendly applications. 
-                My experience spans from front-end development with React and Angular to back-end 
-                systems using Node.js and .NET.
+                Throughout my career I have been developing effective, sustainable, and user-friendly applications.
+My expertise varies from front-end development with React and Angular to back-end
+building systems using Node.js, TypeScript, C# and.NET.
               </p>
             </div>
 
@@ -42,11 +41,11 @@ const AboutPage = () => {
                 What I Do
               </h2>
               <ul className="list-disc list-inside space-y-2">
-                <li>Develop full-stack web applications</li>
-                <li>Design and implement RESTful APIs</li>
-                <li>Work with cloud services (AWS, Azure)</li>
-                <li>Practice DevOps and CI/CD</li>
-                <li>Write clean, maintainable code</li>
+                <li>Skilled in ReactJS, AngularJS, TypeScript, .NET, C#, RxJS and Node.js.</li>
+                <li>Experience in redis caching, query optimization, API security and efficiency.</li>
+                <li>Proficient in Web Based Micro Front-Ends and modular design.</li>
+                <li>Strong with GitHub, TFS, and automated pipelines.</li>
+                <li>Expertise in SQL, database management, and optimization.</li>
               </ul>
             </div>
 
@@ -56,8 +55,7 @@ const AboutPage = () => {
               </h2>
               <p>
                 When I'm not coding, I enjoy staying up-to-date with the latest technology trends,
-                contributing to open-source projects, and continuously learning new skills.
-                I believe in writing clean, efficient code and creating solutions that make a real impact.
+                contributing to open-source projects, and continuously learning new skills. I particularly like skiing, traveling, and staying fit!
               </p>
             </div>
           </div>
