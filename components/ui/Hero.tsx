@@ -1,11 +1,13 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { useLoading } from '../LoadingProvider';
 
-export const Hero = () => {
+export default function Hero() {
   const { setHeroLoaded } = useLoading();
   const [isHeroLoading, setIsHeroLoading] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const t = useTranslations('hero');
 
   useEffect(() => {
     const handleMouseMove = (event: { clientX: any; clientY: any; }) => {
@@ -109,9 +111,7 @@ export const Hero = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-            >
-              Loading...
-            </motion.p>
+            />
           </motion.div>
         </motion.div>
       ) : (
@@ -149,7 +149,7 @@ export const Hero = () => {
                     👋
                   </motion.span>
                   <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 dark:from-[#64ffda] dark:to-[#64ffdb] transition-colors duration-300">
-                    I'm James
+                    {t('greeting')} {t('name')}
                   </h1>
                 </div>
               </motion.div>
@@ -158,22 +158,15 @@ export const Hero = () => {
                 variants={itemVariants}
                 className="text-gray-800 dark:text-gray-200 text-xl transition-colors duration-300"
               >
-                Fullstack Software Engineer || Computer Science && Math  
+                {t('title')}
               </motion.h2>
 
               <motion.div
                 variants={itemVariants}
                 className="text-gray-600 dark:text-[#8892b0] text-lg space-y-3 transition-colors duration-300"
               >
-                <p>
-                  Hey, I'm James Gangi, a full-stack software engineer based in Northern Virginia / Washington DC.
-                </p>
-                <p>
-                  I am highly interested in all things technology and business related. Beyond
-                  coding, I work out, play chess, and love to ski! I'm open to trying new activities
-                  the same way that I'm willing to learn new tools and technologies most suitable for
-                  the job.
-                </p>
+                <p>{t('description')}</p>
+                <p>{t('subtitle')}</p>
               </motion.div>
             </div>
           </motion.div>
@@ -181,4 +174,4 @@ export const Hero = () => {
       )}
     </AnimatePresence>
   );
-}; 
+} 
