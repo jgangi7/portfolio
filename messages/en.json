@@ -14,19 +14,7 @@
   },
   "about": {
     "title": "About Me",
-    "intro": "Hi there! I'm James Gangi, a passionate Software Developer with a strong foundation in full-stack development. I specialize in building scalable web applications using modern technologies and best practices.",
-    "journey": {
-      "title": "Professional Journey",
-      "description": "Throughout my career, I've worked with a diverse range of technologies and frameworks, focusing on creating efficient, maintainable, and user-friendly applications. My experience spans from front-end development with React and Angular to back-end systems using Node.js and .NET."
-    },
-    "skills": {
-      "title": "What I Do",
-      "list": "Skilled in ReactJS, AngularJS, TypeScript, .NET, C#, and Node.js. | Experience in caching, query optimization, and API efficiency. | Proficient in Micro Front-Ends and modular design. | Strong with GitHub, TFS, and CI/CD | Expertise in SQL, procedure deployment, and optimization."
-    },
-    "facts": {
-      "title": "Quick Facts",
-      "list": "🎓 Computer Science Background | 💼 Full-Stack Developer | 🌟 Problem Solver | 📚 Continuous Learner | 🤝 Team Player"
-    }
+    "content": "I'm passionate about creating software that improves lives."
   },
   "skills": {
     "title": "Skills",
