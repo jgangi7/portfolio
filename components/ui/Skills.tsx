@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useLoading } from '../LoadingProvider';
 
@@ -8,11 +8,13 @@ export const Skills = () => {
 
   useEffect(() => {
     if (heroLoaded) {
-      // Add 1-second delay after Hero loads
+      // Add delay after Hero loads
       const timer = setTimeout(() => {
         setShowSkills(true);
       }, 1000);
       return () => clearTimeout(timer);
+    } else {
+      setShowSkills(false);
     }
   }, [heroLoaded]);
 
@@ -25,19 +27,30 @@ export const Skills = () => {
         duration: 0.5,
         ease: "easeOut"
       }
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.3
+      }
     }
   };
 
-  if (!showSkills) return null;
-
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="w-full py-16 bg-white dark:bg-[#0a192f] transition-colors duration-300"
-    >
-      {/* Your existing Skills content */}
-    </motion.div>
+    <AnimatePresence mode="wait">
+      {showSkills && heroLoaded && (
+        <motion.div
+          key="skills"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="w-full py-16 bg-white dark:bg-[#0a192f] transition-colors duration-300"
+        >
+          {/* Your existing Skills content */}
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }; 
