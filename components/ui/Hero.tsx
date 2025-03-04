@@ -1,8 +1,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useLoading } from '../LoadingProvider';
 
 export const Hero = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const { setHeroLoaded } = useLoading();
+  const [isHeroLoading, setIsHeroLoading] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -14,14 +16,16 @@ export const Hero = () => {
 
     // Simulate loading time
     const timer = setTimeout(() => {
-      setIsLoading(false);
+      setIsHeroLoading(false);
+      // Signal that Hero has loaded
+      setHeroLoaded(true);
     }, 2500);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       clearTimeout(timer);
     };
-  }, []);
+  }, [setHeroLoaded]);
 
   const waveAnimation = {
     rotate: [0, 20, -20, 20, 0],
@@ -58,7 +62,7 @@ export const Hero = () => {
 
   return (
     <AnimatePresence mode="wait">
-      {isLoading ? (
+      {isHeroLoading ? (
         <motion.div
           key="loader"
           className="fixed inset-0 bg-white dark:bg-[#0a192f] flex items-center justify-center z-50"
