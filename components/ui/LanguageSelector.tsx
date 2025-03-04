@@ -16,8 +16,14 @@ export default function LanguageSelector() {
   const t = useTranslations('common.languages');
 
   const handleLanguageChange = (locale: string) => {
+    // Store current scroll position
+    const scrollPos = window.scrollY;
+    
     const { pathname, asPath, query } = router;
-    router.push({ pathname, query }, asPath, { locale });
+    router.push({ pathname, query }, asPath, { locale, scroll: false }).then(() => {
+      // Restore scroll position after language change
+      window.scrollTo(0, scrollPos);
+    });
   };
 
   return (
