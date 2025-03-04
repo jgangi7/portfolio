@@ -6,11 +6,11 @@
     "contact": "Contact"
   },
   "hero": {
-    "greeting": "Bonjour, je m'appelle",
+    "greeting": "Bonjour, je suis",
     "name": "James Gangi",
-    "title": "Ingénieur Logiciel",
-    "subtitle": "Je crée des solutions web",
-    "description": "Je suis un ingénieur logiciel spécialisé dans la création d'expériences numériques exceptionnelles."
+    "title": "Ingénieur Logiciel Full Stack || Informatique && Mathématiques",
+    "subtitle": "Je suis passionné par tout ce qui touche à la technologie et aux affaires. Au-delà du codage, je fais du sport, joue aux échecs et adore skier ! Je suis ouvert à essayer de nouvelles activités tout comme je suis prêt à apprendre de nouveaux outils et technologies les plus adaptés au travail.",
+    "description": "Bonjour, je suis James Gangi, un ingénieur logiciel full-stack basé en Virginie du Nord / Washington DC."
   },
   "about": {
     "title": "À Propos de Moi",
@@ -32,9 +32,9 @@
   "common": {
     "loading": "Chargement...",
     "languages": {
-      "en": "AN",
+      "en": "EN",
       "fr": "FR",
-      "de": "AL"
+      "de": "DE"
     }
   }
 } 
