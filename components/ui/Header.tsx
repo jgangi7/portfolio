@@ -36,6 +36,13 @@ export default function Header() {
     }
   }, [lastScrollY]);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   if (!mounted) {
     return null;
   }
@@ -52,24 +59,28 @@ export default function Header() {
         <nav>
           <ul className="flex space-x-8">
             <li>
-              <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+              <button
+                onClick={() => scrollToSection('hero')}
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              >
                 {t('about')}
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#skills" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+              <button
+                onClick={() => scrollToSection('skills')}
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              >
                 {t('skills')}
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#projects" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              >
                 {t('projects')}
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                {t('contact')}
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
