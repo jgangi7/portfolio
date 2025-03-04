@@ -14,7 +14,7 @@ export const Layout = ({
   description = 'Software Developer Portfolio showcasing my projects and skills',
 }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+    <div className="min-h-screen bg-white dark:bg-[#0a192f] transition-colors">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

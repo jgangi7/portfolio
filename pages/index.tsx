@@ -1,4 +1,5 @@
 import { Layout } from "../components/ui/Layout";
+import { Hero } from "../components/ui/Hero";
 import { motion } from 'framer-motion';
 import type { Project, Skill } from "../types";
 
@@ -177,25 +178,10 @@ const socialLinks = {
 export default function Home() {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            James Gangi
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Software Developer specializing in full-stack development
-          </p>
-        </motion.div>
-      </section>
+      <Hero />
 
       {/* Skills Section */}
-      <section id="skills" className="min-h-screen py-20">
+      <section id="skills" className="min-h-screen py-20 bg-white dark:bg-[#0a192f]">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -244,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen py-20">
+      <section id="about" className="min-h-screen py-20 bg-white dark:bg-[#0a192f]">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
