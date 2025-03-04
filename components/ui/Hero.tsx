@@ -13,9 +13,7 @@ export const Hero = () => {
 
   return (
     <div className="relative h-[90vh] flex items-center justify-center px-6 pt-16 pb-8 bg-white dark:bg-[#0a192f] transition-colors duration-300">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-50/50 to-gray-100/50 dark:from-[#0a192f] dark:via-[#0a192f] dark:to-[#112240] pointer-events-none" />
-
+      
       {/* Content container */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
