@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { ReactNode } from 'react';
-import { Header } from './Header';
 import { Footer } from './Footer';
 import { withLoadingGuard } from '../LoadingProvider';
+import Header from './Header';
 
 interface LayoutProps {
   children: ReactNode;

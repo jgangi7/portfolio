@@ -1,0 +1,74 @@
+{
+  "navigation": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "name": "James Gangi",
+    "title": "Fullstack-Softwareentwickler || Informatik && Mathematik",
+    "subtitle": "Ich bin begeistert von allem, was mit Technologie und Business zu tun hat. Neben dem Programmieren treibe ich Sport, spiele Schach und liebe Skifahren! Ich bin offen dafür, neue Aktivitäten auszuprobieren, genauso wie ich bereit bin, neue Tools und Technologien zu lernen, die am besten zur Arbeit passen.",
+    "description": "Hallo, ich bin James Gangi, ein Fullstack-Softwareentwickler aus Northern Virginia/Washington DC."
+  },
+  "about": {
+    "title": "Über Mich",
+    "content": "Ich bin leidenschaftlich daran interessiert, Software zu entwickeln, die das Leben verbessert.",
+    "professional": {
+      "title": "Beruflicher Werdegang",
+      "content": "Im Laufe meiner Karriere habe ich mit einer breiten Palette von Technologien und Frameworks gearbeitet, wobei ich mich darauf konzentriert habe, effiziente, wartbare und benutzerfreundliche Anwendungen zu erstellen. Meine Erfahrung reicht von Frontend-Entwicklung mit React und Angular bis hin zu Backend-Systemen mit Node.js und .NET."
+    },
+    "whatIDo": {
+      "title": "Was Ich Mache",
+      "skills": [
+        "Erfahren in ReactJS, AngularJS, TypeScript, .NET, C# und Node.js.",
+        "Erfahrung mit Caching, Query-Optimierung und API-Effizienz.",
+        "Beherrschung von Micro-Frontends und modularem Design.",
+        "Umfangreiche Erfahrung mit GitHub, TFS und CI/CD",
+        "Expertise in SQL, Stored Procedures und Optimierung."
+      ]
+    },
+    "quickFacts": {
+      "title": "Kurz & Knapp",
+      "facts": [
+        "🎓 Informatik-Ausbildung",
+        "💼 Fullstack-Entwickler",
+        "🌟 Problemlöser",
+        "📚 Kontinuierlicher Lerner",
+        "🤝 Teamplayer"
+      ]
+    },
+    "connect": {
+      "title": "Kontakt",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "E-Mail"
+    }
+  },
+  "skills": {
+    "title": "Fähigkeiten & Expertise",
+    "categories": {
+      "languages": "Programmiersprachen",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Datenbanken",
+      "cloud": "Cloud & DevOps",
+      "testing": "Testing & Tools"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "email": "E-Mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "languages": {
+      "en": "EN",
+      "fr": "FR",
+      "de": "DE"
+    }
+  }
+} 
