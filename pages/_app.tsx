@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import { useState, useEffect } from 'react'
 import { ThemeProvider } from 'next-themes'
-import { NextIntlClientProvider } from 'next-intl'
+import { NextIntlClientProvider, AbstractIntlMessages } from 'next-intl'
 import { useRouter } from 'next/router'
 import '../styles/globals.css'
 
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <NextIntlClientProvider messages={messages[locale as keyof typeof messages]} locale={locale}>
+    <NextIntlClientProvider messages={messages[locale as keyof typeof messages] as unknown as AbstractIntlMessages} locale={locale}>
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
