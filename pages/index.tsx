@@ -1,8 +1,5 @@
 import { Layout } from "../components/ui/Layout";
-import { Hero } from "../components/sections/Hero";
-import { Projects } from "../components/sections/Projects";
-import { Skills } from "../components/sections/Skills";
-import { Contact } from "../components/sections/Contact";
+import { motion } from 'framer-motion';
 import type { Project, Skill } from "../types";
 
 // You can replace these with your actual data
@@ -180,14 +177,164 @@ const socialLinks = {
 export default function Home() {
   return (
     <Layout>
-      <Hero
-        name="James Gangi"
-        tagline="I'm a Software Engineer with experience in building scalable and high-performance applications. I have a strong background in frontend and backend development, specializing in Micro Front-Ends, RESTful APIs, and database management. I’m proficient with GitHub and TFS for version control, ensuring efficient collaboration and deployment workflows. I also have experience working with AWS (SNS, SQS, Lambda, EC2, RDS), Docker, Jenkins, and Datadog for cloud infrastructure, CI/CD, and monitoring. Passionate about writing clean, efficient code and continuously learning new technologies.    "
-        socialLinks={socialLinks}
-      />
-      {/* <Projects projects={projects} /> */}
-      <Skills skills={skills} />
-      <Contact email={socialLinks.email} />
+      {/* Hero Section */}
+      <section id="home" className="min-h-screen flex items-center justify-center py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            James Gangi
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            Software Developer specializing in full-stack development
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="min-h-screen py-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            Skills & Expertise
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Object.entries(
+              skills.reduce((acc, skill) => {
+                if (!acc[skill.category]) {
+                  acc[skill.category] = [];
+                }
+                acc[skill.category].push(skill);
+                return acc;
+              }, {} as Record<string, Skill[]>)
+            ).map(([category, categorySkills]) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">
+                  {category}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {categorySkills.map((skill) => (
+                    <span
+                      key={skill.name}
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm"
+                    >
+                      {skill.icon} {skill.name}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="min-h-screen py-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            About Me
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="md:col-span-2 space-y-6 text-gray-700 dark:text-gray-300">
+              <p className="text-lg leading-relaxed">
+                Hi there! I'm James Gangi, a passionate Software Developer with a strong foundation in full-stack development. 
+                I specialize in building scalable web applications using modern technologies and best practices.
+              </p>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                  Professional Journey
+                </h3>
+                <p>
+                  Throughout my career, I've worked with a diverse range of technologies and frameworks, 
+                  focusing on creating efficient, maintainable, and user-friendly applications. 
+                  My experience spans from front-end development with React and Angular to back-end 
+                  systems using Node.js and .NET.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                  What I Do
+                </h3>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Develop full-stack web applications</li>
+                  <li>Design and implement RESTful APIs</li>
+                  <li>Work with cloud services (AWS, Azure)</li>
+                  <li>Practice DevOps and CI/CD</li>
+                  <li>Write clean, maintainable code</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Quick Facts
+                </h3>
+                <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                  <li>🎓 Computer Science Background</li>
+                  <li>💼 Full-Stack Developer</li>
+                  <li>🌟 Problem Solver</li>
+                  <li>📚 Continuous Learner</li>
+                  <li>🤝 Team Player</li>
+                </ul>
+              </div>
+
+              <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Connect With Me
+                </h3>
+                <div className="space-y-3">
+                  <a
+                    href="https://github.com/jgangi7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  >
+                    <span className="mr-2">📦</span> GitHub
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/james-gangi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  >
+                    <span className="mr-2">💼</span> LinkedIn
+                  </a>
+                  <a
+                    href="mailto:gangijames18@gmail.com"
+                    className="flex items-center text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                  >
+                    <span className="mr-2">📧</span> Email
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
     </Layout>
   );
 }
