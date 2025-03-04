@@ -15,36 +15,24 @@
   "about": {
     "title": "À Propos",
     "content": "Je suis passionné par la création de logiciels qui améliorent la vie.",
-    "professional": {
-      "title": "Parcours Professionnel",
-      "content": "Tout au long de ma carrière, j'ai travaillé avec une large gamme de technologies et de frameworks, en me concentrant sur la création d'applications efficaces, maintenables et conviviales. Mon expérience s'étend du développement front-end avec React et Angular aux systèmes back-end utilisant Node.js et .NET."
-    },
-    "whatIDo": {
-      "title": "Ce Que Je Fais",
-      "skills": [
-        "Compétent en ReactJS, AngularJS, TypeScript, .NET, C# et Node.js.",
-        "Expérience en mise en cache, optimisation des requêtes et efficacité des API.",
-        "Maîtrise des Micro Front-Ends et de la conception modulaire.",
-        "Solide expérience avec GitHub, TFS et CI/CD",
-        "Expertise en SQL, déploiement de procédures et optimisation."
-      ]
-    },
-    "quickFacts": {
-      "title": "En Bref",
-      "facts": [
-        "🎓 Formation en Informatique",
-        "💼 Développeur Full-Stack",
-        "🌟 Résolveur de Problèmes",
-        "📚 Apprenant Continu",
-        "🤝 Esprit d'Équipe"
-      ]
-    },
-    "connect": {
-      "title": "Me Contacter",
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "email": "Email"
-    }
+    "professional.title": "Parcours Professionnel",
+    "professional.content": "Tout au long de ma carrière, j'ai travaillé avec une large gamme de technologies et de frameworks, en me concentrant sur la création d'applications efficaces, maintenables et conviviales. Mon expérience s'étend du développement front-end avec React et Angular aux systèmes back-end utilisant Node.js et .NET.",
+    "whatIDo.title": "Ce Que Je Fais",
+    "whatIDo.skill.0": "Compétent en ReactJS, AngularJS, TypeScript, .NET, C# et Node.js.",
+    "whatIDo.skill.1": "Expérience en mise en cache, optimisation des requêtes et efficacité des API.",
+    "whatIDo.skill.2": "Maîtrise des Micro Front-Ends et de la conception modulaire.",
+    "whatIDo.skill.3": "Solide expérience avec GitHub, TFS et CI/CD",
+    "whatIDo.skill.4": "Expertise en SQL, déploiement de procédures et optimisation.",
+    "quickFacts.title": "En Bref",
+    "quickFacts.fact.0": "🎓 Formation en Informatique",
+    "quickFacts.fact.1": "💼 Développeur Full-Stack",
+    "quickFacts.fact.2": "🌟 Résolveur de Problèmes",
+    "quickFacts.fact.3": "📚 Apprenant Continu",
+    "quickFacts.fact.4": "🤝 Esprit d'Équipe",
+    "connect.title": "Me Contacter",
+    "connect.github": "GitHub",
+    "connect.linkedin": "LinkedIn",
+    "connect.email": "Email"
   },
   "skills": {
     "title": "Compétences & Expertise",

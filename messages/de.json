@@ -9,42 +9,30 @@
     "greeting": "Hallo, ich bin",
     "name": "James Gangi",
     "title": "Fullstack-Softwareentwickler || Informatik && Mathematik",
-    "subtitle": "Ich interessiere mich sehr für alles, was mit Technologie und Business zu tun hat. Neben dem Programmieren treibe ich Sport, spiele Schach und liebe es zu skifahren! Ich bin offen für neue Aktivitäten, genauso wie ich bereit bin, neue Tools und Technologien zu lernen, die am besten für die Arbeit geeignet sind.",
-    "description": "Hallo, ich bin James Gangi, ein Fullstack-Softwareentwickler aus Northern Virginia / Washington DC."
+    "subtitle": "Ich bin begeistert von allem, was mit Technologie und Business zu tun hat. Neben dem Programmieren treibe ich Sport, spiele Schach und liebe Skifahren! Ich bin offen dafür, neue Aktivitäten auszuprobieren, genauso wie ich bereit bin, neue Tools und Technologien zu lernen, die am besten zur Arbeit passen.",
+    "description": "Hallo, ich bin James Gangi, ein Fullstack-Softwareentwickler aus Northern Virginia/Washington DC."
   },
   "about": {
-    "title": "Über mich",
+    "title": "Über Mich",
     "content": "Ich bin leidenschaftlich daran interessiert, Software zu entwickeln, die das Leben verbessert.",
-    "professional": {
-      "title": "Beruflicher Werdegang",
-      "content": "Im Laufe meiner Karriere habe ich mit einer Vielzahl von Technologien und Frameworks gearbeitet und mich dabei auf die Entwicklung effizienter, wartbarer und benutzerfreundlicher Anwendungen konzentriert. Meine Erfahrung reicht von der Frontend-Entwicklung mit React und Angular bis hin zu Backend-Systemen mit Node.js und .NET."
-    },
-    "whatIDo": {
-      "title": "Was Ich Mache",
-      "skills": [
-        "Erfahren in ReactJS, AngularJS, TypeScript, .NET, C# und Node.js.",
-        "Erfahrung in Caching, Query-Optimierung und API-Effizienz.",
-        "Kompetent in Micro Front-Ends und modularem Design.",
-        "Versiert mit GitHub, TFS und CI/CD",
-        "Expertise in SQL, Prozedur-Deployment und Optimierung."
-      ]
-    },
-    "quickFacts": {
-      "title": "Kurz & Knapp",
-      "facts": [
-        "🎓 Informatik-Hintergrund",
-        "💼 Fullstack-Entwickler",
-        "🌟 Problemlöser",
-        "📚 Kontinuierlicher Lerner",
-        "🤝 Teamplayer"
-      ]
-    },
-    "connect": {
-      "title": "Kontakt",
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "email": "E-Mail"
-    }
+    "professional.title": "Beruflicher Werdegang",
+    "professional.content": "Im Laufe meiner Karriere habe ich mit einer breiten Palette von Technologien und Frameworks gearbeitet, wobei ich mich darauf konzentriert habe, effiziente, wartbare und benutzerfreundliche Anwendungen zu erstellen. Meine Erfahrung reicht von Frontend-Entwicklung mit React und Angular bis hin zu Backend-Systemen mit Node.js und .NET.",
+    "whatIDo.title": "Was Ich Mache",
+    "whatIDo.skill.0": "Erfahren in ReactJS, AngularJS, TypeScript, .NET, C# und Node.js.",
+    "whatIDo.skill.1": "Erfahrung mit Caching, Query-Optimierung und API-Effizienz.",
+    "whatIDo.skill.2": "Beherrschung von Micro-Frontends und modularem Design.",
+    "whatIDo.skill.3": "Umfangreiche Erfahrung mit GitHub, TFS und CI/CD",
+    "whatIDo.skill.4": "Expertise in SQL, Stored Procedures und Optimierung.",
+    "quickFacts.title": "Kurz & Knapp",
+    "quickFacts.fact.0": "🎓 Informatik-Ausbildung",
+    "quickFacts.fact.1": "💼 Fullstack-Entwickler",
+    "quickFacts.fact.2": "🌟 Problemlöser",
+    "quickFacts.fact.3": "📚 Kontinuierlicher Lerner",
+    "quickFacts.fact.4": "🤝 Teamplayer",
+    "connect.title": "Kontakt",
+    "connect.github": "GitHub",
+    "connect.linkedin": "LinkedIn",
+    "connect.email": "E-Mail"
   },
   "skills": {
     "title": "Fähigkeiten & Expertise",
@@ -54,7 +42,7 @@
       "backend": "Backend",
       "databases": "Datenbanken",
       "cloud": "Cloud & DevOps",
-      "testing": "Tests & Werkzeuge"
+      "testing": "Testing & Tools"
     }
   },
   "contact": {
