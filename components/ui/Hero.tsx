@@ -1,18 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState, createContext, useContext } from 'react';
-
-// Create a context for loading state
-export const LoadingContext = createContext<{
-  isLoading: boolean;
-  setIsLoading: (loading: boolean) => void;
-}>({
-  isLoading: true,
-  setIsLoading: () => {},
-});
-
-export const useLoading = () => useContext(LoadingContext);
+import { useEffect, useState } from 'react';
+import { useLoading } from '../LoadingProvider';
 
 export const Hero = () => {
+  const { setHeroLoaded } = useLoading();
   const [isHeroLoading, setIsHeroLoading] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -26,13 +17,15 @@ export const Hero = () => {
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsHeroLoading(false);
+      // Signal that Hero has loaded
+      setHeroLoaded(true);
     }, 2500);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       clearTimeout(timer);
     };
-  }, []);
+  }, [setHeroLoaded]);
 
   const waveAnimation = {
     rotate: [0, 20, -20, 20, 0],
