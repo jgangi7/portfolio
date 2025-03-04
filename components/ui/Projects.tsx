@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import Spline from '@splinetool/react-spline';
 
 interface Project {
   title: string;
@@ -38,14 +37,7 @@ export default function Projects() {
   const t = useTranslations('projects');
 
   return (
-    <section id="projects" className="py-40 bg-white dark:bg-[#0a192f] relative">
-      <div className="absolute top-4 right-4 w-32 h-32 z-10">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
-          <Spline
-            scene="https://prod.spline.design/ZIDWNdvZmxxsWZOv/scene.splinecode"
-          />
-        </a>
-      </div>
+    <section id="projects" className="py-40 bg-white dark:bg-[#0a192f]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

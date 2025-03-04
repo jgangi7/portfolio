@@ -22,8 +22,8 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="min-h-screen pt-80 pb-20 bg-white dark:bg-[#0a192f]">
-      <div className="container mx-auto px-4">
+    <section id="about" className="fixed inset-0 top-[80px] bg-white dark:bg-[#0a192f] overflow-y-auto">
+      <div className="container mx-auto px-4 py-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -92,6 +92,15 @@ export default function About() {
                   >
                     <span className="mr-2">📧</span> {t.raw('connect').email}
                   </a>
+                  <div className="absolute top-4 right-4 z-10">
+                  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="https://open.scdn.co/cdn/images/favicon.5f2dfb1b.ico" 
+                      alt="Spotify" 
+                      className="w-8 h-8 hover:scale-110 transition-transform"
+                    />
+                  </a>
+                </div>
                 </div>
               </div>
             </div>
