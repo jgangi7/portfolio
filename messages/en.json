@@ -63,6 +63,10 @@
     "linkedin": "LinkedIn",
     "github": "GitHub"
   },
+  "projects": {
+    "title": "Featured Projects",
+    "description": "Here are some of the projects I've worked on"
+  },
   "common": {
     "loading": "Loading...",
     "languages": {

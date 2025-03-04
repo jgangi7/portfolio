@@ -3,10 +3,12 @@ import { Skills } from '@/components/ui/Skills';
 import { LoadingProvider, withLoadingGuard } from '@/components/LoadingProvider';
 import Hero from "@/components/ui/Hero";
 import About from "@/components/ui/About";
+import Projects from "@/components/ui/Projects";
 
 // Wrap sections with loading guard and staggered delays
 const GuardedSkills = withLoadingGuard(Skills, 500); // 0.5s delay after Hero
 const GuardedAbout = withLoadingGuard(About, 700);   // 0.7s delay after Hero
+const GuardedProjects = withLoadingGuard(Projects, 900); // 0.9s delay after Hero
 
 export default function Home() {
   return (
@@ -15,6 +17,7 @@ export default function Home() {
         <Hero />
         <GuardedSkills />
         <GuardedAbout />
+        <GuardedProjects />
       </Layout>
     </LoadingProvider>
   );
