@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaDatabase, FaAngular } from 'react-icons/fa';
 import { SiTypescript, SiVite, SiMui, SiSharp, SiDotnet, SiSwagger, SiHiveBlockchain } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 
@@ -41,6 +41,16 @@ const projects: Project[] = [
       { name: "Blockchain", icon: <SiHiveBlockchain /> }
     ],
     githubUrl: "https://github.com/jgangi7/blockchain-c-sharp",
+  },
+  {
+    title: "Angular Chat Bot",
+    description: "An Angular-based chatbot that helps screen for memory loss through interactive and adaptive conversations.",
+    technologies: [
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Angular", icon: <FaAngular /> },
+      { name: "NodeJs", icon: <FaNodeJs /> }
+    ],
+    githubUrl: "https://github.com/jgangi7/angular-health-bot",
   }
 ];
 
