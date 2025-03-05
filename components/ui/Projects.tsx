@@ -5,10 +5,10 @@ import { SiTypescript, SiVite, SiMui, SiSharp, SiDotnet, SiSwagger, SiHiveBlockc
 import { TbApi } from 'react-icons/tb';
 
 interface Project {
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   technologies: {
-    name: string;
+    nameKey: string;
     icon: React.ReactNode;
   }[];
   imageUrl?: string;
@@ -18,37 +18,37 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Stock Portfolio Analytics",
-    description: "A React TypeScript application for tracking and visualizing stock portfolio performance. Features real-time stock price updates, portfolio allocation visualization, and gain/loss tracking.",
+    titleKey: "portfolio.title",
+    descriptionKey: "portfolio.description",
     technologies: [
-      { name: "React", icon: <FaReact /> },
-      { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "Vite", icon: <SiVite /> },
-      { name: "Material-UI", icon: <SiMui /> },
-      { name: "Recharts", icon: <FaDatabase /> },
-      { name: "Alpha Vantage API", icon: <TbApi /> }
+      { nameKey: "technologies.react", icon: <FaReact /> },
+      { nameKey: "technologies.typescript", icon: <SiTypescript /> },
+      { nameKey: "technologies.vite", icon: <SiVite /> },
+      { nameKey: "technologies.materialui", icon: <SiMui /> },
+      { nameKey: "technologies.recharts", icon: <FaDatabase /> },
+      { nameKey: "technologies.alphaVantage", icon: <TbApi /> }
     ],
     githubUrl: "https://github.com/jgangi7/portfolio-visualizer",
   },
   {
-    title: "C# Blockchain API",
-    description: "A simple blockchain implementation in C# using ASP.NET Core Web API. Features block creation with proof-of-work, chain validation, and RESTful endpoints with Swagger documentation.",
+    titleKey: "blockchain.title",
+    descriptionKey: "blockchain.description",
     technologies: [
-      { name: "C#", icon: <SiSharp /> },
-      { name: "ASP.NET Core", icon: <SiDotnet /> },
-      { name: "REST API", icon: <TbApi /> },
-      { name: "Swagger", icon: <SiSwagger /> },
-      { name: "Blockchain", icon: <SiHiveBlockchain /> }
+      { nameKey: "technologies.csharp", icon: <SiSharp /> },
+      { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
+      { nameKey: "technologies.restapi", icon: <TbApi /> },
+      { nameKey: "technologies.swagger", icon: <SiSwagger /> },
+      { nameKey: "technologies.blockchain", icon: <SiHiveBlockchain /> }
     ],
     githubUrl: "https://github.com/jgangi7/blockchain-c-sharp",
   },
   {
-    title: "Angular Chat Bot",
-    description: "An Angular-based chatbot that helps screen for memory loss through interactive and adaptive conversations.",
+    titleKey: "chatbot.title",
+    descriptionKey: "chatbot.description",
     technologies: [
-      { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "Angular", icon: <FaAngular /> },
-      { name: "NodeJs", icon: <FaNodeJs /> }
+      { nameKey: "technologies.typescript", icon: <SiTypescript /> },
+      { nameKey: "technologies.angular", icon: <FaAngular /> },
+      { nameKey: "technologies.nodejs", icon: <FaNodeJs /> }
     ],
     githubUrl: "https://github.com/jgangi7/angular-health-bot",
   }
@@ -71,7 +71,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={project.titleKey}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -79,24 +79,24 @@ export default function Projects() {
             >
               {project.imageUrl && (
                 <div className="h-48 overflow-hidden">
-                  <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
+                  <img src={project.imageUrl} alt={t(project.titleKey)} className="w-full h-full object-cover" />
                 </div>
               )}
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  {project.title}
+                  {t(project.titleKey)}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {project.description}
+                  {t(project.descriptionKey)}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
-                      key={tech.name}
+                      key={tech.nameKey}
                       className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm flex items-center gap-2"
                     >
                       <span className="text-base">{tech.icon}</span>
-                      {tech.name}
+                      {t(tech.nameKey)}
                     </span>
                   ))}
                 </div>
@@ -107,6 +107,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                      aria-label={t('githubLink')}
                     >
                       <FaGithub className="text-xl" />
                     </a>
@@ -117,6 +118,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                      aria-label={t('liveLink')}
                     >
                       <FaExternalLinkAlt className="text-xl" />
                     </a>

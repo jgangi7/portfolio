@@ -1,5 +1,6 @@
 {
   "navigation": {
+    "home": "Home",
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
@@ -57,18 +58,50 @@
       "testing": "Testing & Tools"
     }
   },
+  "projects": {
+    "title": "Featured Projects",
+    "description": "Here are some of the projects I've worked on",
+    "githubLink": "View on GitHub",
+    "liveLink": "View Live Demo",
+    "portfolio": {
+      "title": "Stock Portfolio Analytics",
+      "description": "A React TypeScript application for tracking and visualizing stock portfolio performance. Features real-time stock price updates, portfolio allocation visualization, and gain/loss tracking."
+    },
+    "blockchain": {
+      "title": "C# Blockchain API",
+      "description": "A simple blockchain implementation in C# using ASP.NET Core Web API. Features block creation with proof-of-work, chain validation, and RESTful endpoints with Swagger documentation."
+    },
+    "chatbot": {
+      "title": "Angular Chat Bot",
+      "description": "An Angular-based chatbot that helps screen for memory loss through interactive and adaptive conversations."
+    },
+    "technologies": {
+      "react": "React",
+      "typescript": "TypeScript",
+      "vite": "Vite",
+      "materialui": "Material-UI",
+      "recharts": "Recharts",
+      "alphaVantage": "Alpha Vantage API",
+      "csharp": "C#",
+      "dotnet": "ASP.NET Core",
+      "restapi": "REST API",
+      "swagger": "Swagger",
+      "blockchain": "Blockchain",
+      "angular": "Angular",
+      "nodejs": "Node.js"
+    }
+  },
   "contact": {
     "title": "Contact",
+    "description": "I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
     "email": "Email",
     "linkedin": "LinkedIn",
     "github": "GitHub"
   },
-  "projects": {
-    "title": "Featured Projects",
-    "description": "Here are some of the projects I've worked on"
-  },
   "common": {
     "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
     "languages": {
       "en": "EN",
       "fr": "FR",

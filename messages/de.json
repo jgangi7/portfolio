@@ -1,5 +1,6 @@
 {
   "navigation": {
+    "home": "Startseite",
     "about": "Über mich",
     "skills": "Fähigkeiten",
     "projects": "Projekte",
@@ -15,6 +16,7 @@
   "about": {
     "title": "Über Mich",
     "content": "Ich bin leidenschaftlich daran interessiert, Software zu entwickeln, die das Leben verbessert.",
+    "skills": "Fähigkeiten",
     "professional": {
       "title": "Beruflicher Werdegang",
       "content": "Im Laufe meiner Karriere habe ich mit einer breiten Palette von Technologien und Frameworks gearbeitet, wobei ich mich darauf konzentriert habe, effiziente, wartbare und benutzerfreundliche Anwendungen zu erstellen. Meine Erfahrung reicht von Frontend-Entwicklung mit React und Angular bis hin zu Backend-Systemen mit Node.js und .NET."
@@ -57,18 +59,50 @@
       "testing": "Testing & Tools"
     }
   },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "description": "Hier sind einige Projekte, an denen ich gearbeitet habe",
+    "githubLink": "Auf GitHub ansehen",
+    "liveLink": "Live-Demo ansehen",
+    "portfolio": {
+      "title": "Aktienportfolio-Analyse",
+      "description": "Eine React TypeScript-Anwendung zur Verfolgung und Visualisierung der Performance von Aktienportfolios. Enthält Echtzeit-Aktienkursaktualisierungen, Portfolioallokationsvisualisierung und Gewinn-/Verlustverfolgung."
+    },
+    "blockchain": {
+      "title": "C# Blockchain API",
+      "description": "Eine einfache Blockchain-Implementierung in C# mit ASP.NET Core Web API. Enthält Blockerstellung mit Proof-of-Work, Kettenvalidierung und RESTful-Endpunkte mit Swagger-Dokumentation."
+    },
+    "chatbot": {
+      "title": "Angular Chatbot",
+      "description": "Ein auf Angular basierender Chatbot, der durch interaktive und adaptive Gespräche bei der Erkennung von Gedächtnisverlust hilft."
+    },
+    "technologies": {
+      "react": "React",
+      "typescript": "TypeScript",
+      "vite": "Vite",
+      "materialui": "Material-UI",
+      "recharts": "Recharts",
+      "alphaVantage": "Alpha Vantage API",
+      "csharp": "C#",
+      "dotnet": "ASP.NET Core",
+      "restapi": "REST API",
+      "swagger": "Swagger",
+      "blockchain": "Blockchain",
+      "angular": "Angular",
+      "nodejs": "Node.js"
+    }
+  },
   "contact": {
     "title": "Kontakt",
+    "description": "Ich bin immer offen für neue Projekte, kreative Ideen oder Möglichkeiten, Teil Ihrer Visionen zu sein.",
     "email": "E-Mail",
     "linkedin": "LinkedIn",
     "github": "GitHub"
   },
-  "projects": {
-    "title": "Ausgewählte Projekte",
-    "description": "Hier sind einige Projekte, an denen ich gearbeitet habe"
-  },
   "common": {
-    "loading": "Wird geladen...",
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen",
     "languages": {
       "en": "EN",
       "fr": "FR",
