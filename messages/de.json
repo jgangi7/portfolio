@@ -7,11 +7,9 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "greeting": "Hallo, ich bin",
-    "name": "James Gangi",
-    "title": "Fullstack-Softwareentwickler || Informatik && Mathematik",
-    "subtitle": "Ich bin begeistert von allem, was mit Technologie und Business zu tun hat. Neben dem Programmieren treibe ich Sport, spiele Schach und liebe Skifahren! Ich bin offen dafür, neue Aktivitäten auszuprobieren, genauso wie ich bereit bin, neue Tools und Technologien zu lernen, die am besten zur Arbeit passen.",
-    "description": "Hallo, ich bin James Gangi, ein Fullstack-Softwareentwickler aus Northern Virginia/Washington DC."
+    "greeting": "Hallo, ich bin James",
+    "role": "Full Stack Entwickler",
+    "description": "Ich erstelle schöne und funktionale Webanwendungen mit modernen Technologien."
   },
   "about": {
     "title": "Über Mich",
@@ -19,7 +17,7 @@
     "skills": "Fähigkeiten",
     "professional": {
       "title": "Beruflicher Werdegang",
-      "content": "Im Laufe meiner Karriere habe ich mit einer breiten Palette von Technologien und Frameworks gearbeitet, wobei ich mich darauf konzentriert habe, effiziente, wartbare und benutzerfreundliche Anwendungen zu erstellen. Meine Erfahrung reicht von Frontend-Entwicklung mit React und Angular bis hin zu Backend-Systemen mit Node.js und .NET."
+      "content": "Ich komme aus Centreville, VA und bin derzeit in Washington DC ansässig. Mein Weg in die Softwareentwicklung begann in der High School und führte mich zu einem Studium der Informatik mit Nebenfach Mathematik an der James Madison University.\n\nNach meinem Abschluss fand ich eine Stelle bei Costar Group, wo ich zur Entwicklung von Unternehmensprodukten beitrug und Anwendungen entwickelte, die die Vertragserstellung und -verarbeitung für unser großes Vertriebsteam optimierten."
     },
     "whatIDo": {
       "title": "Was Ich Mache",
@@ -60,8 +58,7 @@
     }
   },
   "projects": {
-    "title": "Ausgewählte Projekte",
-    "description": "Hier sind einige Projekte, an denen ich gearbeitet habe",
+    "title": "Meine Projekte",
     "githubLink": "Auf GitHub ansehen",
     "liveLink": "Live-Demo ansehen",
     "portfolio": {
@@ -96,8 +93,8 @@
     "title": "Kontakt",
     "description": "Ich bin immer offen für neue Projekte, kreative Ideen oder Möglichkeiten, Teil Ihrer Visionen zu sein.",
     "email": "E-Mail",
-    "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "phone": "Telefon",
+    "location": "Standort"
   },
   "common": {
     "loading": "Laden...",
