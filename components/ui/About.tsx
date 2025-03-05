@@ -36,9 +36,6 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8 items-start">
             <div className="md:col-span-2 space-y-6 text-gray-700 dark:text-gray-300">
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                  {t.raw('professional').title}
-                </h3>
                 <p>
                   {t.raw('professional').content}
                 </p>
