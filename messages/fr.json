@@ -1,5 +1,6 @@
 {
   "navigation": {
+    "home": "Accueil",
     "about": "À propos",
     "skills": "Compétences",
     "projects": "Projets",
@@ -57,18 +58,50 @@
       "testing": "Tests & Outils"
     }
   },
+  "projects": {
+    "title": "Projets Sélectionnés",
+    "description": "Voici quelques projets sur lesquels j'ai travaillé",
+    "githubLink": "Voir sur GitHub",
+    "liveLink": "Voir la démo",
+    "portfolio": {
+      "title": "Analyse de Portefeuille",
+      "description": "Une application React TypeScript pour suivre et visualiser la performance d'un portefeuille d'actions. Inclut des mises à jour en temps réel des prix, la visualisation de l'allocation du portefeuille et le suivi des gains/pertes."
+    },
+    "blockchain": {
+      "title": "API Blockchain C#",
+      "description": "Une implémentation simple de blockchain en C# utilisant ASP.NET Core Web API. Inclut la création de blocs avec preuve de travail, la validation de chaîne et des points d'accès RESTful avec documentation Swagger."
+    },
+    "chatbot": {
+      "title": "Chatbot Angular",
+      "description": "Un chatbot basé sur Angular qui aide au dépistage de la perte de mémoire à travers des conversations interactives et adaptatives."
+    },
+    "technologies": {
+      "react": "React",
+      "typescript": "TypeScript",
+      "vite": "Vite",
+      "materialui": "Material-UI",
+      "recharts": "Recharts",
+      "alphaVantage": "API Alpha Vantage",
+      "csharp": "C#",
+      "dotnet": "ASP.NET Core",
+      "restapi": "API REST",
+      "swagger": "Swagger",
+      "blockchain": "Blockchain",
+      "angular": "Angular",
+      "nodejs": "Node.js"
+    }
+  },
   "contact": {
     "title": "Me Contacter",
+    "description": "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités pour faire partie de vos visions.",
     "email": "Email",
     "linkedin": "LinkedIn",
     "github": "GitHub"
   },
-  "projects": {
-    "title": "Projets Sélectionnés",
-    "description": "Voici quelques projets sur lesquels j'ai travaillé"
-  },
   "common": {
     "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
     "languages": {
       "en": "EN",
       "fr": "FR",
