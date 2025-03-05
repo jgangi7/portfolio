@@ -7,18 +7,17 @@
     "contact": "Contact"
   },
   "hero": {
-    "greeting": "Bonjour, je suis",
-    "name": "James Gangi",
-    "title": "Ingénieur Logiciel Full Stack || Informatique && Mathématiques",
-    "subtitle": "Je suis passionné par tout ce qui touche à la technologie et aux affaires. Au-delà du codage, je fais du sport, joue aux échecs et adore skier ! Je suis ouvert à essayer de nouvelles activités tout comme je suis prêt à apprendre de nouveaux outils et technologies les plus adaptés au travail.",
-    "description": "Bonjour, je suis James Gangi, un ingénieur logiciel full-stack basé en Virginie du Nord / Washington DC."
+    "greeting": "Bonjour, je suis James",
+    "role": "Développeur Full Stack",
+    "description": "Je crée des applications web belles et fonctionnelles en utilisant des technologies modernes."
   },
   "about": {
     "title": "À Propos",
     "content": "Je suis passionné par la création de logiciels qui améliorent la vie.",
+    "skills": "Compétences",
     "professional": {
       "title": "Parcours Professionnel",
-      "content": "Tout au long de ma carrière, j'ai travaillé avec une large gamme de technologies et de frameworks, en me concentrant sur la création d'applications efficaces, maintenables et conviviales. Mon expérience s'étend du développement front-end avec React et Angular aux systèmes back-end utilisant Node.js et .NET."
+      "content": "Je suis originaire de Centreville, VA et je suis actuellement basé à Washington DC. Mon parcours dans le logiciel a commencé au lycée, m'amenant à poursuivre un diplôme en informatique avec une mineure en mathématiques à l'Université James Madison.\n\nJ'ai ensuite obtenu mon diplôme et trouvé un emploi chez Costar Group, où j'ai contribué au développement de produits d'entreprise, en créant des applications qui ont rationalisé la création et le traitement des contrats pour notre grande équipe commerciale."
     },
     "whatIDo": {
       "title": "Ce Que Je Fais",
@@ -59,8 +58,7 @@
     }
   },
   "projects": {
-    "title": "Projets Sélectionnés",
-    "description": "Voici quelques projets sur lesquels j'ai travaillé",
+    "title": "Mes Projets",
     "githubLink": "Voir sur GitHub",
     "liveLink": "Voir la démo",
     "portfolio": {
@@ -92,11 +90,11 @@
     }
   },
   "contact": {
-    "title": "Me Contacter",
+    "title": "Contactez-moi",
     "description": "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités pour faire partie de vos visions.",
     "email": "Email",
-    "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "phone": "Téléphone",
+    "location": "Localisation"
   },
   "common": {
     "loading": "Chargement...",
