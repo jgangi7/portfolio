@@ -75,6 +75,14 @@
       "title": "Angular Chat Bot",
       "description": "An Angular-based chatbot that helps screen for memory loss through interactive and adaptive conversations."
     },
+    "chrome-extension": {
+      "title": "Chrome Extension",
+      "description": "A Chrome extension that allows you to search the webpage mutltiple times, with a clean  UI to assist with the process of studying or researh."
+    },
+    "golang-app": {
+      "title": "Go Austin Map",
+      "description": "A Go application that allows you to view a map of Austin, Texas. It will show the places I visited there recently!"
+    },
     "technologies": {
       "react": "React",
       "typescript": "TypeScript",
@@ -88,7 +96,9 @@
       "swagger": "Swagger",
       "blockchain": "Blockchain",
       "angular": "Angular",
-      "nodejs": "Node.js"
+      "nodejs": "Node.js",
+      "js": "JavaScript",
+      "golang": "Go"
     }
   },
   "contact": {
