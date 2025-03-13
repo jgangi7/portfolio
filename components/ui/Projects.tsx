@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaDatabase, FaAngular } from 'react-icons/fa';
-import { SiTypescript, SiVite, SiMui, SiSharp, SiDotnet, SiSwagger, SiHiveBlockchain } from 'react-icons/si';
+import { SiTypescript, SiVite, SiMui, SiSharp, SiDotnet, SiSwagger, SiHiveBlockchain, SiJavascript } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 
 interface Project {
@@ -9,7 +9,7 @@ interface Project {
   descriptionKey: string;
   technologies: {
     nameKey: string;
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
   }[];
   imageUrl?: string;
   githubUrl?: string;
@@ -17,6 +17,23 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    titleKey: "chrome-extension.title",
+    descriptionKey: "chrome-extension.description",
+    technologies: [
+      { nameKey: "technologies.typescript", icon: <SiTypescript /> },
+      { nameKey: "technologies.js", icon: <SiJavascript /> }
+    ],
+    githubUrl: "https://github.com/jgangi7/chrome-ext-search",
+  },
+  {
+    titleKey: "golang-app.title",
+    descriptionKey: "golang-app.description",
+    technologies: [
+      { nameKey: "technologies.golang" }
+    ],
+    githubUrl: "https://github.com/jgangi7/go-austin-map",
+  },
   {
     titleKey: "portfolio.title",
     descriptionKey: "portfolio.description",
