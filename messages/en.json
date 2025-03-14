@@ -65,7 +65,7 @@
     "liveLink": "View Live Demo",
     "portfolio": {
       "title": "Stock Portfolio Analytics",
-      "description": "A React TypeScript application for tracking and visualizing stock portfolio performance. Features real-time stock price updates, portfolio allocation visualization, and gain/loss tracking."
+      "description": "Designed and Implemented a React TypeScript application for tracking and visualizing stock portfolio performance. Features real-time stock price updates, portfolio allocation visualization, and gain/loss tracking."
     },
     "blockchain": {
       "title": "C# Blockchain API",
@@ -81,7 +81,7 @@
     },
     "golang-app": {
       "title": "Go Austin Map",
-      "description": "A Go application that allows you to view a map of Austin, Texas. It will show the places I visited there recently!"
+      "description": "Designed and Implemented a Go application that allows you to view a map of Austin, Texas. It will show the places I visited there recently!"
     },
     "technologies": {
       "react": "React",
