@@ -46,6 +46,10 @@
       "github": "GitHub",
       "linkedin": "LinkedIn",
       "email": "Email"
+    },
+    "favoriteProject": {
+      "title": "Projet Favori",
+      "description": "Je pense immédiatement à mon travail chez Costar sur leur projet Web Enterprise (WE). J'ai collaboré dès le début avec les analystes métier et les designers UI pour adapter le produit aux besoins des utilisateurs. J'ai développé des procédures stockées pour accéder aux données de l'énorme base de données de CoStar via des API REST sécurisées que j'ai également créées. Ensuite, j'ai construit les composants et la logique backend pour les validations et la gestion des erreurs permettant à notre équipe commerciale de générer des contrats pour les clients, qui pouvaient être signés électroniquement, traités et suivis. Le logiciel que j'ai développé de A à Z a traité des milliers de contrats, générant des millions de dollars de revenus pour CoStar."
     }
   },
   "skills": {
