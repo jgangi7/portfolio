@@ -14,26 +14,27 @@
     "description": "Hey, I'm James Gangi, a full-stack software engineer based in Northern Virginia / Washington DC."
   },
   "about": {
-    "title": "About",
-    "content": "I'm passionate about creating software that improves lives.",
+    "title": "About Me",
+    "content": "I am passionate about developing software that improves lives.",
+    "skills": "Skills",
     "professional": {
       "title": "Professional Journey",
-      "content": "Throughout my career, I've worked with a diverse range of technologies and frameworks, focusing on creating efficient, maintainable, and user-friendly applications. My experience spans from front-end development with React and Angular to back-end systems using Node.js and .NET."
+      "content": "Throughout my career, I've worked with a wide range of technologies and frameworks, focusing on creating efficient, maintainable, and user-friendly applications. My experience spans from frontend development with React and Angular to backend systems using Node.js and .NET."
     },
     "whatIDo": {
       "title": "What I Do",
       "skills": [
-        "Skilled in ReactJS, AngularJS, TypeScript, .NET, C#, and Node.js.",
-        "Experience in caching, query optimization, and API efficiency.",
-        "Proficient in Micro Front-Ends and modular design.",
-        "Strong with GitHub, TFS, and CI/CD",
-        "Expertise in SQL, procedure deployment, and optimization."
+        "Proficient in ReactJS, AngularJS, TypeScript, .NET, C#, and Node.js.",
+        "Experience with caching, query optimization, and API efficiency.",
+        "Mastery of Micro Front-Ends and modular design.",
+        "Extensive experience with GitHub, TFS, and CI/CD",
+        "Expertise in SQL, stored procedures, and optimization."
       ]
     },
     "quickFacts": {
       "title": "Quick Facts",
       "facts": [
-        "🎓 Computer Science Background",
+        "🎓 Computer Science Education",
         "💼 Full-Stack Developer",
         "🌟 Problem Solver",
         "📚 Continuous Learner",
@@ -45,6 +46,10 @@
       "github": "GitHub",
       "linkedin": "LinkedIn",
       "email": "Email"
+    },
+    "favoriteProject": {
+      "title": "Favorite Project",
+      "description": "Immediately my mind goes to what I did for Costar on their Web Enterprise (WE) project. As I worked with BA's and UI designers from the start to tailor the product to be designed to fit users needs, built stored procs to be able to access data from CoStar's enormous DB using secure REST APIs that I also wrote. From there it was simply building components and the backend logic for validations and error handling such that our sales team could generate contracts for clients to be e-signed, processed, and eventually tracked. The software I wrote start to finish processed thousands of contracts generating millions of dollars in revenue for CoStar."
     }
   },
   "skills": {
