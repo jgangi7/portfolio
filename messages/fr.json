@@ -15,7 +15,7 @@
   },
   "about": {
     "title": "À propos de moi",
-    "description": "Je suis un développeur full-stack passionné spécialisé dans la création d'applications web modernes. J'aime créer des solutions élégantes à des problèmes complexes et je suis toujours désireux d'apprendre de nouvelles technologies.",
+    "content": "Je suis passionné par le développement de logiciels qui améliorent la vie",
     "skills": "Compétences",
     "professional": {
       "title": "Parcours Professionnel",
@@ -110,8 +110,8 @@
     "title": "Contactez-moi",
     "description": "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités pour faire partie de vos visions.",
     "email": "Email",
-    "phone": "Téléphone",
-    "location": "Localisation"
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   },
   "common": {
     "loading": "Chargement...",
