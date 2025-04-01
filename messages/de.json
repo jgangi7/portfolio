@@ -46,6 +46,10 @@
       "github": "GitHub",
       "linkedin": "LinkedIn",
       "email": "E-Mail"
+    },
+    "favoriteProject": {
+      "title": "Lieblingsprojekt",
+      "description": "Mein erster Gedanke geht an meine Arbeit für Costar am Web Enterprise (WE) Projekt. Von Anfang an arbeitete ich mit Business Analysten und UI-Designern zusammen, um das Produkt an die Bedürfnisse der Nutzer anzupassen. Ich entwickelte Stored Procedures für den Zugriff auf Costars umfangreiche Datenbank über sichere REST-APIs, die ich ebenfalls implementierte. Darauf aufbauend erstellte ich Komponenten und Backend-Logik für Validierungen und Fehlerbehandlung, sodass unser Vertriebsteam Verträge für Kunden generieren konnte, die elektronisch signiert, verarbeitet und nachverfolgt wurden. Die von mir entwickelte Software verarbeitete tausende Verträge und generierte Millionen Dollar Umsatz für Costar."
     }
   },
   "skills": {
