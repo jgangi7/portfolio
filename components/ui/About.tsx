@@ -51,6 +51,14 @@ export default function About() {
                   ))}
                 </ul>
               </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {t('favoriteProject.title')}
+                </h3>
+                <p>
+                  {t('favoriteProject.description')}
+                </p>
+              </div>
             </div>
 
             <div className="space-y-6">
