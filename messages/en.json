@@ -49,7 +49,7 @@
     },
     "favoriteProject": {
       "title": "Favorite Project",
-      "description": "Immediately my mind goes to what I did for Costar on their Web Enterprise (WE) project. As I worked with BA's and UI designers from the start to tailor the product to be designed to fit users needs, built stored procs to be able to access data from CoStar's enormous DB using secure REST APIs that I also wrote. From there it was simply building components and the backend logic for validations and error handling such that our sales team could generate contracts for clients to be e-signed, processed, and eventually tracked. The software I wrote start to finish processed thousands of contracts generating millions of dollars in revenue for CoStar."
+      "description": "Immediately my mind goes to what I did for Costar on their Web Enterprise (WE) project. As I worked with BA's and UI designers from the start to tailor the product to be designed to fit users' needs, built stored procs to be able to access data from CoStar's enormous DB using secure REST APIs that I also wrote. From there it was simply building components and the backend logic for validations and error handling such that our sales team could generate contracts for clients to be e-signed, processed, and eventually tracked. The software I wrote start to finish processed thousands of contracts generating millions of dollars in revenue for CoStar."
     }
   },
   "skills": {
