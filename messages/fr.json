@@ -88,6 +88,10 @@
       "title": "Carte Austin Go",
       "description": "Une application Go qui permet de visualiser une carte d'Austin, au Texas, montrant les endroits que j'ai visités récemment !"
     },
+    "top-5-movies": {
+      "title": "Top 5 Films (Influencé par A24)",
+      "description": "Une application simple qui présente mes films préférés ! Construite avec TypeScript et React, et inspirée par le design du site web d'A24."
+    },
     "technologies": {
       "react": "React",
       "typescript": "TypeScript",
