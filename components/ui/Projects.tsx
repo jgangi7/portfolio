@@ -18,6 +18,17 @@ interface Project {
 
 const projects: Project[] = [
   {
+    titleKey: "top-5-movies.title",
+    descriptionKey: "top-5-movies.description",
+    technologies: [
+      { nameKey: "technologies.react", icon: <FaReact /> },
+      { nameKey: "technologies.typescript", icon: <SiTypescript /> },
+      { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
+      { nameKey: "technologies.nodejs", icon: <FaNodeJs /> }
+    ],
+    githubUrl: "https://github.com/jgangi7/movie-top-5",
+  },
+  {
     titleKey: "chrome-extension.title",
     descriptionKey: "chrome-extension.description",
     technologies: [

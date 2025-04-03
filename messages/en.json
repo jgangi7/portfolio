@@ -88,6 +88,10 @@
       "title": "Go Austin Map",
       "description": "Designed and Implemented a Go application that allows you to view a map of Austin, Texas. It will show the places I visited there recently!"
     },
+    "top-5-movies": {
+      "title": "Top 5 Movies",
+      "description": "A simple application that showcases some of my favorite movies! Built with TypeScript and React, and inspired by A24's website design."
+    },
     "technologies": {
       "react": "React",
       "typescript": "TypeScript",
