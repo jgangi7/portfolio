@@ -3,6 +3,12 @@ import { ReactNode } from 'react';
 import { Footer } from './Footer';
 import { withLoadingGuard } from '../LoadingProvider';
 import Header from './Header';
+import { useGLTF } from '@react-three/drei';
+import { useFrame, Canvas } from '@react-three/fiber';
+import { useRef } from 'react';
+import { Group } from 'three';
+import { OrbitControls } from '@react-three/drei';
+import { Suspense } from 'react';
 
 interface LayoutProps {
   children: ReactNode;
@@ -35,4 +41,24 @@ export const Layout = ({
       <GuardedFooter />
     </div>
   );
-}; 
+};
+
+export function Model() {
+  const { scene } = useGLTF('/models/wilsonHall.glb');
+  return <primitive object={scene} />;
+}
+
+export function Scene() {
+  return (
+    <div style={{ width: '100%', height: '400px' }}>
+      <Canvas>
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[10, 10, 5]} intensity={1} />
+        <Suspense fallback={null}>
+          <Model />
+        </Suspense>
+        <OrbitControls />
+      </Canvas>
+    </div>
+  );
+} 

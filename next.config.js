@@ -9,7 +9,7 @@ const nextConfig = {
   i18n: {
     locales: ['en', 'fr', 'de'],
     defaultLocale: 'en',
-    localeDetection: true,
+    localeDetection: false,
   },
 }
 

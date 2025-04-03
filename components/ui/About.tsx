@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { Scene } from './Layout';
 
 export default function About() {
   const t = useTranslations('about');
@@ -103,6 +104,9 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mt-12">
+            <Scene />
           </div>
         </motion.div>
       </div>
