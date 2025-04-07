@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import LanguageSelector from './LanguageSelector';
+import { CoffeeCup } from './CoffeeCup';
 
 export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -75,6 +76,7 @@ export default function Header() {
           </motion.button>
           <LanguageSelector />
         </div>
+        <CoffeeCup />
       </div>
     </motion.header>
   );
