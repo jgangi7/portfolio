@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { Footer } from './Footer';
 import { withLoadingGuard } from '../LoadingProvider';
 import Header from './Header';
+import { Analytics } from '@vercel/analytics/react';
 
 interface LayoutProps {
   children: ReactNode;
@@ -33,6 +34,7 @@ export const Layout = ({
       </main>
 
       <GuardedFooter />
+      <Analytics />
     </div>
   );
 }; 
