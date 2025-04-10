@@ -120,25 +120,8 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative h-screen flex flex-col items-center justify-start pt-40 sm:pt-20 bg-white dark:bg-[#0a192f] transition-colors duration-300"
+          className="relative h-screen flex flex-col items-center justify-start pt-50 sm:pt-20 bg-white dark:bg-[#0a192f] transition-colors duration-300"
         >
-          {/* Spline Scene as background */}
-          <div className="absolute inset-0 z-0">
-            <SplineScene />
-          </div>
-
-          {/* Cursor tracer */}
-          <motion.div
-            className="fixed pointer-events-none w-8 h-8 rounded-full bg-blue-400/30 dark:bg-blue-400/20 mix-blend-screen"
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              pointerEvents: 'none',
-              transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-            }}
-          />
-          
           {/* Content container */}
           <motion.div
             variants={containerVariants}
@@ -168,6 +151,22 @@ export default function Hero() {
               </motion.h2>
             </div>
           </motion.div>
+          {/* Spline Scene as background */}
+          <div className="absolute inset-0 z-0">
+            <SplineScene />
+          </div>
+
+          {/* Cursor tracer */}
+          <motion.div
+            className="fixed pointer-events-none w-8 h-8 rounded-full bg-blue-400/30 dark:bg-blue-400/20 mix-blend-screen"
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              pointerEvents: 'none',
+              transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+            }}
+          />
         </motion.div>
       )}
     </AnimatePresence>
