@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useLoading } from '../LoadingProvider';
+import { SplineScene } from './SplineScene';
 
 export default function Hero() {
   const { setHeroLoaded } = useLoading();
@@ -119,8 +120,13 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative h-[90vh] flex items-center justify-center px-6 pt-16 pb-8 bg-white dark:bg-[#0a192f] transition-colors duration-300"
+          className="relative h-screen flex flex-col items-center justify-start pt-40 sm:pt-20 bg-white dark:bg-[#0a192f] transition-colors duration-300"
         >
+          {/* Spline Scene as background */}
+          <div className="absolute inset-0 z-0">
+            <SplineScene />
+          </div>
+
           {/* Cursor tracer */}
           <motion.div
             className="fixed pointer-events-none w-8 h-8 rounded-full bg-blue-400/30 dark:bg-blue-400/20 mix-blend-screen"
@@ -136,19 +142,19 @@ export default function Hero() {
           {/* Content container */}
           <motion.div
             variants={containerVariants}
-            className="relative z-10 max-w-3xl w-full"
+            className="relative z-10 max-w-3xl w-full text-center px-4 sm:px-0"
           >
             {/* Main content */}
-            <div className="flex flex-col items-start space-y-4">
+            <div className="flex flex-col items-center space-y-4">
               <motion.div variants={itemVariants}>
-                <div className="flex items-center gap-3 mb-2">
+                <div className="flex items-center gap-3 mb-2 justify-center">
                   <motion.span
-                    className="text-4xl inline-block origin-bottom-right"
+                    className="text-3xl sm:text-4xl inline-block origin-bottom-right"
                     animate={waveAnimation}
                   >
                     👋
                   </motion.span>
-                  <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 dark:from-[#64ffda] dark:to-[#64ffdb] transition-colors duration-300">
+                  <h1 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800 dark:from-[#64ffda] dark:to-[#64ffdb] transition-colors duration-300">
                     {t('greeting')} {t('name')}
                   </h1>
                 </div>
@@ -156,18 +162,10 @@ export default function Hero() {
 
               <motion.h2
                 variants={itemVariants}
-                className="text-gray-800 dark:text-gray-200 text-xl transition-colors duration-300"
+                className="text-gray-800 dark:text-gray-200 text-lg sm:text-xl transition-colors duration-300"
               >
                 {t('title')}
               </motion.h2>
-
-              <motion.div
-                variants={itemVariants}
-                className="text-gray-600 dark:text-[#8892b0] text-lg space-y-3 transition-colors duration-300"
-              >
-                <p>{t('description')}</p>
-                <p>{t('subtitle')}</p>
-              </motion.div>
             </div>
           </motion.div>
         </motion.div>
