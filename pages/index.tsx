@@ -15,8 +15,8 @@ export default function Home() {
     <LoadingProvider>
       <Layout>
         <Hero />
-        <GuardedProjects />
         <GuardedSkills />
+        <GuardedProjects />
         <GuardedAbout />
       </Layout>
     </LoadingProvider>

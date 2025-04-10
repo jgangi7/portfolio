@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <NextIntlClientProvider messages={messages[locale as keyof typeof messages] as unknown as AbstractIntlMessages} locale={locale}>
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" defaultTheme="dark">
         <Component {...pageProps} />
       </ThemeProvider>
     </NextIntlClientProvider>
