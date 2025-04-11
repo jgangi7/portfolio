@@ -123,11 +123,10 @@ export default function Hero() {
           className="relative h-screen flex flex-col items-center justify-start pt-50 sm:pt-20 bg-white dark:bg-[#0a192f] transition-colors duration-300"
         >
           {/* Content container */}
-          <motion.div
+          {/* <motion.div
             variants={containerVariants}
             className="relative z-10 max-w-3xl w-full text-center px-4 sm:px-0"
-          >
-            {/* Main content */}
+          >\
             <div className="flex flex-col items-center space-y-4">
               <motion.div variants={itemVariants}>
                 <div className="flex items-center gap-3 mb-2 justify-center">
@@ -150,7 +149,7 @@ export default function Hero() {
                 {t('title')}
               </motion.h2>
             </div>
-          </motion.div>
+          </motion.div> */}
           {/* Spline Scene as background */}
           <div className="absolute inset-0 z-0">
             <SplineScene />
