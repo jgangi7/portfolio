@@ -152,7 +152,7 @@ export default function Hero() {
           </motion.div>
           
           {/* Spline Scene below text */}
-          <div className="mt-8 w-full max-w-4xl">
+          <div className="mt-8 w-full h-full">
             <SplineScene />
           </div>
 
