@@ -18,7 +18,7 @@ export default function CursorTracer() {
 
   return (
     <motion.div
-      className="fixed pointer-events-none w-8 h-8 rounded-full bg-blue-400/30 dark:bg-blue-400/20 mix-blend-screen"
+      className="fixed pointer-events-none w-8 h-8 rounded-full bg-blue-400/30 dark:bg-blue-400/20 mix-blend-screen z-[100]"
       style={{
         position: 'fixed',
         top: 0,
