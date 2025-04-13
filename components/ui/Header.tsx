@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import LanguageSelector from './LanguageSelector';
 import { CoffeeCup } from './CoffeeCup';
+import { useRouter } from 'next/router';
 
 export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -11,6 +12,7 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const t = useTranslations('navigation');
+  const router = useRouter();
 
   useEffect(() => {
     const controlHeader = () => {
@@ -44,6 +46,15 @@ export default function Header() {
     }
   };
 
+  const handleNavigation = (href: string) => {
+    router.push(href);
+  };
+
+  const menuItems = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' }
+  ];
+
   if (!mounted) {
     return null;
   }
@@ -57,6 +68,7 @@ export default function Header() {
     >
       <div className="absolute inset-0 bg-white/80 dark:bg-[#0a192f]/90 backdrop-blur-md transition-colors duration-300" />
       <div className="container relative z-10 mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Left side - Theme toggle and Language selector */}
         <div className="flex items-center space-x-4">
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -76,6 +88,23 @@ export default function Header() {
           </motion.button>
           <LanguageSelector />
         </div>
+
+        {/* Center - Navigation Menu */}
+        <nav className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-8">
+          {menuItems.map((item) => (
+            <motion.button
+              key={item.label}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleNavigation(item.href)}
+              className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-[#64ffda] transition-colors duration-300 text-lg font-medium"
+            >
+              {item.label}
+            </motion.button>
+          ))}
+        </nav>
+
+        {/* Right side - Coffee Cup */}
         <CoffeeCup />
       </div>
     </motion.header>
