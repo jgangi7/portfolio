@@ -18,7 +18,13 @@
     "content": "Je suis passionné par le développement de logiciels qui améliorent la vie",
     "skills": "Compétences",
     "professional": {
+      "about": "À PROPOS",
+      "experiences": "EXPÉRIENCES",
+      "nowPlaying": "JOUE ACTUELLEMENT",
+      "todayheader": "PARCOURS PROFESSIONNEL",
+      "growthheader": "GROUSSSEMENT",
       "title": "Parcours Professionnel",
+      "growth": "En grandissant dans le nord de la Virginie, j'ai toujours été intéressé par la technologie et j'ai rapidement découvert mon amour pour les ordinateurs et ce qui pouvait être fait avec eux. J'ai eu la chance d'avoir une famille qui a travaillé avec moi pour nourrir mon intérêt et m'encourager à créer une petite entreprise d'assemblage d'ordinateurs de bureau pour mes amis et ma famille. C'était la première fois que je pouvais faire quelque chose lié à la technologie, et le sentiment d'accomplissement lors du premier démarrage était incroyable. J'étais accroché. Depuis lors, mon objectif a été de créer des logiciels utiles et impactants. J'ai eu la chance d'avoir eu l'opportunité de travailler avec des personnes et des entreprises incroyables qui m'ont aidé à grandir en tant qu'ingénieur logiciel et en tant que personne.",
       "content": "Je suis un ingénieur logiciel avec une passion pour la construction de systèmes évolutifs, créatifs et efficaces. J'ai commencé mon parcours en 2021 comme stagiaire pour une entreprise de télédétection de données satellitaires -- Maxar Technologies, où j'ai travaillé sur la plateforme de données cartographiques. Après mon stage, j'ai été embauché en CDI en tant qu'Ingénieur Logiciel Associé alors que je poursuivais mes études à l'Université James Madison. J'ai quitté Maxar en 2022 pour rejoindre CoStar Group en tant qu'Ingénieur Logiciel, où j'ai travaillé sur le projet Web Enterprise (WE) principalement en mode full-stack et ai appris à aimer construire des systèmes complets que je peux contrôler de bout en bout."
     },
     "whatIDo": {
