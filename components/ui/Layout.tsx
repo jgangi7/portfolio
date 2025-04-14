@@ -4,6 +4,7 @@ import { Footer } from './Footer';
 import { withLoadingGuard } from '../LoadingProvider';
 import Header from './Header';
 import { Analytics } from '@vercel/analytics/react';
+import CursorTracer from './CursorTracer';
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,7 +20,7 @@ export const Layout = ({
   description = 'Software Developer Portfolio showcasing my projects and skills',
 }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0a192f] transition-colors">
+    <div className="min-h-screen bg-white dark:bg-[#0a192f] transition-colors duration-300">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -35,6 +36,7 @@ export const Layout = ({
 
       <GuardedFooter />
       <Analytics />
+      <CursorTracer />
     </div>
   );
 }; 

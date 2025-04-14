@@ -18,8 +18,14 @@
     "content": "I am passionate about developing software that improves lives.",
     "skills": "Skills",
     "professional": {
+      "about": "ABOUT",
+      "experiences": "EXPERIENCES",
+      "nowPlaying": "NOW PLAYING",
+      "todayheader": "PROFESSIONAL PATH",
+      "growthheader": "GROWTH",
       "title": "Professional Journey",
-      "content": "Throughout my career, I've worked with a wide range of technologies and frameworks, focusing on creating efficient, maintainable, and user-friendly applications. My experience spans from frontend development with React and Angular to backend systems using Node.js and .NET."
+      "growth": "Growing up in Northern Virginia, I was always interested in technology and quickly found my love for computers and what could be done with them. I was fortunate to have a family that worked with me to foster my interest and encourage me to start a small business assembling desktops for friends and family. This was the first time I was able do anything related to technology and the feeling of accomplishment when it would first boot was amazing. I was hooked. From then on my goal has been to build software that is useful and impactful. I've been fortunate to have had the opportunity to work with some amazing people and companies that have helped me grow as a software engineer and person.",
+      "content": "I am a software engineer with a passion for building scalable, creative, and efficient systems. I began my journey in 2021 as an Intern for an amazing satalite imagery company -- Maxar Technologies, where I worked on the Map Data Platform team. After my internship, I was offered a full-time position as an Associate Software Engineer while I continued my studies at James Madison University. I left Maxar in 2022 to join CoStar Group as a Software Engineer, where I worked on the Web Enterprise (WE) project mainly in a full-stack capacity and grew to love building complete systems that I can have control over from start to finish."
     },
     "whatIDo": {
       "title": "What I Do",
