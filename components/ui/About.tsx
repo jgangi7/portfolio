@@ -64,16 +64,16 @@ export default function About() {
         {/* Left Column */}
         <div className="h-full">
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 border border-gray-800 h-full">
-            <h1 className="text-white text-[1.5rem] font-medium mb-4">{t('about')}</h1>
+            <h1 className="text-white text-[1.8rem] font-medium mb-4">{t('about')}</h1>
             <div className="h-full flex flex-col space-y-4">
               <div>
-                <h3 className="text-gray-400 text-[0.875rem] mb-2">{t('todayheader')}</h3>
+                <h3 className="text-gray-400 text-[1.1rem] mb-2">{t('todayheader')}</h3>
                 <p className="text-gray-200 text-[0.875rem] md:text-[min(1.1rem,1.8vh)] xl:text-[min(1.2rem,2vh)] leading-[1.5]">
                   {t('content')}
                 </p>
               </div>
               <div>
-                <h3 className="text-gray-400 text-[0.875rem] mb-2">{t('growthheader')}</h3>
+                <h3 className="text-gray-400 text-[1.1rem] mb-2">{t('growthheader')}</h3>
                 <p className="text-gray-200 text-[0.875rem] md:text-[min(1.1rem,1.8vh)] xl:text-[min(1.2rem,2vh)] leading-[1.5]">
                   {t('growth')}
                 </p>
