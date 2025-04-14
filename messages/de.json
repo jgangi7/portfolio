@@ -18,9 +18,15 @@
     "content": "Ich bin leidenschaftlich daran interessiert, Software zu entwickeln, die das Leben verbessert.",
     "skills": "Fähigkeiten",
     "professional": {
+      "about": "ÜBER MICH",
+      "experiences": "EXPERIENZEN",
+      "nowPlaying": "AKTUELL",
+      "todayheader": "PROFESSIONELLE WEG",
+      "growthheader": "WACHSTUM",
       "title": "Beruflicher Werdegang",
-      "content": "Ich bin ein Softwareentwickler mit einer Leidenschaft für das Entwickeln von skalierbaren, kreativen und effizienten Systemen. Mein Weg begann im Jahr 2021 als Praktikant bei einer bemerkenswerten Satellitenbilddaten-Firma -- Maxar Technologies, wo ich am Map Data Platform Team arbeitete. Nach meinem Praktikum wurde ich als Softwareentwickler in die Position eines Associate Software Engineers berufen, während ich meine Studien an der James Madison University fortsetzte. Ich verließ Maxar im Jahr 2022, um bei CoStar Group als Softwareentwickler zu arbeiten, wo ich am Web Enterprise (WE) Projekt hauptsächlich in einem Full-Stack-Umfang arbeitete und zu lieben begann, vollständige Systeme zu erstellen, die ich von Anfang bis Ende kontrollieren kann."
-    },
+      "growth": "Als ich in Nord-Virginia aufwuchs, war ich schon immer an Technologie interessiert und entdeckte schnell meine Liebe zu Computern und was man damit alles machen konnte. Ich hatte das Glück, eine Familie zu haben, die mit mir zusammenarbeitete, um mein Interesse zu fördern und mich dazu ermutigte, ein kleines Unternehmen für den Zusammenbau von Desktop-Computern für Freunde und Familie zu gründen. Das war das erste Mal, dass ich etwas mit Technologie zu tun hatte, und das Gefühl der Erfüllung beim ersten Hochfahren war unglaublich. Ich war süchtig. Seitdem ist es mein Ziel, nützliche und wirkungsvolle Software zu entwickeln. Ich hatte das Glück, die Gelegenheit gehabt zu haben, mit einigen erstaunlichen Menschen und Unternehmen zusammenzuarbeiten, die mir geholfen haben, als Softwareingenieur und als Person zu wachsen.",
+      "content": "Ich bin ein Softwareingenieur mit einer Leidenschaft für den Aufbau skalierbarer, kreativer und effizienter Systeme. Ich begann meine Laufbahn 2021 als Praktikant bei einem Unternehmen für Satellitendaten-Fernerkundung -- Maxar Technologies, wo ich an der Kartendatenplattform arbeitete. Nach meinem Praktikum wurde ich als Associate Software Engineer eingestellt, während ich mein Studium an der James Madison University fortsetzte. Ich verließ Maxar 2022, um zu CoStar Group als Software Engineer zu wechseln, wo ich hauptsächlich im Full-Stack-Modus am Web Enterprise (WE) Projekt arbeitete und lernte, vollständige Systeme zu lieben, die ich von Anfang bis Ende kontrollieren kann."
+      },
     "whatIDo": {
       "title": "Was Ich Mache",
       "skills": [
