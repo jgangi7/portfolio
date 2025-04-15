@@ -106,9 +106,15 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ 
                 scale: 1.01,
-                transition: { duration: 0.2 }
+                y: -5,
+                transition: { 
+                  duration: 0.2,
+                  ease: "easeOut"
+                }
               }}
-              className="relative bg-[#1C1C1C] rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+              whileTap={{ scale: 0.99 }}
+              className="relative bg-[#1C1C1C] rounded-lg overflow-hidden transition-all duration-300 
+                hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-white/10"
             >
               <div className="flex flex-col md:flex-row h-full">
                 {/* Image container - left side */}
