@@ -94,7 +94,7 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         className="max-w-6xl mx-auto px-6"
       >
-        <h2 className="text-3xl text-gray-900 dark:text-white mb-12 text-center">
+        <h2 className="text-4xl text-gray-900 dark:text-white mb-12 text-center">
           {t('title')}
         </h2>
         <div className="grid grid-cols-1 gap-8">
@@ -113,12 +113,13 @@ export default function Projects() {
                 }
               }}
               whileTap={{ scale: 0.99 }}
-              className="relative bg-[#1C1C1C] rounded-lg overflow-hidden transition-all duration-300 
-                hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-white/10"
+              className="relative bg-white dark:bg-[#1C1C1C] rounded-lg overflow-hidden transition-all duration-300 
+                hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] 
+                hover:shadow-black/10 dark:hover:shadow-white/10 border border-gray-100 dark:border-transparent"
             >
               <div className="flex flex-col md:flex-row h-full">
                 {/* Image container - left side */}
-                <div className="md:w-1/2 h-[300px] md:h-[400px] relative overflow-hidden bg-[#2C2C2C]">
+                <div className="md:w-1/2 h-[300px] md:h-[400px] relative overflow-hidden bg-gray-200 dark:bg-[#2C2C2C]">
                   {project.imageUrl ? (
                     <img 
                       src={project.imageUrl} 
@@ -126,7 +127,7 @@ export default function Projects() {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-gray-500">
+                    <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-500">
                       Image coming soon
                     </div>
                   )}
@@ -135,20 +136,20 @@ export default function Projects() {
                 {/* Content container - right side */}
                 <div className="md:w-1/2 p-8 flex flex-col justify-between">
                   <div>
-                    <div className="text-gray-400 text-sm mb-2">
+                    <div className="text-gray-600 dark:text-gray-400 text-sm mb-2 font-medium">
                       {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-4">
                       {t(project.titleKey)}
                     </h3>
-                    <p className="text-gray-400 mb-6 text-sm md:text-base leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-400 mb-6 text-sm md:text-base leading-relaxed">
                       {t(project.descriptionKey)}
                     </p>
                     <div className="flex flex-wrap gap-3 mb-6">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech.nameKey}
-                          className="px-3 py-1 bg-[#2C2C2C] text-gray-300 rounded-full text-sm flex items-center gap-2"
+                          className="px-3 py-1 bg-gray-100 dark:bg-[#2C2C2C] text-gray-700 dark:text-gray-300 rounded-full text-sm flex items-center gap-2 border border-gray-200 dark:border-transparent"
                         >
                           <span className="text-base">{tech.icon}</span>
                           {t(tech.nameKey)}
@@ -163,7 +164,7 @@ export default function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
                         aria-label={t('githubLink')}
                       >
                         <FaGithub className="text-2xl" />
@@ -174,7 +175,7 @@ export default function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
                         aria-label={t('liveLink')}
                       >
                         <FaExternalLinkAlt className="text-2xl" />
