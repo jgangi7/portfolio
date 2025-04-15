@@ -14,6 +14,7 @@ interface Project {
   imageUrl?: string;
   githubUrl?: string;
   liveUrl?: string;
+  category?: string;
 }
 
 const projects: Project[] = [
@@ -93,10 +94,10 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         className="max-w-6xl mx-auto px-6"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+        <h2 className="text-3xl text-gray-900 dark:text-white mb-12 text-center">
           {t('title')}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.titleKey}
@@ -104,57 +105,76 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ 
-                scale: 1.02,
+                scale: 1.01,
                 transition: { duration: 0.2 }
               }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+              className="relative bg-[#1C1C1C] rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
-              {project.imageUrl && (
-                <div className="h-48 overflow-hidden">
-                  <img src={project.imageUrl} alt={t(project.titleKey)} className="w-full h-full object-cover" />
-                </div>
-              )}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  {t(project.titleKey)}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {t(project.descriptionKey)}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech.nameKey}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm flex items-center gap-2"
-                    >
-                      <span className="text-base">{tech.icon}</span>
-                      {t(tech.nameKey)}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                      aria-label={t('githubLink')}
-                    >
-                      <FaGithub className="text-xl" />
-                    </a>
+              <div className="flex flex-col md:flex-row h-full">
+                {/* Image container - left side */}
+                <div className="md:w-1/2 h-[300px] md:h-[400px] relative overflow-hidden bg-[#2C2C2C]">
+                  {project.imageUrl ? (
+                    <img 
+                      src={project.imageUrl} 
+                      alt={t(project.titleKey)} 
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-500">
+                      Image coming soon
+                    </div>
                   )}
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                      aria-label={t('liveLink')}
-                    >
-                      <FaExternalLinkAlt className="text-xl" />
-                    </a>
-                  )}
+                </div>
+
+                {/* Content container - right side */}
+                <div className="md:w-1/2 p-8 flex flex-col justify-between">
+                  <div>
+                    <div className="text-gray-400 text-sm mb-2">
+                      {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+                      {t(project.titleKey)}
+                    </h3>
+                    <p className="text-gray-400 mb-6 text-sm md:text-base leading-relaxed">
+                      {t(project.descriptionKey)}
+                    </p>
+                    <div className="flex flex-wrap gap-3 mb-6">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech.nameKey}
+                          className="px-3 py-1 bg-[#2C2C2C] text-gray-300 rounded-full text-sm flex items-center gap-2"
+                        >
+                          <span className="text-base">{tech.icon}</span>
+                          {t(tech.nameKey)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-6">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors"
+                        aria-label={t('githubLink')}
+                      >
+                        <FaGithub className="text-2xl" />
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors"
+                        aria-label={t('liveLink')}
+                      >
+                        <FaExternalLinkAlt className="text-2xl" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
