@@ -14,6 +14,7 @@ interface Project {
   imageUrl?: string;
   githubUrl?: string;
   liveUrl?: string;
+  category?: string;
 }
 
 const projects: Project[] = [
@@ -26,7 +27,9 @@ const projects: Project[] = [
       { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
       { nameKey: "technologies.nodejs", icon: <FaNodeJs /> }
     ],
+    imageUrl: "/images/top-5-movies.png",
     githubUrl: "https://github.com/jgangi7/movie-top-5",
+    category: "Web App"
   },
   {
     titleKey: "chrome-extension.title",
@@ -35,7 +38,9 @@ const projects: Project[] = [
       { nameKey: "technologies.typescript", icon: <SiTypescript /> },
       { nameKey: "technologies.js", icon: <SiJavascript /> }
     ],
+    imageUrl: "/images/chrome-extension.png",
     githubUrl: "https://github.com/jgangi7/chrome-ext-search",
+    category: "Browser Extension"
   },
   {
     titleKey: "golang-app.title",
@@ -43,33 +48,39 @@ const projects: Project[] = [
     technologies: [
       { nameKey: "technologies.golang" }
     ],
+    imageUrl: "/images/ausitn-map.png",
     githubUrl: "https://github.com/jgangi7/go-austin-map",
+    category: "Go Application"
   },
-  {
-    titleKey: "portfolio.title",
-    descriptionKey: "portfolio.description",
-    technologies: [
-      { nameKey: "technologies.react", icon: <FaReact /> },
-      { nameKey: "technologies.typescript", icon: <SiTypescript /> },
-      { nameKey: "technologies.vite", icon: <SiVite /> },
-      { nameKey: "technologies.materialui", icon: <SiMui /> },
-      { nameKey: "technologies.recharts", icon: <FaDatabase /> },
-      { nameKey: "technologies.alphaVantage", icon: <TbApi /> }
-    ],
-    githubUrl: "https://github.com/jgangi7/portfolio-visualizer",
-  },
-  {
-    titleKey: "blockchain.title",
-    descriptionKey: "blockchain.description",
-    technologies: [
-      { nameKey: "technologies.csharp", icon: <SiSharp /> },
-      { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
-      { nameKey: "technologies.restapi", icon: <TbApi /> },
-      { nameKey: "technologies.swagger", icon: <SiSwagger /> },
-      { nameKey: "technologies.blockchain", icon: <SiHiveBlockchain /> }
-    ],
-    githubUrl: "https://github.com/jgangi7/blockchain-c-sharp",
-  },
+  // {
+  //   titleKey: "portfolio.title",
+  //   descriptionKey: "portfolio.description",
+  //   technologies: [
+  //     { nameKey: "technologies.react", icon: <FaReact /> },
+  //     { nameKey: "technologies.typescript", icon: <SiTypescript /> },
+  //     { nameKey: "technologies.vite", icon: <SiVite /> },
+  //     { nameKey: "technologies.materialui", icon: <SiMui /> },
+  //     { nameKey: "technologies.recharts", icon: <FaDatabase /> },
+  //     { nameKey: "technologies.alphaVantage", icon: <TbApi /> }
+  //   ],
+  //   imageUrl: "/images/portfolio.jpg",
+  //   githubUrl: "https://github.com/jgangi7/portfolio-visualizer",
+  //   category: "Web App"
+  // },
+  // {
+  //   titleKey: "blockchain.title",
+  //   descriptionKey: "blockchain.description",
+  //   technologies: [
+  //     { nameKey: "technologies.csharp", icon: <SiSharp /> },
+  //     { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
+  //     { nameKey: "technologies.restapi", icon: <TbApi /> },
+  //     { nameKey: "technologies.swagger", icon: <SiSwagger /> },
+  //     { nameKey: "technologies.blockchain", icon: <SiHiveBlockchain /> }
+  //   ],
+  //   imageUrl: "/images/blockchain.jpg",
+  //   githubUrl: "https://github.com/jgangi7/blockchain-c-sharp",
+  //   category: "API"
+  // },
   {
     titleKey: "chatbot.title",
     descriptionKey: "chatbot.description",
@@ -78,7 +89,9 @@ const projects: Project[] = [
       { nameKey: "technologies.angular", icon: <FaAngular /> },
       { nameKey: "technologies.nodejs", icon: <FaNodeJs /> }
     ],
+    imageUrl: "/images/chatbot.png",
     githubUrl: "https://github.com/jgangi7/angular-health-bot",
+    category: "Web App"
   }
 ];
 
@@ -93,10 +106,10 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         className="max-w-6xl mx-auto px-6"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+        <h2 className="text-4xl text-gray-900 dark:text-white mb-12 text-center">
           {t('title')}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.titleKey}
@@ -104,57 +117,90 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
+                scale: 1.01,
+                y: -5,
+                transition: { 
+                  duration: 0.2,
+                  ease: "easeOut"
+                }
               }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-700"
+              whileTap={{ scale: 0.99 }}
+              className="relative bg-white dark:bg-[#1C1C1C] rounded-lg overflow-hidden transition-all duration-300 
+                hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] 
+                hover:shadow-black/10 dark:hover:shadow-white/10 border border-gray-100 dark:border-transparent"
             >
-              {project.imageUrl && (
-                <div className="h-48 overflow-hidden">
-                  <img src={project.imageUrl} alt={t(project.titleKey)} className="w-full h-full object-cover" />
-                </div>
-              )}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  {t(project.titleKey)}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {t(project.descriptionKey)}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech.nameKey}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm flex items-center gap-2"
-                    >
-                      <span className="text-base">{tech.icon}</span>
-                      {t(tech.nameKey)}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                      aria-label={t('githubLink')}
-                    >
-                      <FaGithub className="text-xl" />
-                    </a>
+              <div className="flex flex-col md:flex-row h-full">
+                {/* Image container - left side */}
+                <div className="hidden md:block md:w-1/2 h-[300px] md:h-[400px] relative overflow-hidden bg-gray-100 dark:bg-[#2C2C2C]">
+                  <div className="absolute top-4 left-4 z-10 text-gray-600 dark:text-gray-400 text-sm font-medium">
+                    {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
+                  </div>
+                  {project.imageUrl ? (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#1C1C1C] dark:to-[#2C2C2C]">
+                      <img 
+                        src={project.imageUrl} 
+                        alt={t(project.titleKey)} 
+                        className="w-full h-full object-contain p-4 mt-[25%]"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-500">
+                      Image coming soon
+                    </div>
                   )}
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-                      aria-label={t('liveLink')}
-                    >
-                      <FaExternalLinkAlt className="text-xl" />
-                    </a>
-                  )}
+                </div>
+
+                {/* Content container - right side */}
+                <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-4 md:hidden">
+                      <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">
+                        {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
+                      </span>
+                    </div>
+                    <h3 className="text-xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-3 md:mb-4">
+                      {t(project.titleKey)}
+                    </h3>
+                    <p className="text-gray-700 dark:text-gray-400 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+                      {t(project.descriptionKey)}
+                    </p>
+                    <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech.nameKey}
+                          className="px-2 md:px-3 py-1 bg-gray-100 dark:bg-[#2C2C2C] text-gray-700 dark:text-gray-300 rounded-full text-xs md:text-sm flex items-center gap-1 md:gap-2 border border-gray-200 dark:border-transparent"
+                        >
+                          <span className="text-sm md:text-base">{tech.icon}</span>
+                          {t(tech.nameKey)}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 md:gap-6">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
+                        aria-label={t('githubLink')}
+                      >
+                        <FaGithub className="text-xl md:text-2xl" />
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
+                        aria-label={t('liveLink')}
+                      >
+                        <FaExternalLinkAlt className="text-xl md:text-2xl" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
