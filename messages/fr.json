@@ -74,6 +74,13 @@
     "description": "Voici quelques projets sur lesquels j'ai travaillé",
     "githubLink": "Voir sur GitHub",
     "liveLink": "Voir la démo",
+    "categories": {
+      "project": "PROJET",
+      "webApp": "Application Web",
+      "browserExtension": "Extension de navigateur",
+      "goApplication": "Application Go",
+      "api": "API"
+    },
     "portfolio": {
       "title": "Analyse de Portefeuille",
       "description": "Une application React TypeScript pour suivre et visualiser la performance d'un portefeuille d'actions. Inclut des mises à jour en temps réel des prix, la visualisation de l'allocation du portefeuille et le suivi des gains/pertes."

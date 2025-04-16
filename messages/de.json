@@ -74,6 +74,13 @@
     "description": "Hier sind einige Projekte, an denen ich gearbeitet habe",
     "githubLink": "Auf GitHub ansehen",
     "liveLink": "Live-Demo ansehen",
+    "categories": {
+      "project": "PROJEKT",
+      "webApp": "Web-Anwendung",
+      "browserExtension": "Browser-Erweiterung",
+      "goApplication": "Go-Anwendung",
+      "api": "API"
+    },
     "portfolio": {
       "title": "Aktienportfolio-Analyse",
       "description": "Eine React TypeScript-Anwendung zur Verfolgung und Visualisierung der Performance von Aktienportfolios. Enthält Echtzeit-Aktienkursaktualisierungen, Portfolioallokationsvisualisierung und Gewinn-/Verlustverfolgung."
