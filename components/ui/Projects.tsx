@@ -129,9 +129,9 @@ export default function Projects() {
                 hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] 
                 hover:shadow-black/10 dark:hover:shadow-white/10 border border-gray-100 dark:border-transparent"
             >
-              <div className="flex flex-col md:flex-row h-full">
+              <div className="flex flex-col lg:flex-row h-full">
                 {/* Image container - left side */}
-                <div className="hidden md:block md:w-1/2 h-[300px] md:h-[400px] relative overflow-hidden bg-gray-100 dark:bg-[#2C2C2C]">
+                <div className="hidden lg:block lg:w-1/2 h-[300px] lg:h-[400px] relative overflow-hidden bg-gray-100 dark:bg-[#2C2C2C]">
                   <div className="absolute top-4 left-4 z-10 text-gray-600 dark:text-gray-400 text-sm font-medium">
                     {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
                   </div>
@@ -151,33 +151,33 @@ export default function Projects() {
                 </div>
 
                 {/* Content container - right side */}
-                <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+                <div className="w-full lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-2 mb-4 md:hidden">
+                    <div className="flex items-center gap-2 mb-4 lg:hidden">
                       <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">
                         {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
                       </span>
                     </div>
-                    <h3 className="text-xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-3 md:mb-4">
+                    <h3 className="text-xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-3 lg:mb-4">
                       {t(project.titleKey)}
                     </h3>
-                    <p className="text-gray-700 dark:text-gray-400 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-400 mb-4 lg:mb-6 text-sm lg:text-base leading-relaxed">
                       {t(project.descriptionKey)}
                     </p>
-                    <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
+                    <div className="flex flex-wrap gap-2 lg:gap-3 mb-4 lg:mb-6">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech.nameKey}
-                          className="px-2 md:px-3 py-1 bg-gray-100 dark:bg-[#2C2C2C] text-gray-700 dark:text-gray-300 rounded-full text-xs md:text-sm flex items-center gap-1 md:gap-2 border border-gray-200 dark:border-transparent"
+                          className="px-2 lg:px-3 py-1 bg-gray-100 dark:bg-[#2C2C2C] text-gray-700 dark:text-gray-300 rounded-full text-xs lg:text-sm flex items-center gap-1 lg:gap-2 border border-gray-200 dark:border-transparent"
                         >
-                          <span className="text-sm md:text-base">{tech.icon}</span>
+                          <span className="text-sm lg:text-base">{tech.icon}</span>
                           {t(tech.nameKey)}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex gap-4 md:gap-6">
+                  <div className="flex gap-4 lg:gap-6">
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
@@ -186,7 +186,7 @@ export default function Projects() {
                         className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
                         aria-label={t('githubLink')}
                       >
-                        <FaGithub className="text-xl md:text-2xl" />
+                        <FaGithub className="text-xl lg:text-2xl" />
                       </a>
                     )}
                     {project.liveUrl && (
@@ -197,7 +197,7 @@ export default function Projects() {
                         className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
                         aria-label={t('liveLink')}
                       >
-                        <FaExternalLinkAlt className="text-xl md:text-2xl" />
+                        <FaExternalLinkAlt className="text-xl lg:text-2xl" />
                       </a>
                     )}
                   </div>
