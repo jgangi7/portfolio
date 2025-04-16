@@ -74,6 +74,13 @@
     "description": "Here are some of the projects I've worked on",
     "githubLink": "View on GitHub",
     "liveLink": "View Live Demo",
+    "categories": {
+      "project": "PROJECT",
+      "webApp": "Web App",
+      "browserExtension": "Browser Extension",
+      "goApplication": "Go Application",
+      "api": "API"
+    },
     "portfolio": {
       "title": "Stock Portfolio Analytics",
       "description": "Designed and Implemented a React TypeScript application for tracking and visualizing stock portfolio performance. Features real-time stock price updates, portfolio allocation visualization, and gain/loss tracking."

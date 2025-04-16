@@ -14,7 +14,7 @@ interface Project {
   imageUrl?: string;
   githubUrl?: string;
   liveUrl?: string;
-  category?: string;
+  categoryKey?: string;
 }
 
 const projects: Project[] = [
@@ -29,7 +29,7 @@ const projects: Project[] = [
     ],
     imageUrl: "/images/top-5-movies.png",
     githubUrl: "https://github.com/jgangi7/movie-top-5",
-    category: "Web App"
+    categoryKey: "categories.webApp"
   },
   {
     titleKey: "chrome-extension.title",
@@ -40,7 +40,7 @@ const projects: Project[] = [
     ],
     imageUrl: "/images/chrome-extension.png",
     githubUrl: "https://github.com/jgangi7/chrome-ext-search",
-    category: "Browser Extension"
+    categoryKey: "categories.browserExtension"
   },
   {
     titleKey: "golang-app.title",
@@ -50,7 +50,7 @@ const projects: Project[] = [
     ],
     imageUrl: "/images/ausitn-map.png",
     githubUrl: "https://github.com/jgangi7/go-austin-map",
-    category: "Go Application"
+    categoryKey: "categories.goApplication"
   },
   // {
   //   titleKey: "portfolio.title",
@@ -91,7 +91,7 @@ const projects: Project[] = [
     ],
     imageUrl: "/images/chatbot.png",
     githubUrl: "https://github.com/jgangi7/angular-health-bot",
-    category: "Web App"
+    categoryKey: "categories.webApp"
   }
 ];
 
@@ -133,7 +133,7 @@ export default function Projects() {
                 {/* Image container - left side */}
                 <div className="hidden lg:block lg:w-1/2 h-[300px] lg:h-[400px] relative overflow-hidden bg-gray-100 dark:bg-[#2C2C2C]">
                   <div className="absolute top-4 left-4 z-10 text-gray-600 dark:text-gray-400 text-sm font-medium">
-                    {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
+                    {String(index + 1).padStart(2, '0')} | {project.categoryKey ? t(project.categoryKey) : t('categories.project')}
                   </div>
                   {project.imageUrl ? (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#1C1C1C] dark:to-[#2C2C2C]">
@@ -155,7 +155,7 @@ export default function Projects() {
                   <div>
                     <div className="flex items-center gap-2 mb-4 lg:hidden">
                       <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">
-                        {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
+                        {String(index + 1).padStart(2, '0')} | {project.categoryKey ? t(project.categoryKey) : t('categories.project')}
                       </span>
                     </div>
                     <h3 className="text-xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-3 lg:mb-4">
