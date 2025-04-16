@@ -27,7 +27,9 @@ const projects: Project[] = [
       { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
       { nameKey: "technologies.nodejs", icon: <FaNodeJs /> }
     ],
+    imageUrl: "/images/top-5-movies.png",
     githubUrl: "https://github.com/jgangi7/movie-top-5",
+    category: "Web App"
   },
   {
     titleKey: "chrome-extension.title",
@@ -36,7 +38,9 @@ const projects: Project[] = [
       { nameKey: "technologies.typescript", icon: <SiTypescript /> },
       { nameKey: "technologies.js", icon: <SiJavascript /> }
     ],
+    imageUrl: "/images/chrome-extension.png",
     githubUrl: "https://github.com/jgangi7/chrome-ext-search",
+    category: "Browser Extension"
   },
   {
     titleKey: "golang-app.title",
@@ -44,33 +48,39 @@ const projects: Project[] = [
     technologies: [
       { nameKey: "technologies.golang" }
     ],
+    imageUrl: "/images/ausitn-map.png",
     githubUrl: "https://github.com/jgangi7/go-austin-map",
+    category: "Go Application"
   },
-  {
-    titleKey: "portfolio.title",
-    descriptionKey: "portfolio.description",
-    technologies: [
-      { nameKey: "technologies.react", icon: <FaReact /> },
-      { nameKey: "technologies.typescript", icon: <SiTypescript /> },
-      { nameKey: "technologies.vite", icon: <SiVite /> },
-      { nameKey: "technologies.materialui", icon: <SiMui /> },
-      { nameKey: "technologies.recharts", icon: <FaDatabase /> },
-      { nameKey: "technologies.alphaVantage", icon: <TbApi /> }
-    ],
-    githubUrl: "https://github.com/jgangi7/portfolio-visualizer",
-  },
-  {
-    titleKey: "blockchain.title",
-    descriptionKey: "blockchain.description",
-    technologies: [
-      { nameKey: "technologies.csharp", icon: <SiSharp /> },
-      { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
-      { nameKey: "technologies.restapi", icon: <TbApi /> },
-      { nameKey: "technologies.swagger", icon: <SiSwagger /> },
-      { nameKey: "technologies.blockchain", icon: <SiHiveBlockchain /> }
-    ],
-    githubUrl: "https://github.com/jgangi7/blockchain-c-sharp",
-  },
+  // {
+  //   titleKey: "portfolio.title",
+  //   descriptionKey: "portfolio.description",
+  //   technologies: [
+  //     { nameKey: "technologies.react", icon: <FaReact /> },
+  //     { nameKey: "technologies.typescript", icon: <SiTypescript /> },
+  //     { nameKey: "technologies.vite", icon: <SiVite /> },
+  //     { nameKey: "technologies.materialui", icon: <SiMui /> },
+  //     { nameKey: "technologies.recharts", icon: <FaDatabase /> },
+  //     { nameKey: "technologies.alphaVantage", icon: <TbApi /> }
+  //   ],
+  //   imageUrl: "/images/portfolio.jpg",
+  //   githubUrl: "https://github.com/jgangi7/portfolio-visualizer",
+  //   category: "Web App"
+  // },
+  // {
+  //   titleKey: "blockchain.title",
+  //   descriptionKey: "blockchain.description",
+  //   technologies: [
+  //     { nameKey: "technologies.csharp", icon: <SiSharp /> },
+  //     { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
+  //     { nameKey: "technologies.restapi", icon: <TbApi /> },
+  //     { nameKey: "technologies.swagger", icon: <SiSwagger /> },
+  //     { nameKey: "technologies.blockchain", icon: <SiHiveBlockchain /> }
+  //   ],
+  //   imageUrl: "/images/blockchain.jpg",
+  //   githubUrl: "https://github.com/jgangi7/blockchain-c-sharp",
+  //   category: "API"
+  // },
   {
     titleKey: "chatbot.title",
     descriptionKey: "chatbot.description",
@@ -79,7 +89,9 @@ const projects: Project[] = [
       { nameKey: "technologies.angular", icon: <FaAngular /> },
       { nameKey: "technologies.nodejs", icon: <FaNodeJs /> }
     ],
+    imageUrl: "/images/chatbot.png",
     githubUrl: "https://github.com/jgangi7/angular-health-bot",
+    category: "Web App"
   }
 ];
 
@@ -119,13 +131,18 @@ export default function Projects() {
             >
               <div className="flex flex-col md:flex-row h-full">
                 {/* Image container - left side */}
-                <div className="md:w-1/2 h-[300px] md:h-[400px] relative overflow-hidden bg-gray-200 dark:bg-[#2C2C2C]">
+                <div className="md:w-1/2 h-[300px] md:h-[400px] relative overflow-hidden bg-gray-100 dark:bg-[#2C2C2C]">
+                  <div className="absolute top-4 left-4 z-10 text-gray-600 dark:text-gray-400 text-sm font-medium">
+                    {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
+                  </div>
                   {project.imageUrl ? (
-                    <img 
-                      src={project.imageUrl} 
-                      alt={t(project.titleKey)} 
-                      className="w-full h-full object-cover"
-                    />
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#1C1C1C] dark:to-[#2C2C2C]">
+                      <img 
+                        src={project.imageUrl} 
+                        alt={t(project.titleKey)} 
+                        className="w-full h-full object-contain p-4 mt-[25%]"
+                      />
+                    </div>
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-500">
                       Image coming soon
@@ -136,9 +153,6 @@ export default function Projects() {
                 {/* Content container - right side */}
                 <div className="md:w-1/2 p-8 flex flex-col justify-between">
                   <div>
-                    <div className="text-gray-600 dark:text-gray-400 text-sm mb-2 font-medium">
-                      {String(index + 1).padStart(2, '0')} | {project.category || 'PROJECT'}
-                    </div>
                     <h3 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white mb-4">
                       {t(project.titleKey)}
                     </h3>
