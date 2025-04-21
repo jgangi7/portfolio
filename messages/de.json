@@ -81,6 +81,10 @@
       "goApplication": "Go-Anwendung",
       "api": "API"
     },
+    "podcast-visualizer": {
+      "title": "Podcast-Visualisierer",
+      "description": "Diese Webanwendung analysiert YouTube-Podcast-Transkripte mit der Grok-beta-API, um Hauptpunkte und verwandte Themen zu extrahieren. Die Anwendung visualisiert die Analyseergebnisse in einem organisierten, kapitelweisen Format. Sie können einfach einen Link einfügen und so viele oder so wenige Informationen erhalten, wie Sie möchten."
+    },
     "portfolio": {
       "title": "Aktienportfolio-Analyse",
       "description": "Eine React TypeScript-Anwendung zur Verfolgung und Visualisierung der Performance von Aktienportfolios. Enthält Echtzeit-Aktienkursaktualisierungen, Portfolioallokationsvisualisierung und Gewinn-/Verlustverfolgung."
@@ -120,7 +124,9 @@
       "angular": "Angular",
       "nodejs": "Node.js",
       "js": "JavaScript",
-      "golang": "Go"
+      "golang": "Go",
+      "python": "Python",
+      "LLM": "Großes Sprachmodell"
     }
   },
   "contact": {

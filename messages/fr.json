@@ -81,6 +81,10 @@
       "goApplication": "Application Go",
       "api": "API"
     },
+    "podcast-visualizer": {
+        "title": "Visualiseur de Podcast",
+        "description": "Cette application web analyse les transcriptions de podcasts YouTube en utilisant l'API Grok-beta pour extraire les points principaux et les sujets connexes. L'application visualise les résultats de l'analyse sous forme d'un format organisé, chapitre par chapitre. Vous pouvez simplement coller un lien et obtenir autant ou autant d'informations que vous souhaitez."
+    },
     "portfolio": {
       "title": "Analyse de Portefeuille",
       "description": "Une application React TypeScript pour suivre et visualiser la performance d'un portefeuille d'actions. Inclut des mises à jour en temps réel des prix, la visualisation de l'allocation du portefeuille et le suivi des gains/pertes."
@@ -120,7 +124,9 @@
       "angular": "Angular",
       "nodejs": "Node.js",
       "js": "JavaScript",
-      "golang": "Go"
+      "golang": "Go",
+      "python": "Python",
+      "LLM": "Modèle de Langage Large"
     }
   },
   "contact": {
