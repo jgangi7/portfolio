@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaDatabase, FaAngular } from 'react-icons/fa';
-import { SiTypescript, SiVite, SiMui, SiSharp, SiDotnet, SiSwagger, SiHiveBlockchain, SiJavascript } from 'react-icons/si';
-import { TbApi } from 'react-icons/tb';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaAngular, FaPython, FaBrain } from 'react-icons/fa';
+import { SiTypescript, SiDotnet, SiJavascript } from 'react-icons/si';
+
 
 interface Project {
   titleKey: string;
@@ -18,6 +18,18 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    titleKey: "podcast-visualizer.title",
+    descriptionKey: "podcast-visualizer.description",
+    technologies: [
+      { nameKey: "technologies.python", icon: <FaPython /> },
+      { nameKey: "technologies.LLM", icon: <FaBrain /> },
+      { nameKey: "technologies.js", icon: <SiJavascript /> }
+    ],
+    imageUrl: "/images/podcast-visualizer.png",
+    githubUrl: "https://github.com/jgangi7/podcast-visualizer",
+    categoryKey: "categories.webApp"
+  },
   {
     titleKey: "top-5-movies.title",
     descriptionKey: "top-5-movies.description",
@@ -52,35 +64,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com/jgangi7/go-austin-map",
     categoryKey: "categories.goApplication"
   },
-  // {
-  //   titleKey: "portfolio.title",
-  //   descriptionKey: "portfolio.description",
-  //   technologies: [
-  //     { nameKey: "technologies.react", icon: <FaReact /> },
-  //     { nameKey: "technologies.typescript", icon: <SiTypescript /> },
-  //     { nameKey: "technologies.vite", icon: <SiVite /> },
-  //     { nameKey: "technologies.materialui", icon: <SiMui /> },
-  //     { nameKey: "technologies.recharts", icon: <FaDatabase /> },
-  //     { nameKey: "technologies.alphaVantage", icon: <TbApi /> }
-  //   ],
-  //   imageUrl: "/images/portfolio.jpg",
-  //   githubUrl: "https://github.com/jgangi7/portfolio-visualizer",
-  //   category: "Web App"
-  // },
-  // {
-  //   titleKey: "blockchain.title",
-  //   descriptionKey: "blockchain.description",
-  //   technologies: [
-  //     { nameKey: "technologies.csharp", icon: <SiSharp /> },
-  //     { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
-  //     { nameKey: "technologies.restapi", icon: <TbApi /> },
-  //     { nameKey: "technologies.swagger", icon: <SiSwagger /> },
-  //     { nameKey: "technologies.blockchain", icon: <SiHiveBlockchain /> }
-  //   ],
-  //   imageUrl: "/images/blockchain.jpg",
-  //   githubUrl: "https://github.com/jgangi7/blockchain-c-sharp",
-  //   category: "API"
-  // },
   {
     titleKey: "chatbot.title",
     descriptionKey: "chatbot.description",
@@ -140,7 +123,7 @@ export default function Projects() {
                       <img 
                         src={project.imageUrl} 
                         alt={t(project.titleKey)} 
-                        className="w-full h-full object-contain p-4 mt-[25%]"
+                        className="w-full h-full object-contain p-4 mt-[28%]"
                       />
                     </div>
                   ) : (
