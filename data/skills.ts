@@ -12,32 +12,50 @@ export const skills: Skill[] = [
     category: "languages",
     icon: "📜",
   },
+
   {
-    name: "C#",
+    name: "Python",
     category: "languages",
-    icon: "🔷",
+    icon: "🐍",
+  },  
+  {
+    name: "Java",
+    category: "languages",
+    icon: "☕",
   },
   {
-    name: "SQL",
+    name: "C++",
     category: "languages",
-    icon: "📊",
+    icon: "⚡",
+  }, 
+  {
+    name: "Go",
+    category: "languages",
+    icon: "🐹",
+  }, 
+  {
+    name: "Rust",
+    category: "languages",
+    icon: "🦀",
   },
   {
-    name: "HTML",
+    name: "C",
     category: "languages",
-    icon: "🌐",
+    icon: "🔵"
   },
-  {
-    name: "CSS",
-    category: "languages",
-    icon: "🎨",
-  },
+  
+
 
   // Frontend
   {
     name: "React",
     category: "frontend",
     icon: "⚛️",
+  },
+  {
+    name: "HTML",
+    category: "frontend",
+    icon: "🌐",
   },
   {
     name: "AngularJS",
@@ -59,12 +77,22 @@ export const skills: Skill[] = [
     category: "frontend",
     icon: "🌊",
   },
+  {
+    name: "CSS",
+    category: "frontend",
+    icon: "🎨",
+  },
 
   // Backend
   {
     name: "Node.js",
     category: "backend",
     icon: "🟢",
+  },  
+  {
+    name: "C#",
+    category: "backend",
+    icon: "🔷",
   },
   {
     name: ".NET",
