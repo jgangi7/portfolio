@@ -257,8 +257,7 @@ export default function PodcastProject() {
                 </div>
               </div>
 
-              {/* Competitor Analysis Section */}
-              <div className="py-20">
+              <div className="py-10">
                 <div className="max-w-6xl mx-auto">
                   <div className="border-b border-gray-800">
                     <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">RESEARCH</p>
@@ -270,7 +269,6 @@ export default function PodcastProject() {
 
                   {/* Competitor Cards */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-                    {/* Otter.ai Card */}
                     <div className="bg-[#112240] rounded-lg p-6">
                       <div className="flex items-center gap-4 mb-4">
                         <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
@@ -306,8 +304,6 @@ export default function PodcastProject() {
                         </div>
                       </div>
                     </div>
-
-                    {/* Podclips Card */}
                     <div className="bg-[#112240] rounded-lg p-6">
                       <div className="flex items-center gap-4 mb-4">
                         <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
@@ -346,6 +342,114 @@ export default function PodcastProject() {
                   </div>
                 </div>
               </div>
+
+              {/* Synthesis Section */}
+              <div className="py-20">
+                <div className="max-w-6xl mx-auto">
+                  <div className="border-b border-gray-800">
+                    <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                      SYNTHESIS
+                    </p>
+                    <h1 className="text-xl text-white mb-3">User Persona</h1>
+                  </div>  
+                  <p className="text-gray-400 leading-relaxed mt-5 mb-10">
+                    <span>I developed a user persona to identify the ideal user who would gain the most value this tool. I wanted to create a user persona that would be a <span className="font-bold" style={{color: '#64ffda'}}>typical podcast listener</span> who would be stetched for time and looking for a way to <span className="font-bold" style={{color: '#64ffda'}}>get the most out of their podcasts</span>. This process allowed me to focus on the goals, needs, and frustrations of the ideal beneficiary. </span>
+                  </p>
+
+                  {/* Persona Card */}
+                  <div className="bg-[#112240] rounded-lg p-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                      {/* Left Column - Profile */}
+                      <div className="md:col-span-1">
+                        <div className="flex flex-col items-start">
+                          <div className="w-24 h-24 bg-gray-800 rounded-full mb-4 overflow-hidden">
+                            <img src="/images/alex-persona.png" alt="Alex" className="w-full h-full object-cover" />
+                          </div>
+                          <h2 className="text-xl text-white mb-1">Alex Turner | he/him | 28</h2>
+                          <p className="text-gray-400 text-sm mb-4">Tech Professional & Continuous Learner</p>
+                          
+                          <div className="space-y-4 w-full">
+                            <div>
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-6 h-6 flex items-center justify-center">
+                                  <span className="text-[#64ffda]">📍</span>
+                                </div>
+                                <span className="text-gray-400 text-sm uppercase">LOCATION</span>
+                              </div>
+                              <p className="text-white ml-8">San Francisco, CA</p>
+                            </div>
+
+                            <div>
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-6 h-6 flex items-center justify-center">
+                                  <span className="text-[#64ffda]">🎓</span>
+                                </div>
+                                <span className="text-gray-400 text-sm uppercase">OCCUPATION</span>
+                              </div>
+                              <p className="text-white ml-8">Software Engineer</p>
+                            </div>
+
+                            <div>
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-6 h-6 flex items-center justify-center">
+                                  <span className="text-[#64ffda]">⭐</span>
+                                </div>
+                                <span className="text-gray-400 text-sm uppercase">EXPERIENCE</span>
+                              </div>
+                              <p className="text-white ml-8">4+ Years</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Right Column - Goals, Needs, Pain Points */}
+                      <div className="md:col-span-2">
+                        <div className="grid grid-cols-1 gap-6">
+                          {/* Goals Card */}
+                          <div className="bg-[#1a2f55] rounded-lg p-6">
+                            <div className="flex items-center gap-2 mb-4">
+                              <span className="text-[#64ffda] text-xl">⚡</span>
+                              <h3 className="text-white text-lg">Goals</h3>
+                            </div>
+                            <ul className="text-gray-400 space-y-2">
+                              <li>• Stay updated with tech trends and industry knowledge</li>
+                              <li>• Maximize learning from educational podcasts while not giving up large amounts of time</li>
+                              <li>• Balance continuous learning with busy work schedule</li>
+                            </ul>
+                          </div>
+
+                          {/* Needs Card */}
+                          <div className="bg-[#1a2f55] rounded-lg p-6">
+                            <div className="flex items-center gap-2 mb-4">
+                              <span className="text-[#64ffda] text-xl">❓</span>
+                              <h3 className="text-white text-lg">Needs</h3>
+                            </div>
+                            <ul className="text-gray-400 space-y-2">
+                              <li>• Quick access to key insights from long-form content produced by experts</li>
+                              <li>• Easy way to review and retain important information and refernce it later</li>
+                              <li>• Tool that integrates with existing podcast platforms that large content creators use</li>
+                            </ul>
+                          </div>
+
+                          {/* Pain Points Card */}
+                          <div className="bg-[#1a2f55] rounded-lg p-6">
+                            <div className="flex items-center gap-2 mb-4">
+                              <span className="text-[#64ffda] text-xl">⚠️</span>
+                              <h3 className="text-white text-lg">Pain Points</h3>
+                            </div>
+                            <ul className="text-gray-400 space-y-2">
+                              <li>• Limited time to listen to full podcast episodes</li>
+                              <li>• Difficulty remembering key points from episodes</li>
+                              <li>• Frustration with finding specific topics in long episodes</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </section>
         </div>
