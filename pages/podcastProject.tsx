@@ -190,7 +190,6 @@ export default function PodcastProject() {
                         <ul className="text-gray-400 space-y-2 text-sm">
                           <li>User Persona</li>
                           <li>User Journey</li>
-                          <li>User Flow</li>
                         </ul>
                       </div>
 
@@ -202,9 +201,7 @@ export default function PodcastProject() {
                         </div>
                         <ul className="text-gray-400 space-y-2 text-sm">
                           <li>Developing a Solution</li>
-                          <li>Moodboard</li>
-                          <li>Low Fidelity</li>
-                          <li>High Fidelity</li>
+                          <li>Testing LLMs</li>
                           <li>Further Explorations</li>
                         </ul>
                       </div>
@@ -216,9 +213,8 @@ export default function PodcastProject() {
                           <h3 className="text-white text-lg">Final Designs</h3>
                         </div>
                         <ul className="text-gray-400 space-y-2 text-sm">
-                          <li>Keynote Prototype</li>
-                          <li>SwiftUI Prototype</li>
-                          <li>Figma Prototype</li>
+                          <li>UI Prototype</li>
+                          <li>Implementation</li>
                         </ul>
                       </div>
 
