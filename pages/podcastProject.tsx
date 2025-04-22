@@ -447,6 +447,106 @@ export default function PodcastProject() {
                       </div>
                     </div>
                   </div>
+
+                  <div className="py-20">
+                    <div className="max-w-6xl mx-auto">
+                      <div className="border-b border-gray-800">
+                        <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                          SYNTHESIS
+                        </p>
+                        <h1 className="text-xl text-white mb-3">User Journey</h1>
+                      </div> 
+                      <p className="text-gray-400 leading-relaxed mt-5 mb-10">
+                        <span>Next is the user journey, which focuses on Alex's current experience as a software engineer collaborating remotely/in person, and being strained for time to discover new idea and keep up with trends. He knows that in the ever changing field that is tech he has to keep up but <span className="font-bold" style={{color: '#64ffda'}}>struggles to find the time to commit to a long form conversation</span> that isn't a meeting in a professional setting. </span>
+                      </p>
+                      <h3 className="text-gray-400 mb-12"><span className="font-bold" style={{color: '#64ffda'}}>Scenario:</span> Alex is stressed for time and looking for a way to get the most out of his podcasts during his commute on the train to the office. He only has 15 minutes to listen to a podcast and wants to make the most of it.</h3>
+
+                      {/* Journey Timeline */}
+                      <div className="relative my-20">
+                        {/* Timeline Line */}
+                        <div className="hidden md:block absolute left-0 right-0 h-0.5 bg-gray-800 top-32 transform -translate-y-1/2"></div>
+
+                        {/* Journey Steps */}
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                          {/* Starting */}
+                          <div className="relative">
+                            <div className="h-24">
+                              <h4 className="text-white text-lg mb-2">Starting</h4>
+                              <p className="text-sm text-gray-400">
+                                Alex discovers an interesting tech podcast creator and wants to stay updated with industry trends.
+                              </p>
+                            </div>
+                            <div className="hidden md:block absolute left-1/2 top-32 transform -translate-x-1/2 -translate-y-1/2">
+                              <div className="w-4 h-4 rounded-full bg-[#64ffda]"></div>
+                            </div>
+                            <div className="mt-8 md:mt-16">
+                              <p className="text-sm text-[#64ffda] mb-2">Thought:</p>
+                              <p className="text-sm text-gray-400 mb-4">"This could be a great way to learn while commuting!"</p>
+                              <p className="text-sm text-[#64ffda] mb-2">Action:</p>
+                              <p className="text-sm text-gray-400">Subscribes to several tech podcasts and starts downloading episodes.</p>
+                            </div>
+                          </div>
+
+                          {/* Trying */}
+                          <div className="relative">
+                            <div className="h-24">
+                              <h4 className="text-white text-lg mb-2">Trying</h4>
+                              <p className="text-sm text-gray-400">
+                                Attempts to incorporate podcast listening into daily routine but struggles to watch the newest episodes each day.
+                              </p>
+                            </div>
+                            <div className="hidden md:block absolute left-1/2 top-32 transform -translate-x-1/2 -translate-y-1/2">
+                              <div className="w-4 h-4 rounded-full bg-[#64ffda]"></div>
+                            </div>
+                            <div className="mt-8 md:mt-16">
+                              <p className="text-sm text-[#64ffda] mb-2">Thought:</p>
+                              <p className="text-sm text-gray-400 mb-4">"These episodes are longer than my commute time."</p>
+                              <p className="text-sm text-[#64ffda] mb-2">Action:</p>
+                              <p className="text-sm text-gray-400">Tries listening at increased speed and taking notes.</p>
+                            </div>
+                          </div>
+
+                          {/* Struggling */}
+                          <div className="relative">
+                            <div className="h-24">
+                              <h4 className="text-white text-lg mb-2">Struggling</h4>
+                              <p className="text-sm text-gray-400">
+                                Finds it difficult to retain information and manage time effectively. As a result, he is frustrated and feeling uninformed.
+                              </p>
+                            </div>
+                            <div className="hidden md:block absolute left-1/2 top-32 transform -translate-x-1/2 -translate-y-1/2">
+                              <div className="w-4 h-4 rounded-full bg-[#64ffda]"></div>
+                            </div>
+                            <div className="mt-8 md:mt-16">
+                            <p className="text-sm text-[#64ffda] mb-2">Thought:</p>
+                              <p className="text-sm text-gray-400 mb-4">"I'm missing key points and can't remember everything."</p>
+                              <p className="text-sm text-[#64ffda] mb-2">Action:</p>
+                              <p className="text-sm text-gray-400">Searches for tools to help with podcast consumption.</p>
+                            </div>
+                          </div>
+
+                          {/* Seeking Solution */}
+                          <div className="relative">
+                            <div className="h-24">
+                              <h4 className="text-white text-lg mb-2">Seeking Solution</h4>
+                              <p className="text-sm text-gray-400">
+                                Looking for tools to optimize podcast learning experience. As current tools are not meeting his needs.
+                              </p>
+                            </div>
+                            <div className="hidden md:block absolute left-1/2 top-32 transform -translate-x-1/2 -translate-y-1/2">
+                              <div className="w-4 h-4 rounded-full bg-[#64ffda]"></div>
+                            </div>
+                            <div className="mt-8 md:mt-16">
+                              <p className="text-sm text-[#64ffda] mb-2">Thought:</p>
+                              <p className="text-sm text-gray-400 mb-4">"There must be a better way to consume this content."</p>
+                              <p className="text-sm text-[#64ffda] mb-2">Action:</p>
+                              <p className="text-sm text-gray-400">Ready to try a solution that addresses his specific needs.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
