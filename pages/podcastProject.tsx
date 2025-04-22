@@ -159,6 +159,85 @@ export default function PodcastProject() {
                   </p>
                 </div>
               </div>
+
+              {/* Process Section */}
+              <div className="py-20">
+                <div className="max-w-6xl mx-auto">
+                  <div className="border-b border-gray-800">
+                    <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">THE PROCESS</p>
+                    <h1 className="text-xl text-white mb-3">Development Timeline</h1>
+                  </div>
+                  <div className="mt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+                      {/* Phase 1 - Research */}
+                      <div className="relative">
+                        <div className="flex items-center mb-4">
+                          <span className="bg-[#64ffda] text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">1</span>
+                          <h3 className="text-white text-lg">Research</h3>
+                        </div>
+                        <ul className="text-gray-400 space-y-2 text-sm">
+                          <li>Identifying Problems</li>
+                          <li>Desk Research</li>
+                          <li>Competitor Analysis</li>
+                        </ul>
+                      </div>
+
+                      {/* Phase 2 - Synthesis */}
+                      <div className="relative">
+                        <div className="flex items-center mb-4">
+                          <span className="bg-[#64ffda] text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">2</span>
+                          <h3 className="text-white text-lg">Synthesis</h3>
+                        </div>
+                        <ul className="text-gray-400 space-y-2 text-sm">
+                          <li>User Persona</li>
+                          <li>User Journey</li>
+                          <li>User Flow</li>
+                        </ul>
+                      </div>
+
+                      {/* Phase 3 - Ideation */}
+                      <div className="relative">
+                        <div className="flex items-center mb-4">
+                          <span className="bg-[#64ffda] text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">3</span>
+                          <h3 className="text-white text-lg">Ideation</h3>
+                        </div>
+                        <ul className="text-gray-400 space-y-2 text-sm">
+                          <li>Developing a Solution</li>
+                          <li>Moodboard</li>
+                          <li>Low Fidelity</li>
+                          <li>High Fidelity</li>
+                          <li>Further Explorations</li>
+                        </ul>
+                      </div>
+
+                      {/* Phase 4 - Final Designs */}
+                      <div className="relative">
+                        <div className="flex items-center mb-4">
+                          <span className="bg-[#64ffda] text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">4</span>
+                          <h3 className="text-white text-lg">Final Designs</h3>
+                        </div>
+                        <ul className="text-gray-400 space-y-2 text-sm">
+                          <li>Keynote Prototype</li>
+                          <li>SwiftUI Prototype</li>
+                          <li>Figma Prototype</li>
+                        </ul>
+                      </div>
+
+                      {/* Phase 5 - Reflection */}
+                      <div className="relative">
+                        <div className="flex items-center mb-4">
+                          <span className="bg-[#64ffda] text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">5</span>
+                          <h3 className="text-white text-lg">Reflection</h3>
+                        </div>
+                        <ul className="text-gray-400 space-y-2 text-sm">
+                          <li>User Feedback</li>
+                          <li>Next Steps</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>
