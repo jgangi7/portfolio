@@ -37,7 +37,7 @@ export default function PodcastProject() {
                     playsInline
                     loop
                     onLoadedMetadata={(e) => {
-                      e.currentTarget.currentTime = 4;
+                      e.currentTarget.currentTime = 6;
                     }}
                   >
                     <source src="/videos/podcast-demo.mp4" type="video/mp4" />
@@ -152,10 +152,10 @@ export default function PodcastProject() {
                     <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
                       BACKGROUND
                     </p>
-                    <h1 className="text-xl text-white mb-3">The Why</h1>
+                    <h1 className="text-xl text-white mb-3">The Idea</h1>
                   </div>
                   <p className="text-gray-400 leading-relaxed mt-5">
-                    <span className="font-bold" style={{color: '#64ffda'}}>Podcasts</span> are my favorite way to consume information. I love the opitons of audio and video and the <span className="font-bold" style={{color: '#64ffda'}}>ability to learn</span> new and complex topics that I am interested in or have never heard of before. I cant tell you the <span className="font-bold" style={{color: '#64ffda'}}>amount of change </span>I have taken from podcasts and brought into my own life. Whether that be a new way of thinking about a international issue, a new hobby, or any other small piece of information that I can take with me. However, they take a large amount of time to listen to, and it can be hard to remember what you learned. <span className="font-bold" style={{color: '#64ffda'}}>So I wanted to create a tool that would help me and others like me to get the most out of podcasts and retain </span>what they learned.
+                    <span className="font-bold" style={{color: '#64ffda'}}>The goal</span> of this project was to help solve an issue I thought others might have. As well as <span className="font-bold" style={{color: '#64ffda'}}>challenge myself</span> to work with a large language model api. For this I chose to use <span className="font-bold" style={{color: '#64ffda'}}>Grok-Beta</span> because of its proven ability to understand large amounts of conversational text and its ability to understand complex topics. AI is the future, everyone knows this, and I wanted show and prove to myself that I am able to work with it and understand how to <span className="font-bold" style={{color: '#64ffda'}}>integrate it and add value</span>.
                   </p>
                 </div>
               </div>
@@ -177,7 +177,6 @@ export default function PodcastProject() {
                         </div>
                         <ul className="text-gray-400 space-y-2 text-sm">
                           <li>Identifying Problems</li>
-                          <li>Desk Research</li>
                           <li>Competitor Analysis</li>
                         </ul>
                       </div>
@@ -233,6 +232,115 @@ export default function PodcastProject() {
                           <li>User Feedback</li>
                           <li>Next Steps</li>
                         </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              {/* Research Section */}
+              <div className="py-20">
+                <div className="max-w-6xl mx-auto">
+                  <div className="border-b border-gray-800">
+                    <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                      RESEARCH
+                    </p>
+                    <h1 className="text-xl text-white mb-3">Identifying Problems</h1>
+                  </div>
+                  <p className="text-gray-400 leading-relaxed mt-5">
+                    <span className="font-bold" style={{color: '#64ffda'}}>Podcasts</span> are my favorite way to consume information. I love the opitons of audio and video and the <span className="font-bold" style={{color: '#64ffda'}}>ability to learn</span> new and complex topics that I am interested in or have never heard of before. I cant tell you the <span className="font-bold" style={{color: '#64ffda'}}>amount of change </span>I have taken from podcasts and brought into my own life. Whether that be a new way of thinking about a international issue, a new hobby, or any other small piece of information that I can take with me. However, they take a large amount of time to listen to, and it can be hard to remember what you learned. <span className="font-bold" style={{color: '#64ffda'}}>So I wanted to create a tool that would help me and others like me to get the most out of podcasts and retain </span>what they learned.
+                    <br></br>
+                    <br></br>
+                    <span>With this webapp users can <span className="font-bold" style={{color: '#64ffda'}}>easily get am idea of the larger topics</span> being discussed as well as the <span className="font-bold" style={{color: '#64ffda'}}>related topics</span> touched on. Helping reduce the amount of time it would take to understand the conversation. I also provided a full transcript so if there is a particular quote or word that a user is looking for you can easily <span className="font-bold" style={{color: '#64ffda'}}>pin point when in the conversation it was spoken.</span> Lastly, because we are obtaining the transcript directly from the youtube api we can <span className="font-bold" style={{color: '#64ffda'}}>skip over any ads</span> that may be interjected into the pod. </span>
+                  </p>
+                </div>
+              </div>
+
+              {/* Competitor Analysis Section */}
+              <div className="py-20">
+                <div className="max-w-6xl mx-auto">
+                  <div className="border-b border-gray-800">
+                    <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">RESEARCH</p>
+                    <h1 className="text-xl text-white mb-3">Competitor Analysis</h1>
+                  </div>
+                  <p className="text-gray-400 leading-relaxed mt-5">
+                    <span>I wanted to see what other tools were out there that could <span className="font-bold" style={{color: '#64ffda'}}>help me and others like me to get the most out of podcasts and retain what they learned.</span> I found a few tools that I thought were interesting and worth looking into. But ultimately I wanted to create my own tool that would be <span className="font-bold" style={{color: '#64ffda'}}>tailored to my needs</span> and <span className="font-bold" style={{color: '#64ffda'}}>solve the identified problem.</span></span>
+                  </p>
+
+                  {/* Competitor Cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+                    {/* Otter.ai Card */}
+                    <div className="bg-[#112240] rounded-lg p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
+                          <span className="text-2xl"><img src="/images/podsqueeze.png" alt="Podsqueeze" className="w-12 h-12" /></span>
+                        </div>
+                        <h3 className="text-xl text-white">Podsqueeze</h3>
+                      </div>
+                      <p className="text-gray-400 text-sm mb-6">
+                        Podsqueeze uses AI to streamline podcast content creation, generating visualizers, transcripts, and timestamps to save time and enhance listener engagement.
+                      </p>
+                      <div className="space-y-6">
+                        <div>
+                          <div className="flex items-center gap-2 text-[#64ffda] mb-2">
+                            <span className="text-lg">+</span>
+                            <span className="text-sm uppercase tracking-wider">Pros</span>
+                          </div>
+                          <ul className="text-gray-400 text-sm space-y-2">
+                            <li>- AI cuts podcast post-production time, easing creators' time commitment</li>
+                            <li>- Timestamps, show notes improve episode searchability for listeners</li>
+                            <li>- Visual content boosts engagement, reducing reliance on ads</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2 text-red-400 mb-2">
+                            <span className="text-lg">−</span>
+                            <span className="text-sm uppercase tracking-wider">Cons</span>
+                          </div>
+                          <ul className="text-gray-400 text-sm space-y-2">
+                            <li>- Over-reliance on visuals may skew content to short snippets</li>
+                            <li>- Customizing visualizers, clips can still be time-intensive</li>
+                            <li>- AI struggles with non-standard podcasts, limiting searchability</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Podclips Card */}
+                    <div className="bg-[#112240] rounded-lg p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center">
+                          <span className="text-2xl"><img src="/images/audiograms.png" alt="Audiograms" className="w-12 h-12" /></span>
+                        </div>
+                        <h3 className="text-xl text-white">Audiograms</h3>
+                      </div>
+                      <p className="text-gray-400 text-sm mb-6">
+                        AI-powered tools simplify audiogram and video clip creation, improving podcast accessibility and promotion with customizable, shareable content.
+                      </p>
+                      <div className="space-y-6">
+                        <div>
+                          <div className="flex items-center gap-2 text-[#64ffda] mb-2">
+                            <span className="text-lg">+</span>
+                            <span className="text-sm uppercase tracking-wider">Pros</span>
+                          </div>
+                          <ul className="text-gray-400 text-sm space-y-2">
+                            <li>- AI audiogram maker reduces clip creation time for podcasters</li>
+                            <li>- Auto-generated captions, timestamps enhance episode searchability on social media</li>
+                            <li>- Customizable templates boost engagement, lessening ad reliance for promotion</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2 text-red-400 mb-2">
+                            <span className="text-lg">−</span>
+                            <span className="text-sm uppercase tracking-wider">Cons</span>
+                          </div>
+                          <ul className="text-gray-400 text-sm space-y-2">
+                            <li>- Over-focus on short clips may prioritize virality over episode depth</li>
+                            <li>- Customizing audiograms can be time-consuming for unique branding needs</li>
+                            <li>- AI may struggle with complex audio, limiting searchability accuracy</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
