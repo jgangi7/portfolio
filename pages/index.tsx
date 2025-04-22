@@ -2,7 +2,6 @@ import { Layout } from "../components/ui/Layout";
 import { Skills } from '@/components/ui/Skills';
 import { LoadingProvider, withLoadingGuard } from '@/components/LoadingProvider';
 import Hero from "@/components/ui/Hero";
-import About from "@/components/ui/About";
 import Projects from "@/components/ui/Projects";
 
 // Wrap sections with loading guard and staggered delays
