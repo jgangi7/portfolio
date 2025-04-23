@@ -14,10 +14,22 @@ export default function PodcastProject() {
   const [completedBars, setCompletedBars] = useState<number[]>([]);
 
   const llms = [
-    { name: 'BART', description: 'A powerful sequence-to-sequence model pre-trained on large text corpora, making it effective for text summarization tasks like extracting main points from transcripts. However, it is not able to understand the context of a complex and specific conversation. Additionally, it requires significant computational resources to run locally, has a maximum input length constraint of 1024 tokens, which was a major issue for this project.' },
-    { name: 'Llama 2', description: 'Metas open-source large language model that offers impressive performance while being deployable locally through tools like Ollama. Its strengths include powerful reasoning capabilities suitable for extracting nuanced insights from conversational text, the ability to run completely offline with no API costs, and availability in various sizes to match your hardware capabilities (from 7B to 70B parameters). Downsides were significant hardware requirements, slower inference speeds compared to cloud APIs, and occasionally less consistent formatting in outputs compared to other models.' },
-    { name: 'Mistral-7B', description: 'Googles instruction-tuned version of the T5 architecture, specifically designed to follow instructions in natural language. However, it has notable drawbacks: the XXL variant can be slow through the free API tier with potential queue times, may struggle with highly domain-specific content without custom fine-tuning, and can occasionally produce overly concise summaries that miss nuanced points in complex discussions ' },
-    { name: 'Grok-Beta', description: 'a newer conversational AI model developed by xAI, designed to compete with models like GPT-4 and Claude. Its primary strengths include excellent understanding of conversational context making it well-suited for podcast transcript analysis, strong instruction-following capabilities allowing for precise extraction of main points and related topics. This was the model I used for this project and it worked the best in my opinion.' }
+    { 
+      name: 'BART', 
+      description: 'A powerful sequence-to-sequence model pre-trained on large text corpora, making it effective for text summarization tasks like extracting main points from transcripts. However, it is not able to understand the context of a complex and specific conversation. Additionally, it requires significant computational resources to run locally, has a maximum input length constraint of 1024 tokens, which was a major issue for this project.' 
+    },
+    { 
+      name: 'Llama 2', 
+      description: 'Meta\'s open-source large language model that offers impressive performance while being deployable locally through tools like Ollama. Its strengths include powerful reasoning capabilities suitable for extracting nuanced insights from conversational text, the ability to run completely offline with no API costs, and availability in various sizes to match your hardware capabilities (from 7B to 70B parameters). Downsides were significant hardware requirements, slower inference speeds compared to cloud APIs, and occasionally less consistent formatting in outputs compared to other models.' 
+    },
+    { 
+      name: 'Mistral-7B', 
+      description: 'Google\'s instruction-tuned version of the T5 architecture, specifically designed to follow instructions in natural language. However, it has notable drawbacks: the XXL variant can be slow through the free API tier with potential queue times, may struggle with highly domain-specific content without custom fine-tuning, and can occasionally produce overly concise summaries that miss nuanced points in complex discussions.' 
+    },
+    { 
+      name: 'Grok-Beta', 
+      description: 'A newer conversational AI model developed by xAI, designed to compete with models like GPT-4 and Claude. Its primary strengths include excellent understanding of conversational context making it well-suited for podcast transcript analysis, strong instruction-following capabilities allowing for precise extraction of main points and related topics. This was the model I used for this project and it worked the best in my opinion.' 
+    }
   ];
 
   useEffect(() => {
@@ -249,7 +261,6 @@ export default function PodcastProject() {
                           <h3 className="text-gray-900 dark:text-white text-lg">Final Designs</h3>
                         </div>
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
-                          <li>UI Prototype</li>
                           <li>Implementation</li>
                         </ul>
                       </div>
@@ -262,7 +273,6 @@ export default function PodcastProject() {
                         </div>
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
                           <li>User Feedback</li>
-                          <li>Next Steps</li>
                         </ul>
                       </div>
                     </div>
@@ -583,7 +593,7 @@ export default function PodcastProject() {
               </div>
 
               {/* Ideation Section */}
-              <div className="py-20">
+              <div className="py-10">
                 <div className="max-w-6xl mx-auto">
                   <div className="border-b border-gray-800">
                     <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
@@ -607,7 +617,7 @@ export default function PodcastProject() {
                           <h1 className="text-xl text-gray-900 dark:text-white mb-3">Choosing an LLM</h1>
                         </div>
                         <div className="mt-5 mb-10">
-                          <div className="relative h-64">
+                          <div className="relative h-96">
                             {llms.map((llm, index) => (
                               <div
                                 key={llm.name}
@@ -615,9 +625,9 @@ export default function PodcastProject() {
                                   index === currentLLM ? 'opacity-100' : 'opacity-0 pointer-events-none'
                                 }`}
                               >
-                                <div className="bg-white dark:bg-[#112240] rounded-lg p-6 shadow-lg">
-                                  <h3 className="text-xl font-bold text-teal-600 dark:text-[#64ffda] mb-4">{llm.name}</h3>
-                                  <p className="text-gray-600 dark:text-gray-400">{llm.description}</p>
+                                <div className="bg-white dark:bg-[#112240] rounded-lg p-8 shadow-lg">
+                                  <h3 className="text-2xl font-bold text-teal-600 dark:text-[#64ffda] mb-6">{llm.name}</h3>
+                                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{llm.description}</p>
                                 </div>
                               </div>
                             ))}
@@ -644,11 +654,58 @@ export default function PodcastProject() {
                             </div>
                           </div>
                         </div>
+                        <div className="border-b border-gray-200 dark:border-gray-800 pt-10">
+                          <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                            IDEATION
+                          </p>
+                          <h1 className="text-xl text-gray-900 dark:text-white mb-3">Further Explorations</h1>
+                        </div>
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5 mb-10">
+                          <span>Although I am very happy with the approach and results of this project, I would like to explore a few more ideas in the future. Including a way to <span className="font-bold text-teal-600 dark:text-[#64ffda]">add chapters to a podcast</span> that might not have them. As adding chapters is a feature that most creators do not currently provide. I would also like to explore other ways to <span className="font-bold text-teal-600 dark:text-[#64ffda]">visualize the data</span> that is generated from the podcast. Currently Graphviz accomplishes this to an extent but I would like to see if there are better ways to visualize the data. Lastly, I would want to rethink how I have designed the UI to make it more user friendly and accessible.</span>
+                        </p>
+                    </div>
+                  </div>
+
+                  {/* Final Designs Section */}
+                  <div className="py-20">
+                    <div className="max-w-6xl mx-auto">
+                      <div className="border-b border-gray-200 dark:border-gray-800">
+                        <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                            FINAL DESIGNS
+                        </p>
+                        <h1 className="text-xl text-gray-900 dark:text-white mb-3">Implementation</h1>
+                      </div>
+                      <div className="mt-10">
+                        <div className="relative rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-800">
+                          <img
+                            src="/images/podcast-screenshot.png"
+                            alt="Podcast Visualizer Implementation"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-6 text-center text-sm">
+                          The final implementation <span className="font-bold text-teal-600 dark:text-[#64ffda]"> empty state</span> of the podcast visualizer. To see usage please see the <span className="font-bold text-teal-600 dark:text-[#64ffda]">demo</span> section at the top of the page.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reflections Section */}
+                  <div className="py-20">
+                    <div className="max-w-6xl mx-auto">
+                      <div className="border-b border-gray-200 dark:border-gray-800">
+                        <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                            REFLECTIONS
+                        </p>
+                        <h1 className="text-xl text-gray-900 dark:text-white mb-3">User Feedback</h1>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5 mb-10">
+                        <span><span className="font-bold text-teal-600 dark:text-[#64ffda]">Coming soon!</span></span>
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </section>
         </div>
