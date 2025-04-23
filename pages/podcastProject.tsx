@@ -87,7 +87,7 @@ export default function PodcastProject() {
                     playsInline
                     loop
                     onLoadedMetadata={(e) => {
-                      e.currentTarget.currentTime = 6;
+                      e.currentTarget.currentTime = 1;
                     }}
                   >
                     <source src="/videos/podcast-demo.mp4" type="video/mp4" />
