@@ -5,9 +5,47 @@ import { FaGithub, FaPython, FaBrain } from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si';
 import { Layout } from "../components/ui/Layout";
 import { LoadingProvider } from '../components/LoadingProvider';
+import { useState, useEffect } from 'react';
 
 export default function PodcastProject() {
   const t = useTranslations('projects.podcast-visualizer');
+  const [currentLLM, setCurrentLLM] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const [completedBars, setCompletedBars] = useState<number[]>([]);
+
+  const llms = [
+    { name: 'BART', description: 'A powerful sequence-to-sequence model pre-trained on large text corpora, making it effective for text summarization tasks like extracting main points from transcripts. However, it is not able to understand the context of a complex and specific conversation. Additionally, it requires significant computational resources to run locally, has a maximum input length constraint of 1024 tokens, which was a major issue for this project.' },
+    { name: 'Llama 2', description: 'Metas open-source large language model that offers impressive performance while being deployable locally through tools like Ollama. Its strengths include powerful reasoning capabilities suitable for extracting nuanced insights from conversational text, the ability to run completely offline with no API costs, and availability in various sizes to match your hardware capabilities (from 7B to 70B parameters). Downsides were significant hardware requirements, slower inference speeds compared to cloud APIs, and occasionally less consistent formatting in outputs compared to other models.' },
+    { name: 'Mistral-7B', description: 'Googles instruction-tuned version of the T5 architecture, specifically designed to follow instructions in natural language. However, it has notable drawbacks: the XXL variant can be slow through the free API tier with potential queue times, may struggle with highly domain-specific content without custom fine-tuning, and can occasionally produce overly concise summaries that miss nuanced points in complex discussions ' },
+    { name: 'Grok-Beta', description: 'a newer conversational AI model developed by xAI, designed to compete with models like GPT-4 and Claude. Its primary strengths include excellent understanding of conversational context making it well-suited for podcast transcript analysis, strong instruction-following capabilities allowing for precise extraction of main points and related topics. This was the model I used for this project and it worked the best in my opinion.' }
+  ];
+
+  useEffect(() => {
+    const updateProgress = () => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          // Reset progress and move to next item
+          setCurrentLLM((current) => {
+            const next = (current + 1) % llms.length;
+            if (next === 0) {
+              setCompletedBars([]);
+            } else {
+              setCompletedBars(prev => [...prev, current]);
+            }
+            return next;
+          });
+          return 0;
+        }
+        return prev + 1;
+      });
+    };
+
+    const interval = setInterval(updateProgress, 50);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <LoadingProvider>
@@ -96,15 +134,15 @@ export default function PodcastProject() {
                   <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Tools</h2>
                   <div className="flex flex-wrap gap-3">
                     <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                      <FaPython className="text-lg text-teal-600 dark:text-[#64ffda]" />
+                      <FaPython className="text-lg text-gray-700 dark:text-white" />
                       Python
                     </span>
                     <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                      <FaBrain className="text-lg text-teal-600 dark:text-[#64ffda]" />
+                      <FaBrain className="text-lg text-gray-700 dark:text-white" />
                       LLM
                     </span>
                     <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                      <SiJavascript className="text-lg text-teal-600 dark:text-[#64ffda]" />
+                      <SiJavascript className="text-lg text-gray-700 dark:text-white" />
                       JavaScript
                     </span>
                     <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm flex items-center gap-2">
@@ -199,7 +237,7 @@ export default function PodcastProject() {
                         </div>
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
                           <li>Developing a Solution</li>
-                          <li>Testing LLMs</li>
+                          <li>Choosing an LLM</li>
                           <li>Further Explorations</li>
                         </ul>
                       </div>
@@ -539,6 +577,73 @@ export default function PodcastProject() {
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ideation Section */}
+              <div className="py-20">
+                <div className="max-w-6xl mx-auto">
+                  <div className="border-b border-gray-800">
+                    <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                      IDEATION
+                    </p>
+                    <h1 className="text-xl text-gray-900 dark:text-white mb-3">Developing the Solution</h1>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5 mb-10">
+                    <span>My approach to developing the solution was to <span className="font-bold text-teal-600 dark:text-[#64ffda]">break down the problem</span> and <span className="font-bold text-teal-600 dark:text-[#64ffda]">identify the core needs</span> of the user. I then <span className="font-bold text-teal-600 dark:text-[#64ffda]">explored various ways</span> to address these needs and <span className="font-bold text-teal-600 dark:text-[#64ffda]">evaluate potential solutions</span>. I landed on a <span className="font-bold text-teal-600 dark:text-[#64ffda]">web app</span> that would allow the user to <span className="font-bold text-teal-600 dark:text-[#64ffda]">quickly get an overview of the podcast</span> and <span className="font-bold text-teal-600 dark:text-[#64ffda]">search for specific topics</span> within the podcast.</span>
+                    <br></br>
+                    <br></br>
+                    <span>I then <span className="font-bold text-teal-600 dark:text-[#64ffda]">decided that utalizing a LLM would be the best way</span> to help me build a user's experience and <span className="font-bold text-teal-600 dark:text-[#64ffda]">show what someone might want out of the tool</span> such as a summary of the podcast, a list of topics discussed, a visualization chart, and a transcript of the podcast.</span>
+                  </p>
+
+                  <div className="py-20">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="border-b border-gray-200 dark:border-gray-800">
+                          <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                            IDEATION
+                          </p>
+                          <h1 className="text-xl text-gray-900 dark:text-white mb-3">Choosing an LLM</h1>
+                        </div>
+                        <div className="mt-5 mb-10">
+                          <div className="relative h-64">
+                            {llms.map((llm, index) => (
+                              <div
+                                key={llm.name}
+                                className={`absolute inset-0 transition-opacity duration-500 ${
+                                  index === currentLLM ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                                }`}
+                              >
+                                <div className="bg-white dark:bg-[#112240] rounded-lg p-6 shadow-lg">
+                                  <h3 className="text-xl font-bold text-teal-600 dark:text-[#64ffda] mb-4">{llm.name}</h3>
+                                  <p className="text-gray-600 dark:text-gray-400">{llm.description}</p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="mt-6">
+                            <div className="flex justify-center space-x-2">
+                              {llms.map((_, index) => (
+                                <div
+                                  key={index}
+                                  className="w-24 h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden"
+                                >
+                                  <div
+                                    className={`h-full transition-all duration-500 ${
+                                      index === currentLLM
+                                        ? 'bg-teal-600 dark:bg-[#64ffda]'
+                                        : completedBars.includes(index)
+                                        ? 'bg-teal-600 dark:bg-[#64ffda]'
+                                        : 'bg-gray-300 dark:bg-gray-600'
+                                    }`}
+                                    style={{ width: `${index === currentLLM ? progress : completedBars.includes(index) ? 100 : 0}%` }}
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
                     </div>
                   </div>
                 </div>
