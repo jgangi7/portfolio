@@ -274,7 +274,8 @@
         "finalDescPT1": "L'état vide de l'implémentation finale ",
         "finalDescPT2": "du visualiseur de podcast. Pour voir l'utilisation, veuillez consulter la section ",
         "finalDescPT3": "démo",
-        "finalDescPT4": " en haut de la page."
+        "finalDescPT4": " en haut de la page.",
+        "finalDescPT5": "Pour voir l'utilisation, veuillez consulter la section "
       },
       "finalDesigns": {
         "title": "DESIGNS FINAUX",
@@ -335,6 +336,10 @@
       "golang": "Go",
       "python": "Python",
       "LLM": "Modèle de Langage Large"
+    },
+    "portfolio": {
+      "title": "Analyse de Portefeuille d'Actions",
+      "description": "Une application React TypeScript pour suivre et visualiser la performance des portefeuilles d'actions. Inclut des mises à jour en temps réel des cours des actions, la visualisation de l'allocation du portefeuille et le suivi des gains/pertes."
     }
   },
   "contact": {

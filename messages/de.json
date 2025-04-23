@@ -244,9 +244,9 @@
         "solutionAction": "Bereit, eine Lösung zu testen, die seine spezifischen Bedürfnisse anspricht."
       },
       "ideation": {
-        "title": "IDEATION",
-        "development": "Lösung entwickeln",
-        "choosingLLM": "LLM auswählen",
+        "title": "IDEEFINDUNG",
+        "development": "Lösungsentwicklung",
+        "choosingLLM": "Auswahl eines LLM",
         "furtherExplorations": "Weitere Erkundungen",
         "devPT1": "Mein Ansatz zur Entwicklung der Lösung war es, ",
         "devPT2": "das Problem zu zerlegen und die grundlegenden Bedürfnisse",
@@ -272,9 +272,10 @@
         "choosingLLMDescriptionPT4": "die Daten zu visualisieren",
         "choosingLLMDescriptionPT5": " die aus dem Podcast generiert werden. Derzeit erfüllt Graphviz dies in gewissem Maße, aber ich würde gerne sehen, ob es bessere Möglichkeiten gibt, die Daten zu visualisieren. Schließlich möchte ich überdenken, wie ich die Benutzeroberfläche gestaltet habe, um sie benutzerfreundlicher und zugänglicher zu machen.",
         "finalDescPT1": "Der leere Zustand der finalen Implementierung ",
-        "finalDescPT2": "des Podcast Visualisierers. Um die Nutzung zu sehen, schauen Sie bitte in den ",
+        "finalDescPT2": "des Podcast Visualisierers. Um die Nutzung zu sehen, besuchen Sie bitte den Abschnitt ",
         "finalDescPT3": "Demo",
-        "finalDescPT4": " Abschnitt am oberen Rand der Seite."
+        "finalDescPT4": " Abschnitt am oberen Rand der Seite.",
+        "finalDescPT5": "Um die Verwendung zu sehen, besuchen Sie bitte den Abschnitt "
       },
       "finalDesigns": {
         "title": "FINAL DESIGNS",
