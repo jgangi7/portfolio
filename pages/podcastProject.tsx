@@ -616,7 +616,7 @@ export default function PodcastProject() {
                           </p>
                           <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('ideation.choosingLLM')}</h1>
                         </div>
-                        <div className="mt-5 mb-10">
+                        <div className="mt-5 mb-10 hidden md:block">
                           <div className="relative h-96">
                             {llms.map((llm, index) => (
                               <div
