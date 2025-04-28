@@ -71,6 +71,29 @@
   },
   "projects": {
     "title": "PROJETS RÉCENTS",
+    "commanders": {
+      "title": "Redesign UI des Commanders",
+      "description": "Un projet complet de redesign UI/UX pour le site web des Washington Commanders, axé sur les principes de design modernes et une expérience utilisateur améliorée.",
+      "timeline": "Chronologie",
+      "timelineDescription": "3 mois de conception et développement",
+      "disciplines": "Disciplines",
+      "disciplinesUI": "Design UI",
+      "disciplinesUX": "Recherche UX",
+      "disciplinesFrontend": "Développement Frontend",
+      "disciplinesBackend": "Développement Backend",
+      "responsibilities": "Responsabilités",
+      "responsibilitiesUI": "Implémentation du Design UI",
+      "responsibilitiesUX": "Recherche d'Expérience Utilisateur",
+      "responsibilitiesFrontend": "Développement Frontend",
+      "responsibilitiesBackend": "Intégration Backend",
+      "tools": "Outils & Technologies",
+      "toolsReact": "React",
+      "toolsTypeScript": "TypeScript",
+      "toolsDotNet": ".NET",
+      "toolsNodeJS": "Node.js",
+      "toolsFigma": "Figma",
+      "viewOnGitHub": "Voir sur GitHub"
+    },
     "description": "Voici quelques projets sur lesquels j'ai travaillé",
     "githubLink": "Voir sur GitHub",
     "liveLink": "Voir la démo",
@@ -79,7 +102,8 @@
       "webApp": "Application Web",
       "browserExtension": "Extension de navigateur",
       "goApplication": "Application Go",
-      "api": "API"
+      "api": "API",
+      "ui": "UI/UX"
     },
     "podcast-visualizer": {
       "title": "Visualiseur de Podcast",

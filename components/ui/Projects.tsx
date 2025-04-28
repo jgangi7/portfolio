@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaAngular, FaPython, FaBrain } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaAngular, FaPython, FaBrain, FaCss3, FaHtml5, FaFigma } from 'react-icons/fa';
 import { SiTypescript, SiDotnet, SiJavascript } from 'react-icons/si';
 import Link from 'next/link';
 
@@ -32,6 +32,23 @@ const projects: Project[] = [
     githubUrl: "https://github.com/jgangi7/podcast-visualizer",
     categoryKey: "categories.webApp",
     pageUrl: "/podcastProject"
+  },
+  {
+    titleKey: "Commanders UI Redesign",
+    descriptionKey: "Commanders UI Redesign Description",
+    technologies: [
+      { nameKey: "technologies.react", icon: <FaReact /> },
+      { nameKey: "technologies.typescript", icon: <SiTypescript /> },
+      { nameKey: "technologies.dotnet", icon: <SiDotnet /> },
+      { nameKey: "technologies.nodejs", icon: <FaNodeJs /> },
+      { nameKey: "technologies.css", icon: <FaCss3 /> },
+      { nameKey: "technologies.html", icon: <FaHtml5 /> },
+      { nameKey: "technologies.figma", icon: <FaFigma /> }
+    ],
+    imageUrl: "/images/commanders-ui.png",
+    githubUrl: "https://github.com/jgangi7/commanders-ui-redesign",
+    categoryKey: "categories.ui",
+    pageUrl: "/commanders"
   },
   {
     titleKey: "top-5-movies.title",

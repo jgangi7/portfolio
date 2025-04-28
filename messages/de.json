@@ -79,7 +79,8 @@
       "webApp": "Web-Anwendung",
       "browserExtension": "Browser-Erweiterung",
       "goApplication": "Go-Anwendung",
-      "api": "API"
+      "api": "API",
+      "ui": "UI/UX"
     },
     "podcast-visualizer": {
       "title": "Podcast Visualisierer",
@@ -340,6 +341,29 @@
       "golang": "Go",
       "python": "Python",
       "LLM": "Großes Sprachmodell"
+    },
+    "commanders": {
+      "title": "Commanders UI Redesign",
+      "description": "Ein umfassendes UI/UX-Redesign-Projekt für die Washington Commanders Website, das sich auf moderne Designprinzipien und verbesserte Benutzererfahrung konzentriert.",
+      "timeline": "Zeitplan",
+      "timelineDescription": "3 Monate Design und Entwicklung",
+      "disciplines": "Disziplinen",
+      "disciplinesUI": "UI-Design",
+      "disciplinesUX": "UX-Forschung",
+      "disciplinesFrontend": "Frontend-Entwicklung",
+      "disciplinesBackend": "Backend-Entwicklung",
+      "responsibilities": "Verantwortlichkeiten",
+      "responsibilitiesUI": "UI-Design-Implementierung",
+      "responsibilitiesUX": "Benutzererfahrungsforschung",
+      "responsibilitiesFrontend": "Frontend-Entwicklung",
+      "responsibilitiesBackend": "Backend-Integration",
+      "tools": "Tools & Technologien",
+      "toolsReact": "React",
+      "toolsTypeScript": "TypeScript",
+      "toolsDotNet": ".NET",
+      "toolsNodeJS": "Node.js",
+      "toolsFigma": "Figma",
+      "viewOnGitHub": "Auf GitHub ansehen"
     }
   },
   "contact": {
