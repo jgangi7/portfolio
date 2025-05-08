@@ -58,11 +58,28 @@ export default function About() {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen p-4 md:p-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Left Column */}
-        <div className="h-full">
+        <motion.div 
+          className="h-full"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 border border-gray-800 h-full">
             <h1 className="text-white text-[1.8rem] font-medium mb-4">{t('about')}</h1>
             <div className="h-full flex flex-col space-y-4">
@@ -80,10 +97,15 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column */}
-        <div className="h-full flex flex-col">
+        <motion.div 
+          className="h-full flex flex-col"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
           {/* Spotify Section */}
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 border border-gray-800 flex-1">
             <h2 className="text-lg font-medium text-white mb-4">{t('nowPlaying')}</h2>
@@ -130,7 +152,12 @@ export default function About() {
           </div>
 
           {/* Experience Section */}
-          <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 border border-gray-800 mt-6">
+          <motion.div 
+            className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-6 border border-gray-800 mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-medium text-white">{t('experiences')}</h2>
             </div>
@@ -154,8 +181,8 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
