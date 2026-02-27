@@ -62,7 +62,7 @@ export default function PodcastProject() {
   return (
     <LoadingProvider>
       <Layout>
-        <div className="min-h-screen bg-gray-50 dark:bg-[#0a192f] text-gray-800 dark:text-gray-300">
+        <div className="min-h-screen dark:bg-[#0a192f] text-gray-800 dark:text-gray-300">
           {/* Title Section */}
           <section className="pt-32 pb-10">
             <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
@@ -162,7 +162,7 @@ export default function PodcastProject() {
                         href="https://github.com/jgangi7/podcast-visualizer"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-700 dark:text-gray-300 hover:text-teal-600 dark:hover:text-[#64ffda] transition-colors inline-flex items-center gap-2"
+                        className="text-gray-700 dark:text-gray-300 hover:text-[#1e40af] dark:hover:text-[#64ffda] transition-colors inline-flex items-center gap-2"
                       >
                         <FaGithub className="text-xl" />
                         {t('tools.viewOnGitHub')}
@@ -203,7 +203,7 @@ export default function PodcastProject() {
                     <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('background.idea')}</h1>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5">
-                    <span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('background.goal')}</span> {t('background.ideaDescriptionPT1')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('background.challenge')}</span> {t('background.ideaDescriptionPT2')} <span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('background.grok')}</span> {t('background.ideaDescriptionPT3')} <span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('background.integrate')}</span>.
+                    <span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('background.goal')}</span> {t('background.ideaDescriptionPT1')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('background.challenge')}</span> {t('background.ideaDescriptionPT2')} <span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('background.grok')}</span> {t('background.ideaDescriptionPT3')} <span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('background.integrate')}</span>.
                   </p>
                 </div>
               </div>
@@ -220,7 +220,7 @@ export default function PodcastProject() {
                       {/* Phase 1 - Research */}
                       <div className="relative">
                         <div className="flex items-center mb-4">
-                          <span className="bg-teal-500 dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">1</span>
+                          <span className="bg-[#1e40af] dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">1</span>
                           <h3 className="text-gray-900 dark:text-white text-lg">{t('theProcess.research')}</h3>
                         </div>
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
@@ -232,7 +232,7 @@ export default function PodcastProject() {
                       {/* Phase 2 - Synthesis */}
                       <div className="relative">
                         <div className="flex items-center mb-4">
-                          <span className="bg-teal-500 dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">2</span>
+                          <span className="bg-[#1e40af] dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">2</span>
                           <h3 className="text-gray-900 dark:text-white text-lg">{t('theProcess.synthesis')}</h3>
                         </div>
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
@@ -244,7 +244,7 @@ export default function PodcastProject() {
                       {/* Phase 3 - Ideation */}
                       <div className="relative">
                         <div className="flex items-center mb-4">
-                          <span className="bg-teal-500 dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">3</span>
+                          <span className="bg-[#1e40af] dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">3</span>
                           <h3 className="text-gray-900 dark:text-white text-lg">{t('theProcess.ideation')}</h3>
                         </div>
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
@@ -257,7 +257,7 @@ export default function PodcastProject() {
                       {/* Phase 4 - Final Designs */}
                       <div className="relative">
                         <div className="flex items-center mb-4">
-                          <span className="bg-teal-500 dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">4</span>
+                          <span className="bg-[#1e40af] dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">4</span>
                           <h3 className="text-gray-900 dark:text-white text-lg">{t('theProcess.finalDesigns')}</h3>
                         </div>
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
@@ -268,7 +268,7 @@ export default function PodcastProject() {
                       {/* Phase 5 - Reflection */}
                       <div className="relative">
                         <div className="flex items-center mb-4">
-                          <span className="bg-teal-500 dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">5</span>
+                          <span className="bg-[#1e40af] dark:bg-[#64ffda] text-white dark:text-gray-900 w-8 h-8 rounded-full flex items-center justify-center font-bold mr-3">5</span>
                           <h3 className="text-gray-900 dark:text-white text-lg">{t('theProcess.reflection')}</h3>
                         </div>
                         <ul className="text-gray-600 dark:text-gray-400 space-y-2 text-sm">
@@ -291,10 +291,10 @@ export default function PodcastProject() {
                     <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('research.identifyingProblems')}</h1>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5">
-                    <span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.podcast')}</span>{t('research.identifyingProblemsDescriptionPT1')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.abilityToLearn')}</span>{t('research.identifyingProblemsDescriptionPT2')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.amountOfChange')} </span>{t('research.identifyingProblemsDescriptionPT3')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.identifyingProblemsDescriptionPT4')}</span>{t('research.whatTheyLearned')}.
+                    <span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.podcast')}</span>{t('research.identifyingProblemsDescriptionPT1')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.abilityToLearn')}</span>{t('research.identifyingProblemsDescriptionPT2')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.amountOfChange')} </span>{t('research.identifyingProblemsDescriptionPT3')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.identifyingProblemsDescriptionPT4')}</span>{t('research.whatTheyLearned')}.
                     <br></br>
                     <br></br>
-                    <span>{t('research.withThisWebapp')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.easilyTarget')} </span>{t('research.discussed')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.relatedTopics')} </span>{t('research.touchedOn')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.pinPoint')} </span>{t('research.skipAds')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.skipAdsDescription')}</span></span>
+                    <span>{t('research.withThisWebapp')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.easilyTarget')} </span>{t('research.discussed')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.relatedTopics')} </span>{t('research.touchedOn')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.pinPoint')} </span>{t('research.skipAds')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.skipAdsDescription')}</span></span>
                   </p>
                 </div>
               </div>
@@ -306,7 +306,7 @@ export default function PodcastProject() {
                     <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('research.competitorAnalysis')}</h1>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5">
-                    <span>{t('research.competitorAnalysisDescriptionPT1')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.competitorAnalysisDescriptionPT2')} </span>{t('research.competitorAnalysisDescriptionPT3')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('research.competitorAnalysisDescriptionPT4')}</span></span>
+                    <span>{t('research.competitorAnalysisDescriptionPT1')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.competitorAnalysisDescriptionPT2')} </span>{t('research.competitorAnalysisDescriptionPT3')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('research.competitorAnalysisDescriptionPT4')}</span></span>
                   </p>
 
                   {/* Competitor Cards */}
@@ -323,7 +323,7 @@ export default function PodcastProject() {
                       </p>
                       <div className="space-y-6">
                         <div>
-                          <div className="flex items-center gap-2 text-teal-600 dark:text-[#64ffda] mb-2">
+                          <div className="flex items-center gap-2 text-[#1e40af] dark:text-[#64ffda] mb-2">
                             <span className="text-lg">+</span>
                             <span className="text-sm uppercase tracking-wider">{t('research.podsqueezePros')}</span>
                           </div>
@@ -358,7 +358,7 @@ export default function PodcastProject() {
                       </p>
                       <div className="space-y-6">
                         <div>
-                          <div className="flex items-center gap-2 text-teal-600 dark:text-[#64ffda] mb-2">
+                          <div className="flex items-center gap-2 text-[#1e40af] dark:text-[#64ffda] mb-2">
                             <span className="text-lg">+</span>
                             <span className="text-sm uppercase tracking-wider">{t('research.audiogramsPros')}</span>
                           </div>
@@ -395,7 +395,7 @@ export default function PodcastProject() {
                     <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('synthesis.userPersona')}</h1>
                   </div>  
                   <p className="text-gray-400 leading-relaxed mt-5 mb-10">
-                    <span>{t('synthesis.userPersonaDescriptionPT1')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('synthesis.userPersonaDescriptionPT2')}</span>{t('synthesis.userPersonaDescriptionPT3')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('synthesis.userPersonaDescriptionPT4')}</span>{t('synthesis.userPersonaDescriptionPT5')}</span>
+                    <span>{t('synthesis.userPersonaDescriptionPT1')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('synthesis.userPersonaDescriptionPT2')}</span>{t('synthesis.userPersonaDescriptionPT3')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('synthesis.userPersonaDescriptionPT4')}</span>{t('synthesis.userPersonaDescriptionPT5')}</span>
                   </p>
 
                   {/* Persona Card */}
@@ -414,7 +414,7 @@ export default function PodcastProject() {
                             <div>
                               <div className="flex items-center gap-2 mb-2">
                                 <div className="w-6 h-6 flex items-center justify-center">
-                                  <span className="text-teal-600 dark:text-[#64ffda]">📍</span>
+                                  <span className="text-[#1e40af] dark:text-[#64ffda]">📍</span>
                                 </div>
                                 <span className="text-gray-500 text-sm uppercase">{t('synthesis.location')}</span>
                               </div>
@@ -424,7 +424,7 @@ export default function PodcastProject() {
                             <div>
                               <div className="flex items-center gap-2 mb-2">
                                 <div className="w-6 h-6 flex items-center justify-center">
-                                  <span className="text-teal-600 dark:text-[#64ffda]">🎓</span>
+                                  <span className="text-[#1e40af] dark:text-[#64ffda]">🎓</span>
                                 </div>
                                 <span className="text-gray-500 text-sm uppercase">{t('synthesis.occupation')}</span>
                               </div>
@@ -434,7 +434,7 @@ export default function PodcastProject() {
                             <div>
                               <div className="flex items-center gap-2 mb-2">
                                 <div className="w-6 h-6 flex items-center justify-center">
-                                  <span className="text-teal-600 dark:text-[#64ffda]">⭐</span>
+                                  <span className="text-[#1e40af] dark:text-[#64ffda]">⭐</span>
                                 </div>
                                 <span className="text-gray-500 text-sm uppercase">{t('synthesis.experience')}</span>
                               </div>
@@ -450,7 +450,7 @@ export default function PodcastProject() {
                           {/* Goals Card */}
                           <div className="bg-white dark:bg-[#1a2f55] rounded-lg p-6">
                             <div className="flex items-center gap-2 mb-4">
-                              <span className="text-teal-600 dark:text-[#64ffda] text-xl">⚡</span>
+                              <span className="text-[#1e40af] dark:text-[#64ffda] text-xl">⚡</span>
                               <h3 className="text-gray-900 dark:text-white text-lg">Goals</h3>
                             </div>
                             <ul className="text-gray-600 dark:text-gray-400 space-y-2">
@@ -463,7 +463,7 @@ export default function PodcastProject() {
                           {/* Needs Card */}
                           <div className="bg-white dark:bg-[#1a2f55] rounded-lg p-6">
                             <div className="flex items-center gap-2 mb-4">
-                              <span className="text-teal-600 dark:text-[#64ffda] text-xl">❓</span>
+                              <span className="text-[#1e40af] dark:text-[#64ffda] text-xl">❓</span>
                               <h3 className="text-gray-900 dark:text-white text-lg">{t('synthesis.needs')}</h3>
                             </div>
                             <ul className="text-gray-600 dark:text-gray-400 space-y-2">
@@ -476,7 +476,7 @@ export default function PodcastProject() {
                           {/* Pain Points Card */}
                           <div className="bg-white dark:bg-[#1a2f55] rounded-lg p-6">
                             <div className="flex items-center gap-2 mb-4">
-                              <span className="text-teal-600 dark:text-[#64ffda] text-xl">⚠️</span>
+                              <span className="text-[#1e40af] dark:text-[#64ffda] text-xl">⚠️</span>
                               <h3 className="text-gray-900 dark:text-white text-lg">{t('synthesis.painPoints')}</h3>
                             </div>
                             <ul className="text-gray-600 dark:text-gray-400 space-y-2">
@@ -499,9 +499,9 @@ export default function PodcastProject() {
                         <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('synthesis.userJourney')}</h1>
                       </div> 
                       <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5 mb-10">
-                        <span>{t('synthesis.userJourneyDescriptionPT1')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('synthesis.userJourneyDescriptionPT2')}</span>{t('synthesis.userJourneyDescriptionPT3')}</span>
+                        <span>{t('synthesis.userJourneyDescriptionPT1')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('synthesis.userJourneyDescriptionPT2')}</span>{t('synthesis.userJourneyDescriptionPT3')}</span>
                       </p>
-                      <h3 className="text-gray-600 dark:text-gray-400 mb-12"><span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('synthesis.scenarios')}</span> {t('synthesis.scenario1')}</h3>
+                      <h3 className="text-gray-600 dark:text-gray-400 mb-12"><span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('synthesis.scenarios')}</span> {t('synthesis.scenario1')}</h3>
 
                       {/* Journey Timeline */}
                       <div className="relative my-20">
@@ -519,12 +519,12 @@ export default function PodcastProject() {
                               </p>
                             </div>
                             <div className="hidden md:block absolute left-1/2 top-32 transform -translate-x-1/2 -translate-y-1/2">
-                              <div className="w-4 h-4 rounded-full bg-teal-500 dark:bg-[#64ffda]"></div>
+                            <div className="w-4 h-4 rounded-full bg-[#1e40af] dark:bg-[#64ffda]"></div>
                             </div>
                             <div className="mt-8 md:mt-16">
-                              <p className="text-sm text-teal-600 dark:text-[#64ffda] mb-2">{t('synthesis.thought')}:</p>
-                              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">"{t('synthesis.startingThought')}"</p>
-                              <p className="text-sm text-teal-600 dark:text-[#64ffda] mb-2">{t('synthesis.action')}:</p>
+                              <p className="text-sm text-[#1e40af] dark:text-[#64ffda] mb-2">{t('synthesis.thought')}:</p>
+                              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">"  {t('synthesis.startingThought')}</p>
+                              <p className="text-sm text-[#1e40af] dark:text-[#64ffda] mb-2">{t('synthesis.action')}:</p>
                               <p className="text-sm text-gray-600 dark:text-gray-400">{t('synthesis.startingAction')}</p>
                             </div>
                           </div>
@@ -538,12 +538,12 @@ export default function PodcastProject() {
                               </p>
                             </div>
                             <div className="hidden md:block absolute left-1/2 top-32 transform -translate-x-1/2 -translate-y-1/2">
-                              <div className="w-4 h-4 rounded-full bg-teal-500 dark:bg-[#64ffda]"></div>
+                              <div className="w-4 h-4 rounded-full bg-[#1e40af] dark:bg-[#64ffda]"></div>
                             </div>
                             <div className="mt-8 md:mt-16">
-                              <p className="text-sm text-teal-600 dark:text-[#64ffda] mb-2">{t('synthesis.thought')}:</p>
+                              <p className="text-sm text-[#1e40af] dark:text-[#64ffda] mb-2">{t('synthesis.thought')}:</p>
                               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">"{t('synthesis.tryingThought')}"</p>
-                              <p className="text-sm text-teal-600 dark:text-[#64ffda] mb-2">{t('synthesis.action')}:</p>
+                              <p className="text-sm text-[#1e40af] dark:text-[#64ffda] mb-2">{t('synthesis.action')}:</p>
                               <p className="text-sm text-gray-600 dark:text-gray-400">{t('synthesis.tryingAction')}</p>
                             </div>
                           </div>
@@ -557,12 +557,12 @@ export default function PodcastProject() {
                               </p>
                             </div>
                             <div className="hidden md:block absolute left-1/2 top-32 transform -translate-x-1/2 -translate-y-1/2">
-                              <div className="w-4 h-4 rounded-full bg-teal-500 dark:bg-[#64ffda]"></div>
+                              <div className="w-4 h-4 rounded-full bg-[#1e40af] dark:bg-[#64ffda]"></div>
                             </div>
                             <div className="mt-8 md:mt-16">
-                              <p className="text-sm text-teal-600 dark:text-[#64ffda] mb-2">{t('synthesis.thought')}:</p>
+                              <p className="text-sm text-[#1e40af] dark:text-[#64ffda] mb-2">{t('synthesis.thought')}:</p>
                               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">"{t('synthesis.strugglingThought')}"</p>
-                              <p className="text-sm text-teal-600 dark:text-[#64ffda] mb-2">{t('synthesis.action')}:</p>
+                              <p className="text-sm text-[#1e40af] dark:text-[#64ffda] mb-2">{t('synthesis.action')}:</p>
                               <p className="text-sm text-gray-600 dark:text-gray-400">{t('synthesis.strugglingAction')}</p>
                             </div>
                           </div>
@@ -576,12 +576,12 @@ export default function PodcastProject() {
                               </p>
                             </div>
                             <div className="hidden md:block absolute left-1/2 top-32 transform -translate-x-1/2 -translate-y-1/2">
-                              <div className="w-4 h-4 rounded-full bg-teal-500 dark:bg-[#64ffda]"></div>
+                              <div className="w-4 h-4 rounded-full bg-[#1e40af] dark:bg-[#64ffda]"></div>
                             </div>
                             <div className="mt-8 md:mt-16">
-                              <p className="text-sm text-teal-600 dark:text-[#64ffda] mb-2">{t('synthesis.thought')}:</p>
+                              <p className="text-sm text-[#1e40af] dark:text-[#64ffda] mb-2">{t('synthesis.thought')}:</p>
                               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">"{t('synthesis.solutionThought')}"</p>
-                              <p className="text-sm text-teal-600 dark:text-[#64ffda] mb-2">{t('synthesis.action')}:</p>
+                              <p className="text-sm text-[#1e40af] dark:text-[#64ffda] mb-2">{t('synthesis.action')}:</p>
                               <p className="text-sm text-gray-600 dark:text-gray-400">{t('synthesis.solutionAction')}</p>
                             </div>
                           </div>
@@ -602,10 +602,10 @@ export default function PodcastProject() {
                     <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('ideation.development')}</h1>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5 mb-10">
-                    <span>{t('ideation.devPT1')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.devPT2')}</span> {t('ideation.devPT3')} <span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.devPT4')}</span>{t('ideation.devPT5')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.devPT6')}</span>{t('ideation.devPT7')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.devPT8')}</span>{t('ideation.devPT9')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.devPT10')}</span> {t('ideation.devPT11')} <span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.devPT12')}</span>{t('ideation.devPT13')}</span>
+                    <span>{t('ideation.devPT1')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.devPT2')}</span> {t('ideation.devPT3')} <span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.devPT4')}</span>{t('ideation.devPT5')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.devPT6')}</span>{t('ideation.devPT7')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.devPT8')}</span>{t('ideation.devPT9')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.devPT10')}</span> {t('ideation.devPT11')} <span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.devPT12')}</span>{t('ideation.devPT13')}</span>
                     <br></br>
                     <br></br>
-                    <span>{t('ideation.devPT14')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.devPT15')}</span>{t('ideation.devPT16')} <span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.devPT17')}</span>{t('ideation.devPT18')}</span>
+                    <span>{t('ideation.devPT14')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.devPT15')}</span>{t('ideation.devPT16')} <span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.devPT17')}</span>{t('ideation.devPT18')}</span>
                   </p>
 
                   <div className="py-20">
@@ -626,7 +626,7 @@ export default function PodcastProject() {
                                 }`}
                               >
                                 <div className="bg-white dark:bg-[#112240] rounded-lg p-8 shadow-lg">
-                                  <h3 className="text-2xl font-bold text-teal-600 dark:text-[#64ffda] mb-6">{llm.name}</h3>
+                                  <h3 className="text-2xl font-bold text-[#1e40af] dark:text-[#64ffda] mb-6">{llm.name}</h3>
                                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{llm.description}</p>
                                 </div>
                               </div>
@@ -642,9 +642,9 @@ export default function PodcastProject() {
                                   <div
                                     className={`h-full transition-all duration-500 ${
                                       index === currentLLM
-                                        ? 'bg-teal-600 dark:bg-[#64ffda]'
+                                        ? 'bg-[#1e40af] dark:bg-[#64ffda]'
                                         : completedBars.includes(index)
-                                        ? 'bg-teal-600 dark:bg-[#64ffda]'
+                                        ? 'bg-[#1e40af] dark:bg-[#64ffda]'
                                         : 'bg-gray-300 dark:bg-gray-600'
                                     }`}
                                     style={{ width: `${index === currentLLM ? progress : completedBars.includes(index) ? 100 : 0}%` }}
@@ -661,7 +661,7 @@ export default function PodcastProject() {
                           <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('ideation.furtherExplorations')}</h1>
                         </div>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5 mb-10">
-                          <span>{t('ideation.choosingLLMDescriptionPT1')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.choosingLLMDescriptionPT2')}</span>{t('ideation.choosingLLMDescriptionPT3')}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('ideation.choosingLLMDescriptionPT4')}</span>{t('ideation.choosingLLMDescriptionPT5')}</span>
+                          <span>{t('ideation.choosingLLMDescriptionPT1')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.choosingLLMDescriptionPT2')}</span>{t('ideation.choosingLLMDescriptionPT3')}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('ideation.choosingLLMDescriptionPT4')}</span>{t('ideation.choosingLLMDescriptionPT5')}</span>
                         </p>
                     </div>
                   </div>
@@ -684,7 +684,7 @@ export default function PodcastProject() {
                           />
                         </div>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-6 text-center text-sm">
-                          {t("ideation.finalDescPT1")}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t("ideation.finalDescPT2")}</span> {t("ideation.finalDescPT3")}<span className="font-bold text-teal-600 dark:text-[#64ffda]">{t("ideation.finalDescPT4")}</span>{t("ideation.finalDescPT5")}
+                          {t("ideation.finalDescPT1")}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t("ideation.finalDescPT2")}</span> {t("ideation.finalDescPT3")}<span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t("ideation.finalDescPT4")}</span>{t("ideation.finalDescPT5")}
                         </p>
                       </div>
                     </div>
@@ -700,7 +700,7 @@ export default function PodcastProject() {
                         <h1 className="text-xl text-gray-900 dark:text-white mb-3">{t('reflection.userFeedback')}</h1>
                       </div>
                       <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-5 mb-10">
-                        <span><span className="font-bold text-teal-600 dark:text-[#64ffda]">{t('reflection.comingSoon')}</span></span>
+                        <span><span className="font-bold text-[#1e40af] dark:text-[#64ffda]">{t('reflection.comingSoon')}</span></span>
                       </p>
                     </div>
                   </div>

@@ -14,36 +14,37 @@
     "description": "Hallo, ich bin James Gangi, ein Fullstack-Softwareentwickler aus Northern Virginia/Washington DC."
   },
   "about": {
-    "title": "Über Mich",
-    "content": "Ich bin leidenschaftlich daran interessiert, Software zu entwickeln, die das Leben verbessert.",
-    "skills": "Fähigkeiten",
+    "title": "Hi, ich bin ",
+    "content": "Ich schätze mich glücklich, mit vielen talentierten Menschen an vielfältigen Herausforderungen gearbeitet zu haben. Von Fortune-500-Konzernen bis hin zu agilen Teams konnte ich den Entwicklungsprozess aus jeder Perspektive miterleben.",
+    "cheers": "Auf die gemeinsame Reise.",
+    "skills": "Skills",
     "professional": {
       "about": "ÜBER MICH",
-      "experiences": "EXPERIENZEN",
-      "nowPlaying": "AKTUELL",
-      "todayheader": "PROFESSIONELLE WEG",
-      "growthheader": "WACHSTUM",
+      "experiences": "ERFAHRUNG",
+      "nowPlaying": "AKTUELL LÄUFT",
+      "todayheader": "BERUFLICHER WERDEGANG",
+      "growthheader": "ENTWICKLUNG",
       "title": "Beruflicher Werdegang",
-      "growth": "Als ich in Nord-Virginia aufwuchs, war ich schon immer an Technologie interessiert und entdeckte schnell meine Liebe zu Computern und was man damit alles machen konnte. Ich hatte das Glück, eine Familie zu haben, die mit mir zusammenarbeitete, um mein Interesse zu fördern und mich dazu ermutigte, ein kleines Unternehmen für den Zusammenbau von Desktop-Computern für Freunde und Familie zu gründen. Das war das erste Mal, dass ich etwas mit Technologie zu tun hatte, und das Gefühl der Erfüllung beim ersten Hochfahren war unglaublich. Ich war süchtig. Seitdem ist es mein Ziel, nützliche und wirkungsvolle Software zu entwickeln. Ich hatte das Glück, die Gelegenheit gehabt zu haben, mit einigen erstaunlichen Menschen und Unternehmen zusammenzuarbeiten, die mir geholfen haben, als Softwareingenieur und als Person zu wachsen.",
-      "content": "Ich bin ein Softwareingenieur mit einer Leidenschaft für den Aufbau skalierbarer, kreativer und effizienter Systeme. Ich begann meine Laufbahn 2021 als Praktikant bei einem Unternehmen für Satellitendaten-Fernerkundung -- Maxar Technologies, wo ich an der Kartendatenplattform arbeitete. Nach meinem Praktikum wurde ich als Associate Software Engineer eingestellt, während ich mein Studium an der James Madison University fortsetzte. Ich verließ Maxar 2022, um zu CoStar Group als Software Engineer zu wechseln, wo ich hauptsächlich im Full-Stack-Modus am Web Enterprise (WE) Projekt arbeitete und lernte, vollständige Systeme zu lieben, die ich von Anfang bis Ende kontrollieren kann."
-      },
+      "growth": "Aufgewachsen in Northern Virginia, hat mich Technologie schon immer fasziniert. Früh entdeckte ich meine Leidenschaft für Computer und deren Möglichkeiten. Dank der Unterstützung meiner Familie konnte ich ein kleines Business für den Zusammenbau von PCs gründen. Das erste Mal ein System zu booten, war ein unbeschreibliches Erfolgserlebnis. Seitdem ist es mein Ziel, Software zu entwickeln, die einen echten Unterschied macht.",
+      "content": "Ich bin Software-Ingenieur mit einer Leidenschaft für skalierbare und effiziente Systeme. Meine Reise begann 2021 als Intern bei Maxar Technologies im Bereich Satellitenbilddaten. Nach meinem Praktikum wurde ich als Associate Software Engineer übernommen, während ich mein Studium an der James Madison University abschloss. 2022 wechselte ich zur CoStar Group, wo ich als Full-Stack-Entwickler am Web Enterprise (WE) Projekt arbeitete und meine Begeisterung für ganzheitliche Systeme vertiefte."
+    },
     "whatIDo": {
-      "title": "Was Ich Mache",
+      "title": "Was ich mache",
       "skills": [
-        "Erfahren in ReactJS, AngularJS, TypeScript, .NET, C# und Node.js.",
+        "Sicherer Umgang mit ReactJS, AngularJS, TypeScript, .NET, C# und Node.js.",
         "Erfahrung mit Caching, Query-Optimierung und API-Effizienz.",
-        "Beherrschung von Micro-Frontends und modularem Design.",
-        "Umfangreiche Erfahrung mit GitHub, TFS und CI/CD",
-        "Expertise in SQL, Stored Procedures und Optimierung."
+        "Expertise in Micro Front-Ends und modularem Design.",
+        "Umfangreiche Erfahrung mit GitHub, TFS und CI/CD.",
+        "Experte für SQL, Stored Procedures und Datenbankoptimierung."
       ]
     },
     "quickFacts": {
-      "title": "Kurz & Knapp",
+      "title": "Quick Facts",
       "facts": [
-        "🎓 Informatik-Ausbildung & Mathematik",
-        "💼 Fullstack-Entwickler",
+        "🎓 Informatik & Mathe",
+        "💼 Full-Stack Entwickler",
         "🌟 Problemlöser",
-        "📚 Kontinuierlicher Lerner",
+        "📚 Dauerlerner",
         "🤝 Teamplayer"
       ]
     },
@@ -55,8 +56,12 @@
     },
     "favoriteProject": {
       "title": "Lieblingsprojekt",
-      "description": "Mein erster Gedanke geht an meine Arbeit für Costar am Web Enterprise (WE) Projekt. Von Anfang an arbeitete ich mit Business Analysten und UI-Designern zusammen, um das Produkt an die Bedürfnisse der Nutzer anzupassen. Ich entwickelte Stored Procedures für den Zugriff auf Costars umfangreiche Datenbank über sichere REST-APIs, die ich ebenfalls implementierte. Darauf aufbauend erstellte ich Komponenten und Backend-Logik für Validierungen und Fehlerbehandlung, sodass unser Vertriebsteam Verträge für Kunden generieren konnte, die elektronisch signiert, verarbeitet und nachverfolgt wurden. Die von mir entwickelte Software verarbeitete tausende Verträge und generierte Millionen Dollar Umsatz für Costar."
-    }
+      "description": "Definitiv meine Arbeit am Web Enterprise (WE) Projekt bei CoStar. Ich begleitete den Prozess von der UI-Planung bis zur Backend-Logik. Ich entwickelte Stored Procedures und sichere REST-APIs, um Daten aus der riesigen CoStar-Datenbank nutzbar zu machen. Die von mir entwickelte Software ermöglichte es dem Vertrieb, Verträge rechtssicher zu generieren und zu verarbeiten. Dieses System hat tausende Verträge abgewickelt und Millionenumsätze für CoStar generiert."
+    },
+    "onRepeat": "Dauerschleife",
+    "playOnSpotify": "Auf Spotify abspielen",
+    "timeline": "Timeline",
+    "findMe": "Social Media"
   },
   "skills": {
     "title": "Fähigkeiten & Expertise",
@@ -359,4 +364,4 @@
       "de": "DE"
     }
   }
-} 
+}

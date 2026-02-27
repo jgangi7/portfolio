@@ -78,6 +78,16 @@ export const skills: Skill[] = [
     icon: "🌊",
   },
   {
+    name: "Next.js",
+    category: "frontend",
+    icon: "⬛",
+  },
+  {
+    name: "TanStack",
+    category: "frontend",
+    icon: "🔗",
+  },
+  {
     name: "CSS",
     category: "frontend",
     icon: "🎨",
@@ -108,6 +118,21 @@ export const skills: Skill[] = [
     name: "REST APIs",
     category: "backend",
     icon: "🔌",
+  },
+  {
+    name: "GraphQL",
+    category: "backend",
+    icon: "📊",
+  },
+  {
+    name: "WebSocket",
+    category: "backend",
+    icon: "📡",
+  },
+  {
+    name: "JWT Management",
+    category: "backend",
+    icon: "🔑",
   },
 
   // Databases
@@ -169,6 +194,31 @@ export const skills: Skill[] = [
     name: "Jest",
     category: "testing",
     icon: "🃏",
+  },
+  {
+    name: "Vitest",
+    category: "testing",
+    icon: "⚡",
+  },
+  {
+    name: "ESLint",
+    category: "testing",
+    icon: "📋",
+  },
+  {
+    name: "SonarCloud",
+    category: "testing",
+    icon: "🔍",
+  },
+  {
+    name: "Webpack",
+    category: "testing",
+    icon: "📦",
+  },
+  {
+    name: "Figma",
+    category: "testing",
+    icon: "�",
   },
   {
     name: "Git",
