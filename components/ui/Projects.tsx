@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaAngular, FaPython, FaBrain } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaAngular, FaPython, FaBrain, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { SiTypescript, SiDotnet, SiJavascript } from 'react-icons/si';
 import Link from 'next/link';
-
+import { useState } from 'react';
 
 interface Project {
   titleKey: string;
@@ -17,6 +17,7 @@ interface Project {
   liveUrl?: string;
   categoryKey?: string;
   pageUrl?: string;
+  year: number;
 }
 
 const projects: Project[] = [
@@ -31,7 +32,8 @@ const projects: Project[] = [
     imageUrl: "/images/podcast-visualizer.png",
     githubUrl: "https://github.com/jgangi7/podcast-visualizer",
     categoryKey: "categories.webApp",
-    pageUrl: "/podcastProject"
+    pageUrl: "/podcastProject",
+    year: 2025
   },
   {
     titleKey: "top-5-movies.title",
@@ -44,7 +46,8 @@ const projects: Project[] = [
     ],
     imageUrl: "/images/top-5-movies.png",
     githubUrl: "https://github.com/jgangi7/movie-top-5",
-    categoryKey: "categories.webApp"
+    categoryKey: "categories.webApp",
+    year: 2024
   },
   {
     titleKey: "chrome-extension.title",
@@ -55,7 +58,8 @@ const projects: Project[] = [
     ],
     imageUrl: "/images/chrome-extension.png",
     githubUrl: "https://github.com/jgangi7/chrome-ext-search",
-    categoryKey: "categories.browserExtension"
+    categoryKey: "categories.browserExtension",
+    year: 2024
   },
   {
     titleKey: "golang-app.title",
@@ -65,7 +69,8 @@ const projects: Project[] = [
     ],
     imageUrl: "/images/ausitn-map.png",
     githubUrl: "https://github.com/jgangi7/go-austin-map",
-    categoryKey: "categories.goApplication"
+    categoryKey: "categories.goApplication",
+    year: 2023
   },
   {
     titleKey: "chatbot.title",
@@ -77,12 +82,17 @@ const projects: Project[] = [
     ],
     imageUrl: "/images/chatbot.png",
     githubUrl: "https://github.com/jgangi7/angular-health-bot",
-    categoryKey: "categories.webApp"
+    categoryKey: "categories.webApp",
+    year: 2023
   }
 ];
 
 export default function Projects() {
   const t = useTranslations('projects');
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState<number>(0);
+  const [imageModalOpen, setImageModalOpen] = useState(false);
+
+  const selectedProject = projects[selectedProjectIndex];
 
   return (
     <section id="projects" className="py-40 bg-white dark:bg-[#0a192f]">
@@ -90,189 +100,164 @@ export default function Projects() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="max-w-6xl mx-auto px-6"
+        className="max-w-7xl mx-auto px-6"
       >
-        <h2 className="text-4xl text-gray-900 dark:text-white mb-12 text-center">
-          {t('title')}
-        </h2>
-        <div className="grid grid-cols-1 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.titleKey}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ 
-                scale: 1.01,
-                y: -5,
-                transition: { 
-                  duration: 0.2,
-                  ease: "easeOut"
-                }
-              }}
-              whileTap={{ scale: 0.99 }}
-              className="relative bg-white dark:bg-[#1C1C1C] rounded-lg overflow-hidden transition-all duration-300 
-                hover:shadow-[0_0_20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] 
-                hover:shadow-black/10 dark:hover:shadow-white/10 border border-gray-100 dark:border-transparent"
-            >
-              {project.pageUrl ? (
-                <Link href={project.pageUrl} className="block">
-                  <div className="flex flex-col lg:flex-row h-full">
-                    {/* Image container - left side */}
-                    <div className="hidden lg:block lg:w-1/2 h-[300px] lg:h-[400px] relative overflow-hidden bg-gray-100 dark:bg-[#2C2C2C]">
-                      <div className="absolute top-4 left-4 z-10 text-gray-600 dark:text-gray-400 text-sm font-medium">
-                        {String(index + 1).padStart(2, '0')} | {project.categoryKey ? t(project.categoryKey) : t('categories.project')}
-                      </div>
-                      {project.imageUrl ? (
-                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#1C1C1C] dark:to-[#2C2C2C]">
-                          <img 
-                            src={project.imageUrl} 
-                            alt={t(project.titleKey)} 
-                            className="w-full h-full object-contain p-4 mt-[28%]"
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-500">
-                          Image coming soon
-                        </div>
+        <div className="flex gap-12">
+          {/* Left sidebar - Project selector */}
+          <div className="w-40 space-y-12">
+            {projects.map((project, index) => (
+              <button
+                key={project.titleKey}
+                onClick={() => {
+                  setSelectedProjectIndex(index);
+                  if (project.pageUrl) {
+                    window.location.href = project.pageUrl;
+                  }
+                }}
+                onMouseEnter={() => setSelectedProjectIndex(index)}
+                className={`block text-sm transition-colors ${
+                  selectedProjectIndex === index
+                    ? 'text-gray-900 dark:text-white font-semibold'
+                    : 'text-gray-500 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
+                } ${project.pageUrl ? 'cursor-pointer hover:underline' : 'cursor-default'}`}
+              >
+                <span className="font-bold text-[#1e40af] dark:text-[#64ffdb]">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                {' '}{t(project.titleKey)}
+              </button>
+            ))}
+          </div>
+
+          {/* Right side - Project description */}
+          <div className="flex-1">
+              <div className="max-w-6xl flex gap-12">
+                {/* Left - Text content */}
+                <div className="flex-1">
+                  <button
+                    onClick={() => {
+                      if (selectedProject.pageUrl) {
+                        window.location.href = selectedProject.pageUrl as string;
+                      }
+                    }}
+                    className={`block mb-6 ${
+                      selectedProject.pageUrl ? 'hover:opacity-75 transition-opacity cursor-pointer' : 'cursor-default'
+                    }`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+                        {t(selectedProject.titleKey)}
+                      </h3>
+                      {selectedProject.pageUrl && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            window.location.href = selectedProject.pageUrl as string;
+                          }}
+                          className="p-2 transition-opacity hover:opacity-75 text-[#1e40af] dark:text-[#64ffdb]"
+                        >
+                          <FaArrowRight className="text-2xl" />
+                        </button>
                       )}
                     </div>
+                  </button>
 
-                    {/* Content container - right side */}
-                    <div className="w-full lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center gap-2 mb-4 lg:hidden">
-                          <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">
-                            {String(index + 1).padStart(2, '0')} | {project.categoryKey ? t(project.categoryKey) : t('categories.project')}
-                          </span>
-                        </div>
-                        <h3 className="text-xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-3 lg:mb-4">
-                          {t(project.titleKey)}
-                        </h3>
-                        <p className="text-gray-700 dark:text-gray-400 mb-4 lg:mb-6 text-sm lg:text-base leading-relaxed">
-                          {t(project.descriptionKey)}
-                        </p>
-                        <div className="flex flex-wrap gap-2 lg:gap-3 mb-4 lg:mb-6">
-                          {project.technologies.map((tech) => (
-                            <span
-                              key={tech.nameKey}
-                              className="px-2 lg:px-3 py-1 bg-gray-100 dark:bg-[#2C2C2C] text-gray-700 dark:text-gray-300 rounded-full text-xs lg:text-sm flex items-center gap-1 lg:gap-2 border border-gray-200 dark:border-transparent"
-                            >
-                              <span className="text-sm lg:text-base">{tech.icon}</span>
-                              {t(tech.nameKey)}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed text-lg">
+                    {t(selectedProject.descriptionKey)}
+                  </p>
 
-                      <div className="flex gap-4 lg:gap-6">
-                        {project.githubUrl && (
-                          <a
-                            href={project.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
-                            aria-label={t('githubLink')}
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <FaGithub className="text-xl lg:text-2xl" />
-                          </a>
-                        )}
-                        {project.liveUrl && (
-                          <a
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
-                            aria-label={t('liveLink')}
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <FaExternalLinkAlt className="text-xl lg:text-2xl" />
-                          </a>
-                        )}
-                      </div>
-                    </div>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {selectedProject.technologies.map((tech) => (
+                      <span
+                        key={tech.nameKey}
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm flex items-center gap-2 border border-gray-200 dark:border-gray-700"
+                      >
+                        <span className="text-base">{tech.icon}</span>
+                        {t(tech.nameKey)}
+                      </span>
+                    ))}
                   </div>
-                </Link>
-              ) : (
-                <div className="flex flex-col lg:flex-row h-full">
-                  {/* Image container - left side */}
-                  <div className="hidden lg:block lg:w-1/2 h-[300px] lg:h-[400px] relative overflow-hidden bg-gray-100 dark:bg-[#2C2C2C]">
-                    <div className="absolute top-4 left-4 z-10 text-gray-600 dark:text-gray-400 text-sm font-medium">
-                      {String(index + 1).padStart(2, '0')} | {project.categoryKey ? t(project.categoryKey) : t('categories.project')}
-                    </div>
-                    {project.imageUrl ? (
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#1C1C1C] dark:to-[#2C2C2C]">
-                        <img 
-                          src={project.imageUrl} 
-                          alt={t(project.titleKey)} 
-                          className="w-full h-full object-contain p-4 mt-[28%]"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-500 dark:text-gray-500">
-                        Image coming soon
-                      </div>
+
+                  <div className="flex gap-4" >
+                    {selectedProject.githubUrl && (
+                      <a
+                        href={selectedProject.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                        aria-label="GitHub"
+                        style={{display: 'flex', alignItems: 'center'}}
+                      >
+                        <FaGithub className="text-2xl" /> <FaArrowLeft className="text-sm inline-block ml-1 transition-opacity hover:opacity-75 text-[#1e40af] dark:text-[#64ffdb]" />
+                      </a>
+                    )}
+                    {selectedProject.liveUrl && (
+                      <a
+                        href={selectedProject.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                        aria-label="Live site"
+                      >
+                        <FaExternalLinkAlt className="text-2xl" />
+                      </a>
                     )}
                   </div>
-
-                  {/* Content container - right side */}
-                  <div className="w-full lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center gap-2 mb-4 lg:hidden">
-                        <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">
-                          {String(index + 1).padStart(2, '0')} | {project.categoryKey ? t(project.categoryKey) : t('categories.project')}
-                        </span>
-                      </div>
-                      <h3 className="text-xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-3 lg:mb-4">
-                        {t(project.titleKey)}
-                      </h3>
-                      <p className="text-gray-700 dark:text-gray-400 mb-4 lg:mb-6 text-sm lg:text-base leading-relaxed">
-                        {t(project.descriptionKey)}
-                      </p>
-                      <div className="flex flex-wrap gap-2 lg:gap-3 mb-4 lg:mb-6">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech.nameKey}
-                            className="px-2 lg:px-3 py-1 bg-gray-100 dark:bg-[#2C2C2C] text-gray-700 dark:text-gray-300 rounded-full text-xs lg:text-sm flex items-center gap-1 lg:gap-2 border border-gray-200 dark:border-transparent"
-                          >
-                            <span className="text-sm lg:text-base">{tech.icon}</span>
-                            {t(tech.nameKey)}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4 lg:gap-6">
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
-                          aria-label={t('githubLink')}
-                        >
-                          <FaGithub className="text-xl lg:text-2xl" />
-                        </a>
-                      )}
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
-                          aria-label={t('liveLink')}
-                        >
-                          <FaExternalLinkAlt className="text-xl lg:text-2xl" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
                 </div>
-              )}
+
+                {/* Right - Project image */}
+                {selectedProject.imageUrl && (
+                  <div 
+                    className="flex-shrink-0 w-64 h-48 cursor-pointer"
+                    onClick={() => setImageModalOpen(true)}
+                  >
+                    <img
+                      src={selectedProject.imageUrl}
+                      alt={t(selectedProject.titleKey)}
+                      className="w-full h-full object-contain rounded-lg hover:opacity-80 transition-opacity"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+        {/* Image Modal */}
+        {imageModalOpen && selectedProject.imageUrl && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setImageModalOpen(false)}
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-3xl max-h-[90vh] bg-white dark:bg-gray-900 rounded-lg overflow-hidden"
+            >
+              <div className="w-full h-full overflow-hidden">
+                <img
+                  src={selectedProject.imageUrl}
+                  alt={t(selectedProject.titleKey)}
+                  className="w-full h-full object-cover object-top"
+                  style={{ maxHeight: '125%' }}
+                />
+              </div>
+              <button
+                onClick={() => setImageModalOpen(false)}
+                className="absolute top-4 right-4 p-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-full transition-colors"
+                aria-label="Close modal"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </motion.div>
-          ))}
-        </div>
+          </motion.div>
+        )}
       </motion.div>
     </section>
   );
