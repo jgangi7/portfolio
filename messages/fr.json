@@ -343,8 +343,8 @@
       "LLM": "Modèle de Langage Large"
     },
     "portfolio": {
-      "title": "Analyse de Portefeuille d'Actions",
-      "description": "Une application React TypeScript pour suivre et visualiser la performance des portefeuilles d'actions. Inclut des mises à jour en temps réel des cours des actions, la visualisation de l'allocation du portefeuille et le suivi des gains/pertes."
+      "title": "Analytique du Portefeuille",
+      "description": "Une application React TypeScript pour le suivi et la visualisation de la performance d'un portefeuille boursier. Comprend des mises à jour des cours en temps réel, la visualisation de l'allocation d'actifs, l'importation de fichiers CSV et le suivi des gains et pertes."
     }
   },
   "contact": {
