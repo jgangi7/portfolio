@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaAngular, FaPython, FaBrain, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
-import { SiTypescript, SiDotnet, SiJavascript } from 'react-icons/si';
+import { SiTypescript, SiDotnet, SiJavascript, SiVite } from 'react-icons/si';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -33,6 +33,19 @@ const projects: Project[] = [
     githubUrl: "https://github.com/jgangi7/podcast-visualizer",
     categoryKey: "categories.webApp",
     pageUrl: "/podcastProject",
+    year: 2025
+  },
+  {
+    titleKey: "portfolio.title",
+    descriptionKey: "portfolio.description",
+    technologies: [
+      { nameKey: "technologies.react", icon: <FaReact /> },
+      { nameKey: "technologies.typescript", icon: <SiTypescript /> },
+      { nameKey: "technologies.vite", icon: <SiVite /> },
+      { nameKey: "technologies.recharts" }
+    ],
+    githubUrl: "https://github.com/jgangi7/portfolio-visualizer",
+    categoryKey: "categories.webApp",
     year: 2025
   },
   {

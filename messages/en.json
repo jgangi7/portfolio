@@ -304,8 +304,8 @@
       "videoError": "Your browser does not support the video tag."
     },
     "portfolio": {
-      "title": "Stock Portfolio Analytics",
-      "description": "Designed and Implemented a React TypeScript application for tracking and visualizing stock portfolio performance. Features real-time stock price updates, portfolio allocation visualization, and gain/loss tracking."
+      "title": "Portfolio Analytics",
+      "description": "A React TypeScript application for tracking and visualizing stock portfolio performance. Features real-time stock price updates, portfolio allocation visualization, csv import, and gain/loss tracking."
     },
     "blockchain": {
       "title": "C# Blockchain API",
